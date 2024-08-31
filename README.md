@@ -4,22 +4,30 @@
 
 `DISCIPLINA: Trabalho Interdisciplinar Aplicações para Processos de Negócios`
 
-`Xº semestre/ANO`
+`2º semestre/ANO`
 
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
+O objetivo principal do DoaSô é proporcionar uma solução tecnológica que simplifique o processo de doação, conectando de maneira eficiente doadores e beneficiários. Além disso, a plataforma busca promover práticas sustentáveis, incentivando a reutilização de itens que, de outra forma, seriam descartados, e assim contribuindo para a redução do desperdício (ODS 12). Especificamente, a plataforma visa:
+
+- Criar um ambiente seguro e acessível para o cadastro de parceiros e voluntários.
+- Facilitar a localização e visualização de pontos de doação, proporcionando transparência e acessibilidade.
+- Implementar ferramentas avançadas de busca e filtragem, melhorando a experiência do usuário.
+- Estabelecer um sistema de feedback e avaliações para assegurar a qualidade e confiabilidade das doações.
+
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Guilherme de Oliveira Souza
+* Igor Maia Moreira Fernandes
+* Luis Henrique Sampaio Vieira
+* Thiago Moreira de Queiroz
+* Victor Schneider do Vale
+* Vitor Prates Souza Lima
+* Gabriel Madureira Matos
+* Wendell Leonardo Machado Miranda
 
 ## Professor
 
-* Nome completo do(a) professor(a)
+* Amália Soares Vieira de Vasconcelos
 
 ## Instruções de utilização
 
