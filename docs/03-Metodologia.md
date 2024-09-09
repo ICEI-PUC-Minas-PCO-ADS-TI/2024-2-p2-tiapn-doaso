@@ -26,7 +26,7 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2024-2-p2-tiapn-doaso                            |
-| Documentos do projeto               | Google Docs                        | https://docs.google.com/document/d/1Xn5zD_GoZHLqoypVicsPDXxWhgpDhh4J4mkz1Q7JHiY/edit?usp=sharing                            |
+| Documentos do projeto               | Google Docs                        | https://docs.google.com/document/d/1RYRCMayG6setah19pF0Ce4Z1LMYnDmcoUF03ACnFxZI/edit?pli=1                            |
 | Projeto de interface                | Figma                              | https://www.figma.com/file/JrDROhX1TekdW4PE24b8Qd?node-id=0:1&locale=en&type=design                          |
 | Gerenciamento do projeto            | Trello                             | https://trello.com/b/ya27x3UB/uaidonations                            |
 | Design Thinking                     | Miro                               | https://miro.com/app/board/uXjVKoqz8AU=/                            |
@@ -142,7 +142,7 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2024-2-p2-tiapn-doaso                            |
-| Documentos do projeto               | GitHub                             | https://docs.google.com/document/d/1Xn5zD_GoZHLqoypVicsPDXxWhgpDhh4J4mkz1Q7JHiY/edit?usp=sharing                            |
+| Documentos do projeto               | GitHub                             | https://docs.google.com/document/d/1RYRCMayG6setah19pF0Ce4Z1LMYnDmcoUF03ACnFxZI/edit?pli=1                            |
 | Projeto de interface                | Figma                              | http://....                            |
 | Gerenciamento do projeto            | GitHub Projects                    | http://....                            |
 | Hospedagem                          | Vercel                             | http://....                            |
