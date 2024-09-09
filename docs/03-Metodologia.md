@@ -21,6 +21,18 @@ Durante o projeto, todos os membros participaram das etapas de design thinking, 
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. A relação dos ambientes com seus respectivos propósitos deverá ser apresentada em uma tabela que especifique e detalhe Ambiente, Plataforma e Link de Acesso. Defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
 
+Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
+
+| Ambiente                            | Plataforma                         | Link de acesso                         |
+|-------------------------------------|------------------------------------|----------------------------------------|
+| Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2024-2-p2-tiapn-doaso                            |
+| Documentos do projeto               | Google Docs                        | https://docs.google.com/document/d/1Xn5zD_GoZHLqoypVicsPDXxWhgpDhh4J4mkz1Q7JHiY/edit?usp=sharing                            |
+| Projeto de interface                | Figma                              | https://www.figma.com/file/JrDROhX1TekdW4PE24b8Qd?node-id=0:1&locale=en&type=design                          |
+| Gerenciamento do projeto            | Trello                             | https://trello.com/b/ya27x3UB/uaidonations                            |
+| Design Thinking                     | Miro                               | https://miro.com/app/board/uXjVKoqz8AU=/                            |
+| Diagrama de casos de uso            | Lucidchart                         | https://lucid.app/lucidchart/0f9039ad-a311-40a2-8a3d-f2bdf8d431a2/edit?invitationId=inv_cbc931cc-05ca-4244-b8a5-875f7176919a&page=.Q4MUjXso07N#                      |
+| Hospedagem                          | Vercel                             | -                           |
+
 ## Controle de versão
 
 A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-scm.com/), sendo que o [GitHub](https://github.com) foi utilizado para hospedagem do repositório.
