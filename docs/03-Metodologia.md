@@ -71,20 +71,20 @@ Atualizado em: 06/09/2024
 | Gabriel Madureira| Wireframes Alta Fidelidade  | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
 | Guilherme Souza  | Entrevista Qualitativa      | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
 | Guilherme Souza  | HIghlights                  | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Igor Maia        | Personas                    | 26/08/2024 | 06/09/2024 | 📝    | 06/09/2024  |
-| Igor Maia        | Histórias do Usuário        | 26/08/2024 | 06/09/2024 | 📝    | 06/09/2024  |
+| Igor Maia        | Personas                    | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
+| Igor Maia        | Histórias do Usuário        | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
 | Luis Sampaio     | Requisitos Funcionais       | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
 | Luis Sampaio     | Preenchimento do arquivo Citation      | 07/09/2024 | 08/09/2024 | ✔️    | 07/09/2024  |
 | Luis Sampaio     | Requisitos Não Funcionais   | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
 | Luis Sampaio     | Restrições do projeto       | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
-| Luis Sampaio     | User Flow                   | 26/08/2024 | 06/09/2024 | 📝    | 30/08/2024  |
-| Thiago Moreira   | Priorização de ideias       | 26/08/2024 | 06/09/2024 | ⌛    | 06/09/2024  |
-| Thiago Moreira   | Mural de Possibilidades      | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Vitor Prates     | Introdução                  | 26/08/2024 | 06/09/2024 | 📝    | 04/09/2024  |
-| Vitor Prates     | Wireframes Baixa fidelidade | 26/08/2024 | 06/09/2024 | 📝    | 05/09/2024  |
+| Luis Sampaio     | User Flow                   | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
+| Thiago Moreira   | Priorização de ideias       | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
+| Thiago Moreira   | Mural de Possibilidades     | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
+| Vitor Prates     | Introdução                  | 26/08/2024 | 06/09/2024 | ✔️    | 04/09/2024  |
+| Vitor Prates     | Wireframes Baixa fidelidade | 26/08/2024 | 06/09/2024 | ✔️    | 05/09/2024  |
 | Victor Schneider | Diagrama Casos de uso       | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
 | Victor Schneider | Quadro de tarefas           | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Wendell Leonardo | Mapa de Stakeholders        | 26/08/2024 | 06/09/2024 | 📝    | 06/09/2024  |
+| Wendell Leonardo | Mapa de Stakeholders        | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
 
 <!-- #### Sprint 2
 
