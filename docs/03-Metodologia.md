@@ -15,7 +15,7 @@ Alguns motivos que levaram a equipe a optar por essa metodologia incluem:
 * Enfatiza a conclusão rápida de tarefas.
 * Promove a melhoria contínua, incentivando a equipe a otimizar processos constantemente.
 
-Durante o projeto, todos os membros participaram das etapas de design thinking, incluindo as fases de entendimento e exploração, onde foram propostas diversas ideias sobre funcionalidades e elementos do site, da fase de contextualização do projeto e das ferramentas a serem utilizadas. A implementação e documentação dessas ideias foram divididas em seções, permitindo que cada integrante escolhesse a área que gostaria de desenvolver. Para isso, a equipe utilizou o Miro (Encontrado no arquivo <li><a href="01.1-ContextualizacaoMiro.md"> Documentação do Miro</a></li>) para organizar as ideias visualmente, o Trello para gerenciar e distribuir as tarefas na sprint 01 e o GitHub Projects a partir da sprint 02 para a mesma função do Trello.
+Durante o projeto, todos os membros participaram das etapas de design thinking, incluindo as fases de entendimento e exploração, onde foram propostas diversas ideias sobre funcionalidades e elementos do site, da fase de contextualização do projeto e das ferramentas a serem utilizadas. A implementação e documentação dessas ideias foram divididas em seções, permitindo que cada integrante escolhesse a área que gostaria de desenvolver. Para isso, a equipe utilizou o Miro (Encontrado no arquivo <a href="01.1-ContextualizacaoMiro.md"> Documentação do Miro</a>) para organizar as ideias visualmente, o Trello para gerenciar e distribuir as tarefas na sprint 01 e o GitHub Projects a partir da sprint 02 para a mesma função do Trello.
 
 ## Relação de ambientes de trabalho
 
