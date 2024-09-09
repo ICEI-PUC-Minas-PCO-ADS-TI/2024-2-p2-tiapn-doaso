@@ -3,7 +3,19 @@
 
 <span style="color:red">Pré-requisitos: <a href="02-Especificacao.md"> Especificação do projeto</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para abordar o problema. Inclua definições sobre os ambientes de trabalho utilizados pela equipe para desenvolver o projeto. Isso abrange a relação dos ambientes utilizados, a estrutura para a gestão do código-fonte, além da definição do processo e das ferramentas por meio dos quais a equipe se organiza (gestão de equipes).
+A equipe adotou a metodologia ScrumBan, que combina elementos do Scrum e Kanban, focando na organização de tarefas, flexibilidade e agilidade dos processos. O ScrumBan une a estrutura organizada do Scrum com o fluxo contínuo e a visualização do Kanban, proporcionando o melhor de ambos os métodos.
+
+Alguns motivos que levaram a equipe a optar por essa metodologia incluem:
+
+* Combina as vantagens do Scrum e Kanban.
+* Facilita entregas contínuas e incrementais.
+* Utiliza quadros Kanban para monitorar o fluxo de trabalho.
+* As tarefas são priorizadas, garantindo foco nas mais importantes.
+* Oferece flexibilidade, permitindo ajustes conforme as necessidades do projeto.
+* Enfatiza a conclusão rápida de tarefas.
+* Promove a melhoria contínua, incentivando a equipe a otimizar processos constantemente.
+
+Durante o projeto, todos os membros participaram das etapas de design thinking, incluindo as fases de entendimento e exploração, onde foram propostas diversas ideias sobre funcionalidades e elementos do site, da fase de contextualização do projeto e das ferramentas a serem utilizadas. A implementação e documentação dessas ideias foram divididas em seções, permitindo que cada integrante escolhesse a área que gostaria de desenvolver. Para isso, a equipe utilizou o Miro (Encontrado no arquivo <li><a href="01.1-ContextualizacaoMiro.md"> Documentação do Miro</a></li>) para organizar as ideias visualmente, o Trello para gerenciar e distribuir as tarefas na sprint 01 e o GitHub Projects a partir da sprint 02 para a mesma função do Trello.
 
 ## Relação de ambientes de trabalho
 
@@ -16,60 +28,65 @@ A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-s
 O projeto segue a seguinte convenção para o nome de branches:
 
 - `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
+- `Documentação-Sprint-1`: versão de documentação para a primeira sprint do projeto.
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
 
-- `documentation`: melhorias ou acréscimos à documentação
-- `bug`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
+- `documentation/documentação`: Acréscimos à documentação.
+- `correção`: Correção de possíveis erros.
+- `melhoria`: Melhoria de itens já adicionados.
+- `atualização`: Atualização de itens já adicionados.
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gestão de tags, merges, commits e branches é realizada. Discuta também como a gestão de issues foi feita.
-
-> **Links úteis**:
+<!-- > **Links úteis**:
 > - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
 > - [Git e GitHub](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
 > - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
 > - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
+> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs) -->
 
 ## Planejamento do projeto
 
 ###  Divisão de papéis
 
-> Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
-
 #### Sprint 1
-- _Scrum master_: AlunaX
-- Protótipos: AlunoY
-- Testes: AlunoK
-- Documentação: AlunaZ
+- _Scrum master_: Luis Henrique Sampaio Vieira.
+- Protótipos: Vitor Prates.
+- Testes: Victor Schneider.
+- Documentação: Thiago Moreira, Guilherme Souza, Wendell Leonardo,  Igor Maia e Gabriel Madureira.
 
-#### Sprint 2
+<!-- #### Sprint 2
 - _Scrum master_: AlunaY
 - Desenvolvedor _front-end_: AlunoX
 - Desenvolvedor _back-end_: AlunoK
-- Testes: AlunaZ
+- Testes: AlunaZ -->
 
 ###  Quadro de tarefas
 
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
-
 #### Sprint 1
 
-Atualizado em: 21/04/2024
+Atualizado em: 06/09/2024
 
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
+| Responsável      | Tarefa/Requisito            | Iniciado em| Prazo      | Status | Terminado em|
+| :----            |    :----                    |      :----:| :----:     | :----: | :----:      |
+| Gabriel Madureira| Wireframes Alta Fidelidade  | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
+| Guilherme Souza  | Entrevista Qualitativa      | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
+| Guilherme Souza  | HIghlights                  | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
+| Igor Maia        | Personas                    | 26/08/2024 | 06/09/2024 | 📝    | 06/09/2024  |
+| Igor Maia        | Histórias do Usuário        | 26/08/2024 | 06/09/2024 | 📝    | 06/09/2024  |
+| Luis Sampaio     | Requisitos Funcionais       | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
+| Luis Sampaio     | Preenchimento do arquivo Citation      | 07/09/2024 | 08/09/2024 | ✔️    | 07/09/2024  |
+| Luis Sampaio     | Requisitos Não Funcionais   | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
+| Luis Sampaio     | Restrições do projeto       | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
+| Luis Sampaio     | User Flow                   | 26/08/2024 | 06/09/2024 | 📝    | 30/08/2024  |
+| Thiago Moreira   | Priorização de ideias       | 26/08/2024 | 06/09/2024 | ⌛    | 06/09/2024  |
+| Thiago Moreira   | Mural de Possibilidades      | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
+| Vitor Prates     | Introdução                  | 26/08/2024 | 06/09/2024 | 📝    | 04/09/2024  |
+| Vitor Prates     | Wireframes Baixa fidelidade | 26/08/2024 | 06/09/2024 | 📝    | 05/09/2024  |
+| Victor Schneider | Diagrama Casos de uso       | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
+| Victor Schneider | Quadro de tarefas           | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
+| Wendell Leonardo | Mapa de Stakeholders        | 26/08/2024 | 06/09/2024 | 📝    | 06/09/2024  |
 
-#### Sprint 2
+<!-- #### Sprint 2
 
 Atualizado em: 21/04/2024
 
@@ -78,7 +95,7 @@ Atualizado em: 21/04/2024
 | AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
 | AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
 | AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
+| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       | -->
 
 
 Legenda:
@@ -88,10 +105,10 @@ Legenda:
 - ❌: não iniciado
 
 
-> **Links úteis**:
+<!-- > **Links úteis**:
 > - [11 passos essenciais para implantar Scrum no seu projeto](https://mindmaster.com.br/scrum-11-passos/)
 > - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles) -->
 
 ### Processo
 
@@ -112,8 +129,8 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | http://....                            |
-| Documentos do projeto               | GitHub                             | http://....                            |
+| Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2024-2-p2-tiapn-doaso                            |
+| Documentos do projeto               | GitHub                             | https://docs.google.com/document/d/1Xn5zD_GoZHLqoypVicsPDXxWhgpDhh4J4mkz1Q7JHiY/edit?usp=sharing                            |
 | Projeto de interface                | Figma                              | http://....                            |
 | Gerenciamento do projeto            | GitHub Projects                    | http://....                            |
 | Hospedagem                          | Vercel                             | http://....                            |

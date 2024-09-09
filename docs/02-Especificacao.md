@@ -1,48 +1,58 @@
 # Especificação do projeto
 
-<span style="color:red">Pré-requisitos: <a href="01-Contexto.md"> Documentação de contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
+Durante a elaboração do projeto, trabalhamos em grupo para definir os problemas e o escopo do sistema, baseando-nos na observação e pesquisa do público-alvo. Nosso objetivo era obter o máximo de informações possível para resolver as dores dos usuários. Para isso, realizamos entrevistas com o público-alvo e após analisar as informações coletadas, personificamos este público simulando seus padrões de rotina, a fim de entender como a DoaSô poderia melhorar suas vidas. Foram utilizados as ferramentas do Trello para a criação das personas e as ferramentas do Lucidchart para a criação dos Casos de Uso. Segue os dados coletados:
 
 ## Personas
+Durante a fase de compreensão do problema, identificamos as seguintes personas:
 
-Exemplo: _Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente por meio de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros._
+| João Almeida | Idade | Profissão | Frustrações | Hobbies|
+| ---- | :-----: | :---------:| :-----------:| :-----------------: |
+|![J_Almeida](https://github.com/user-attachments/assets/f41cb363-ef1e-4c6d-a564-96e7caa2730d) |32 anos | Analista de Suporte Técnico|Desconhecimento de onde doar<br/><br/>Falta de tempo em sua rotina| Ciclismo<br/><br/>Jogar Videogames|
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+| Fernanda Costa | Idade | Profissão | Frustrações | Hobbies|
+| ---- | :-----: | :---------:| :-----------:| :-----------------: |
+|![Fer](https://github.com/user-attachments/assets/dc34d87b-0af6-4c99-954c-979196fea4a0)| 25 anos | Estudante de Biologia<br/><br/> Estagiária de Laboratório|Falta de clareza sobre o que doar| Fazer trilhas<br/><br/>Cozinhar|
 
-> **Links úteis**:
-> - [Rock content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+| Pedro Nunes | Idade | Profissão | Frustrações | Hobbies|
+| ---- | :-----: | :---------:| :-----------:| :-----------------: |
+|![nunes](https://github.com/user-attachments/assets/0d80c07d-7289-4544-b102-2203e9f07a29)| 45 anos | Gerente de projetos|Falta de confiança nas instituições<br/><br/>Acúmulo de objetos em casa| Apreciador de filmes clássicos<br/><br/>Fotografia|
+
+Um pouco sobre as personas:
+
+**João Almeida**
+
+João tem 32 anos e trabalha como analista de suporte técnico. Ele é prático, focado em soluções rápidas e sempre buscando formas de simplificar sua rotina. No dia a dia, João se sente sobrecarregado com o acúmulo de objetos em casa, especialmente porque ele não gosta de perder tempo com processos complicados. Ele prefere resolver tudo rapidamente pelo celular ou notebook, e sua frustração maior é não saber exatamente onde doar seus itens. O site de doações pode ajudá-lo oferecendo uma plataforma fácil de usar, que permita a ele doar com apenas alguns cliques e resolver esse problema de forma eficiente.
+
+**Fernanda Costa**
+
+Fernanda é uma jovem de 25 anos, estudante de biologia e estagiária em um laboratório ambiental. Muito preocupada com questões ecológicas e sociais, ela gosta de se envolver em causas que reflitam seus valores de sustentabilidade. Apesar de suas boas intenções, Fernanda muitas vezes se sente insegura sobre o impacto real de suas doações e quer garantir que suas ações realmente ajudem. Ela usa o celular e tablet para seguir iniciativas ambientais, e o site de doações pode oferecer a ela uma forma de contribuir para essas causas de forma tangível. Mostrando o impacto das doações e garantindo um processo sustentável, o site pode conectar Fernanda às necessidades das instituições de forma transparente.
+
+**Pedro Nunes**
+
+Pedro, com 45 anos, é gerente de projetos em uma empresa de tecnologia. Ele é organizado, gosta de ter controle sobre o que faz, e valoriza a segurança em todos os processos. Pedro quer doar objetos que não usa mais, mas se sente desconfiado quanto à transparência das instituições e a logística de entrega. Ele é metódico, acessa o site principalmente pelo laptop ou tablet e busca soluções que tragam garantias claras. O site de doações pode proporcionar a ele segurança e confiança ao fornecer informações detalhadas sobre o destino dos itens doados, assim como uma logística bem estruturada para facilitar o processo. Pedro ficará satisfeito com uma interface que ofereça transparência e acompanhamento das doações.
+
 
 ## Histórias de usuários
-
 Com base na análise das personas, foram identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+| EU                | QUERO/PRECISO                                      | PARA                                          |
+|-------------------|---------------------------------------------------|----------------------------------------------|
+| João Almeida       | Visualizar locais de doação                        | Ter conhecimento de locais de entrega        |
+| João Almeida       | Uma plataforma rápida e simples                    | Doar itens acumulados sem complicação        |
+| João Almeida       | Receber notificações sobre novos locais de doação  | Saber de novas oportunidades sem buscar      |
+| João Almeida       | Acessar um mapa interativo com locais próximos     | Escolher o local de doação mais conveniente  |
+| Fernanda Costa     | Saber o impacto das minhas doações                 | Garantir que estou ajudando de forma útil    |
+| Fernanda Costa     | Uma lista de itens necessários                     | Doar algo que realmente seja útil            |
+| Fernanda Costa     | Deixar comentários e avaliações dos locais de doação| Compartilhar minha experiência com outros    |
+| Pedro Nunes        | Saber da qualidade do local de doação              | Doar com confiança e transparência           |
+| Pedro Nunes        | Uma logística simplificada                        | Evitar complicações ao entregar doações      |
+| Pedro Nunes        | Verificar a reputação e avaliações dos parceiros   | Garantir que a doação vai para instituição séria |
+| Pedro Nunes        | Manter um registro de todas as doações feitas      | Acompanhar o histórico e entender rejeições  |
 
-Apresente aqui as histórias de usuários que são relevantes para o projeto da sua solução. As histórias de usuários consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuários por contexto, para facilitar consultas recorrentes a esta parte do documento.
-
-> **Links úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (user stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 common user story mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 ## Requisitos
 
-As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade dos requisitos, aplique uma técnica de priorização e detalhe como essa técnica foi aplicada.
+As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. A prioridade dos requisitos foi determinada no julgamento da equipe de desenvolvimento, levando em base as principais funções da aplicação
 
 ### Requisitos funcionais
 
@@ -66,6 +76,12 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 |RF-016| Permitir que os doadores deixem comentários sobre os parceiros, ajudando a manter a qualidade dos serviços oferecidos	|MÉDIA|
 |RF-017| Fornecer uma funcionalidade para os doadores avaliarem os parceiros com base na experiência de doação	|MÉDIA|
 |RF-018| Permitir que doadores enviem fotos das doações diretamente no chat com os parceiros, facilitando a comunicação e verificação do estado dos itens doados	|ALTA|
+|RF-019| Permitir que o parceiro consiga publicar, editar e excluir suas metas virtuais	|ALTA|
+|RF-020| Permitir que o usuário consiga criar, editar e excluir seu perfil	|ALTA|
+|RF-021| O sistema deve emitir relatórios sobre as doações recebidas pelo parceiro e relatórios sobre doações feitas pelo usuário	|BAIXA|
+|RF-022| Permitir que o parceiro consiga destacar/turbinar sua meta por meio de pagamento	|ALTA|
+|RF-023| Oferecer a opção de filtrar as metas baseado em localidade, tipo, e data	|MÉDIA|
+
 
 ### Requisitos não funcionais
 
@@ -80,44 +96,27 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 | RNF-007  | O código do site deve ser bem organizado, modular e documentado, facilitando a manutenção, correção de bugs e adição de novas funcionalidades. | ALTA       |
 | RNF-008  | O site deve garantir que os dados pessoais dos usuários sejam coletados, armazenados e processados de acordo com as regulamentações de privacidade aplicáveis. | ALTA       |
 
-Com base nas histórias de usuários, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos não funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-
-Lembre-se de que cada requisito deve corresponder a uma e somente uma característica-alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas histórias de usuários foram cobertos.
-
-> **Links úteis**:
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [Entenda o que são requisitos de software, a diferença entre requisito funcional e não funcional, e como identificar e documentar cada um deles](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
 ## Restrições
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
 O projeto está restrito aos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|001| O projeto deverá ser entregue até o final do semestre |
-|002| O custo total do projeto não deve exceder o orçamento definido       |
+| ID  | Restrição                                                                                  |
+|-----|--------------------------------------------------------------------------------------------|
+| 01  | O projeto deve seguir os prazos de entrega estipulados para cada sprint.                   |
+| 02  | O projeto precisa necessariamente ser intuitivo para todas as idades diante de níveis tecnológicos. |
+| 03  | Todos os colaboradores do projeto precisam conhecer todas as etapas do projeto.            |
+| 04  | Todos os colaboradores do projeto precisam participar efetivamente de todas as etapas do projeto. |
+| 05  | O projeto precisa necessariamente ser de fácil entendimento para todos os tipos de usuários. |
+| 06  | O projeto deve cumprir com excelência todos os requisitos de cada sprint.                  |
+| 07  | As entregas intermediárias devem ser revisadas e validadas por todas as partes interessadas antes de avançar para a próxima fase. |
+| 08  | As atualizações e revisões no escopo devem ser aprovadas por todos os desenvolvedores antes de serem implementadas. |
+| 09  | A documentação do projeto deve ser atualizada e mantida em todas as fases de desenvolvimento. |
+| 10  | O código-fonte deve ser versionado adequadamente e estar disponível em repositórios acessíveis para a equipe. |
+| 11  | O projeto deve atender a todas as métricas de qualidade acordadas, incluindo desempenho e segurança. |
+
 
 ## Diagrama de casos de uso
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos. Ele utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. O diagrama contempla a fronteira do sistema e o detalhamento dos requisitos funcionais, com a indicação dos atores, casos de uso e seus relacionamentos.
+A imagem  ilustra o diagrama de caso de uso da plataforma DoaSô, demonstrando as principais interações entre os usuários (Doadores e Centros de Doações) e o sistema. O diagrama evidencia funcionalidades cruciais, tais como o cadastro de usuários, envio de propostas de doação, bem como a aceitação ou recusa dessas propostas pelos centros de doação. Ademais, destaca-se a possibilidade de  visualização dos centros mais próximos através de um mapa interativo, e a comunicação direta entre doadores e centros por meio de chat, assegurando um processo de doação eficiente, transparente e acessível.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “diagrama de casos de uso”.
-
-> **Links úteis**:
-> - [Criando casos de uso](https://www.ibm.com/docs/pt-br/engineering-lifecycle-management-suite/design-rhapsody/10.0?topic=cases-creating-use)
-> - [Como criar diagrama de caso de uso: tutorial passo a passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+![Diagrama de casos de uso](images/casos_de_uso_doaSô.png)

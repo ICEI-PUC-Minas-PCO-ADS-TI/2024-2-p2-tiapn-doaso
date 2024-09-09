@@ -16,7 +16,11 @@ O objetivo principal do DoaSô é proporcionar uma solução tecnológica que si
 
 ## Justificativa
 
-O desenvolvimento do DoaSô justifica-se pela necessidade urgente de soluções que combinem tecnologia e solidariedade para enfrentar os desafios sociais e ambientais do mundo atual. A alta taxa de desperdício de itens em bom estado, aliada à falta de recursos em comunidades carentes, torna inegável a demanda da implementação de uma plataforma que conecte oferta e demanda de maneira eficiente. Ao se alinhar ao ODS 10, que visa reduzir as desigualdades, e ao ODS 12, que incentiva o consumo e a produção responsáveis, o DoaSô contribui diretamente para a construção de uma sociedade mais justa e sustentável.
+O desenvolvimento do DoaSô justifica-se pela necessidade urgente de soluções que combinem tecnologia e solidariedade para enfrentar os desafios sociais e ambientais do mundo atual. De acordo com dados recentes do IBGE, 31,6% da população brasileira vive na linha da pobreza e 5,9% na extrema pobreza (IBGE, 2023). Essa realidade reforça a necessidade de iniciativas que conectem doadores e beneficiários, promovendo o consumo responsável e a redução das desigualdades.
+
+O relatório Fios da Moda, divulgado pelo instituto Modefica em parceria com a Fundação Getúlio Vargas (FGV), mostrou que, em 2018, foram produzidas cerca de 9 bilhões de peças de roupa no Brasil, representando mais de 40 unidades por habitante. Além disso, 56,8% das pessoas estariam dispostas a reciclar suas peças de roupas se soubessem que elas realmente seriam recicladas, enquanto 49,9% nunca ouviram falar sobre reciclagem de roupas no Brasil (Modefica, 2021).
+
+O DoaSô visa enfrentar esses problemas, incentivando a reutilização/doação de roupas e itens não perecíveis, promovendo a redistribuição de recursos entre os que mais precisam. Desta forma, a plataforma alinha-se aos Objetivos de Desenvolvimento Sustentável (ODS) 10 (Redução das Desigualdades) e ODS 12 (Consumo e Produção Responsáveis), promovendo práticas sustentáveis e inclusivas.
 
 ## Público-alvo
 
