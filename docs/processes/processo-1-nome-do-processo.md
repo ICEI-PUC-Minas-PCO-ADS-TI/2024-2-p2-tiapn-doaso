@@ -1,67 +1,64 @@
 ### 3.3.1 Processo 1 – NOME DO PROCESSO
 
-_Apresente aqui o nome e as oportunidades de melhoria para o processo 1. 
-Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN._
+No novo processo proposto (to be), a Parceira Delvis otimiza a coleta de doações ao eliminar a necessidade de recolher itens em más condições para posterior descarte, graças à implementação de um mecanismo de triagem prévia. Além disso, amplia-se o escopo de doadores, não se limitando mais aos contatos pessoais diretos, mas abrangendo um público mais vasto. O fluxo também se torna mais eficiente ao permitir que os doadores realizem a entrega diretamente na loja, reduzindo a dependência de logística própria.
  
-![Exemplo de um Modelo BPMN do PROCESSO 1](../images/process.png "Modelo BPMN do Processo 1.")
+![Exemplo de um Modelo BPMN do PROCESSO 1](../images/TO%20BE%20-%20Coleta.png "Modelo BPMN do novo Processo de coletas.")
 
 #### Detalhamento das atividades
 
-_Descreva aqui cada uma das propriedades das atividades do processo 1. 
-Devem estar relacionadas com o modelo de processo apresentado anteriormente._
-
 _Os tipos de dados a serem utilizados são:_
 
-_* **Área de texto** - campo texto de múltiplas linhas_
+_* **Área de texto** - Chat entre o doador e o parceiro_
 
-_* **Caixa de texto** - campo texto de uma linha_
+_* **Caixa de texto** - Feedbacks de rejeição_
 
-_* **Número** - campo numérico_
+_* **Data e Hora** - Combinar encontro com o doador_
 
-_* **Data** - campo do tipo data (dd-mm-aaaa)_
-
-_* **Hora** - campo do tipo hora (hh:mm:ss)_
-
-_* **Data e Hora** - campo do tipo data e hora (dd-mm-aaaa, hh:mm:ss)_
-
-_* **Imagem** - campo contendo uma imagem_
-
-_* **Seleção única** - campo com várias opções de valores que são mutuamente exclusivas (tradicional radio button ou combobox)_
-
-_* **Seleção múltipla** - campo com várias opções que podem ser selecionadas mutuamente (tradicional checkbox ou listbox)_
-
-_* **Arquivo** - campo de upload de documento_
-
-_* **Link** - campo que armazena uma URL_
-
-_* **Tabela** - campo formado por uma matriz de valores_
+_* **Imagem** - Enviar imagens no chat para aprovação da doação_
 
 
-**Nome da atividade 1**
+## **Chat entre o doador e o parceiro**
 
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-| ***Exemplo:***  |                  |                |                   |
-| login           | Caixa de Texto   | formato de e-mail |                |
-| senha           | Caixa de Texto   | mínimo de 8 caracteres |           |
+| **Campo**                         | **Tipo** | **Restrições**                     | **Valor default** |
+| --------------------------------- | -------- | ---------------------------------- | ----------------- |
+| Chat entre o doador e o parceiro   | Texto    | Deve oferecer proposta de doação   | null              |
 
-| **Comandos**         |  **Destino**                   | **Tipo** |
-| ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-| ***Exemplo:***       |                                |                   |
-| entrar               | Fim do Processo 1              | default           |
-| cadastrar            | Início do proceso de cadastro  |                   |
+| **Comandos**     | **Destino**                | **Tipo**     |
+| ---------------- | -------------------------- | ------------ |
+| Enviar mensagem  | Verificar imagem das doações | (Mensagem)   |
 
+---
 
-**Nome da atividade 2**
+## **Feedbacks de rejeição**
 
-| **Campo**       | **Tipo**         | **Restrições** | **Valor default** |
-| ---             | ---              | ---            | ---               |
-| [Nome do campo] | [tipo de dados]  |                |                   |
-|                 |                  |                |                   |
+| **Campo**         | **Tipo** | **Restrições**               | **Valor default** |
+| ----------------- | -------- | ---------------------------- | ----------------- |
+| Motivo da rejeição | Texto    | A proposta deve ser negada    | null              |
 
-| **Comandos**         |  **Destino**                   | **Tipo**          |
-| ---                  | ---                            | ---               |
-| [Nome do botão/link] | Atividade/processo de destino  | (default/cancel/  ) |
-|                      |                                |                   |
+| **Comandos**     | **Destino**         | **Tipo**     |
+| ---------------- | ------------------- | ------------ |
+| Enviar feedback  | Receber feedback     | (Mensagem)   |
+
+---
+
+## **Combinar encontro com o doador**
+
+| **Campo**                       | **Tipo**     | **Restrições**            | **Valor default** |
+| ------------------------------- | ------------ | ------------------------- | ----------------- |
+| Combinar encontro com o doador   | Data e hora  | A proposta deve ser aceita | null              |
+
+| **Comandos**     | **Destino**               | **Tipo**     |
+| ---------------- | ------------------------- | ------------ |
+| Agendar hora     | Levar ou receber doações   | (Date)       |
+
+---
+
+## **Enviar imagens no chat para aprovação da doação**
+
+| **Campo**                                 | **Tipo** | **Restrições**         | **Valor default** |
+| ----------------------------------------- | -------- | ---------------------- | ----------------- |
+| Enviar proposta de doação com imagens     | Imagem   | Deve haver proposta    | null              |
+
+| **Comandos**     | **Destino**                 | **Tipo**     |
+| ---------------- | --------------------------- | ------------ |
+| Entrar em contato com o parceiro | Verificar imagens das doações | (Imagem)     |

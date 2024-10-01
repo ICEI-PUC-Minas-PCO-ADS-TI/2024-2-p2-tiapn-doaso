@@ -98,16 +98,26 @@ Atualizado em: 06/09/2024
 | Victor Schneider | Quadro de tarefas           | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
 | Wendell Leonardo | Mapa de Stakeholders        | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
 
-<!-- #### Sprint 2
+Sprint 2
 
 Atualizado em: 21/04/2024
 
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
-| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       | -->
+| Responsável      | Tarefa/Requisito          | Iniciado em | Prazo      | Status | Terminado em |
+|------------------|---------------------------|-------------|------------|--------|--------------|
+| Gabriel Madureira| Documentação APC          | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
+| Guilherme Souza  | Documentação GitHub       | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
+| Igor Maia        | Documentação GitHub       | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
+| Luis Sampaio     | Modelagem To Be 1 e 2     | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
+| Luis Sampaio     | Visita extensiva          | 06/09/2024  | 30/09/2024 | ✔️     | 29/09/2024   |
+| Luis Sampaio     | GitHub Projects           | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
+| Thiago Moreira   | Documentação APC          | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
+| Thiago Moreira   | Entrevista extensiva      | 06/09/2024  | 30/09/2024 | ✔️     | 20/09/2024   |
+| Vitor Prates     | Visita extensiva          | 06/09/2024  | 30/09/2024 | ✔️     | 29/09/2024   |
+| Vitor Prates     | Slides                    | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
+| Victor Schneider | Entrevista extensiva      | 06/09/2024  | 30/09/2024 | ✔️     | 20/09/2024   |
+| Victor Schneider | Quadro de tarefas         | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
+| Victor Schneider | Modelagem AS IS 2         | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
+| Wendell Leonardo | Modelagem AS IS 1         | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
 
 
 Legenda:
@@ -144,6 +154,6 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 | Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2024-2-p2-tiapn-doaso                            |
 | Documentos do projeto               | GitHub                             | https://docs.google.com/document/d/1RYRCMayG6setah19pF0Ce4Z1LMYnDmcoUF03ACnFxZI/edit?pli=1                            |
 | Projeto de interface                | Figma                              | http://....                            |
-| Gerenciamento do projeto            | GitHub Projects                    | http://....                            |
+| Gerenciamento do projeto            | GitHub Projects                    | https://github.com/orgs/ICEI-PUC-Minas-PCO-ADS-TI/projects/8/views/1                          |
 | Hospedagem                          | Vercel                             | http://....                            |
  

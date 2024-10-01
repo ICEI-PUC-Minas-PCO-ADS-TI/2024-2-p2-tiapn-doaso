@@ -1,6 +1,6 @@
 # Especificação do projeto
 
-Durante a elaboração do projeto, trabalhamos em grupo para definir os problemas e o escopo do sistema, baseando-nos na observação e pesquisa do público-alvo. Nosso objetivo era obter o máximo de informações possível para resolver as dores dos usuários. Para isso, realizamos entrevistas com o público-alvo e após analisar as informações coletadas, personificamos este público simulando seus padrões de rotina, a fim de entender como a DoaSô poderia melhorar suas vidas. Foram utilizados as ferramentas do Trello para a criação das personas e as ferramentas do Lucidchart para a criação dos Casos de Uso. Segue os dados coletados:
+Durante a elaboração do projeto, trabalhamos em grupo para definir os problemas e o escopo do sistema, baseando-nos na observação e pesquisa do público-alvo. Nosso objetivo era obter o máximo de informações possível para resolver as dores dos usuários. Para isso, realizamos entrevistas com o público-alvo e após analisar as informações coletadas, personificamos este público simulando seus padrões de rotina, a fim de entender como a DoaSô poderia melhorar suas vidas. Foram utilizadas as ferramentas do Trello para a criação das personas e as ferramentas do Lucidchart para a criação dos Casos de Uso. Seguem os dados coletados:
 
 ## Personas
 Durante a fase de compreensão do problema, identificamos as seguintes personas:
@@ -52,7 +52,7 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 
 ## Requisitos
 
-As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. A prioridade dos requisitos foi determinada no julgamento da equipe de desenvolvimento, levando em base as principais funções da aplicação
+As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. A prioridade dos requisitos foi determinada no julgamento da equipe de desenvolvimento, levando em conta as principais funções da aplicação
 
 ### Requisitos funcionais
 
