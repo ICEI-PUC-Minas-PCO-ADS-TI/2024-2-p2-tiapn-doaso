@@ -4,7 +4,7 @@
 
 `DISCIPLINA: Trabalho Interdisciplinar Aplicações para Processos de Negócios`
 
-`2º semestre/ANO`
+`2º semestre/2024`
 
 O objetivo principal do DoaSô é proporcionar uma solução tecnológica que simplifique o processo de doação, conectando de maneira eficiente doadores e beneficiários. Além disso, a plataforma busca promover práticas sustentáveis, incentivando a reutilização de itens que, de outra forma, seriam descartados, e assim contribuindo para a redução do desperdício (ODS 12). Especificamente, a plataforma visa:
 
