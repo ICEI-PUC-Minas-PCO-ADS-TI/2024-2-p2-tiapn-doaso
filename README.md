@@ -16,13 +16,13 @@ O objetivo principal do DoaSô é proporcionar uma solução tecnológica que si
 
 ## Integrantes
 
+* Gabriel Madureira Matos
 * Guilherme de Oliveira Souza
 * Igor Maia Moreira Fernandes
 * Luis Henrique Sampaio Vieira
 * Thiago Moreira de Queiroz
 * Victor Schneider do Vale
 * Vitor Prates Souza Lima
-* Gabriel Madureira Matos
 * Wendell Leonardo Machado Miranda
 
 ## Professor
