@@ -21,7 +21,7 @@ Durante o projeto, todos os membros participaram das etapas de design thinking, 
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. A relação dos ambientes com seus respectivos propósitos deverá ser apresentada em uma tabela que especifique e detalhe Ambiente, Plataforma e Link de Acesso. Defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
 
-Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
+Exemplo: Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seus respectivos propósitos é apresentada na tabela que se segue.
 
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
@@ -39,7 +39,7 @@ A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-s
 
 O projeto segue a seguinte convenção para o nome de branches:
 
-- `main`: versão estável já testada do software
+- `main`: versão estável já testada do software.
 - `Documentação-Sprint-1`: versão de documentação para a primeira sprint do projeto.
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
@@ -72,59 +72,89 @@ Quanto à gerência de issues, o projeto adota a seguinte convenção para etiqu
 - Desenvolvedor _back-end_: AlunoK
 - Testes: AlunaZ -->
 
-###  Quadro de tarefas
+### Quadro de tarefas
 
 #### Sprint 1
 
 Atualizado em: 06/09/2024
 
-| Responsável      | Tarefa/Requisito            | Iniciado em| Prazo      | Status | Terminado em|
-| :----            |    :----                    |      :----:| :----:     | :----: | :----:      |
-| Gabriel Madureira| Wireframes Alta Fidelidade  | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Guilherme Souza  | Entrevista Qualitativa      | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Guilherme Souza  | HIghlights                  | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Igor Maia        | Personas                    | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Igor Maia        | Histórias do Usuário        | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Luis Sampaio     | Requisitos Funcionais       | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
-| Luis Sampaio     | Preenchimento do arquivo Citation      | 07/09/2024 | 08/09/2024 | ✔️    | 07/09/2024  |
-| Luis Sampaio     | Requisitos Não Funcionais   | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
-| Luis Sampaio     | Restrições do projeto       | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
-| Luis Sampaio     | User Flow                   | 26/08/2024 | 06/09/2024 | ✔️    | 30/08/2024  |
-| Thiago Moreira   | Priorização de ideias       | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Thiago Moreira   | Mural de Possibilidades     | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Vitor Prates     | Introdução                  | 26/08/2024 | 06/09/2024 | ✔️    | 04/09/2024  |
-| Vitor Prates     | Wireframes Baixa fidelidade | 26/08/2024 | 06/09/2024 | ✔️    | 05/09/2024  |
-| Victor Schneider | Diagrama Casos de uso       | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Victor Schneider | Quadro de tarefas           | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
-| Wendell Leonardo | Mapa de Stakeholders        | 26/08/2024 | 06/09/2024 | ✔️    | 06/09/2024  |
+| Responsável        | Tarefa/Requisito                | Iniciado em  | Prazo       | Status | Terminado em |
+|--------------------|---------------------------------|--------------|-------------|--------|--------------|
+| Gabriel Madureira  | Wireframes Alta Fidelidade      | 26/08/2024   | 06/09/2024  | ✔️     | 06/09/2024   |
+| Guilherme Souza    | Entrevista Qualitativa          | 26/08/2024   | 06/09/2024  | ✔️     | 06/09/2024   |
+| Guilherme Souza    | Highlights                     | 26/08/2024   | 06/09/2024  | ✔️     | 06/09/2024   |
+| Igor Maia          | Personas                       | 26/08/2024   | 06/09/2024  | ✔️     | 06/09/2024   |
+| Igor Maia          | Histórias do Usuário           | 26/08/2024   | 06/09/2024  | ✔️     | 06/09/2024   |
+| Luis Sampaio       | Requisitos Funcionais          | 26/08/2024   | 06/09/2024  | ✔️     | 30/08/2024   |
+| Luis Sampaio       | Preenchimento do arquivo Citation | 07/09/2024   | 08/09/2024  | ✔️     | 07/09/2024   |
+| Luis Sampaio       | Requisitos Não Funcionais      | 26/08/2024   | 06/09/2024  | ✔️     | 30/08/2024   |
+| Luis Sampaio       | Restrições do projeto          | 26/08/2024   | 06/09/2024  | ✔️     | 30/08/2024   |
+| Luis Sampaio       | User Flow                      | 26/08/2024   | 06/09/2024  | ✔️     | 30/08/2024   |
+| Thiago Moreira     | Priorização de ideias          | 26/08/2024   | 06/09/2024  | ✔️     | 06/09/2024   |
+| Thiago Moreira     | Mural de Possibilidades        | 26/08/2024   | 06/09/2024  | ✔️     | 06/09/2024   |
+| Vitor Prates       | Introdução                     | 26/08/2024   | 06/09/2024  | ✔️     | 04/09/2024   |
+| Vitor Prates       | Wireframes Baixa fidelidade    | 26/08/2024   | 06/09/2024  | ✔️     | 05/09/2024   |
+| Victor Schneider   | Diagrama Casos de uso          | 26/08/2024   | 06/09/2024  | ✔️     | 06/09/2024   |
+| Victor Schneider   | Quadro de tarefas              | 26/08/2024   | 06/09/2024  | ✔️     | 06/09/2024   |
+| Wendell Leonardo   | Mapa de Stakeholders           | 26/08/2024   | 06/09/2024  | ✔️     | 06/09/2024   |
 
-Sprint 2
+#### Sprint 2
 
-Atualizado em: 21/04/2024
+Atualizado em: 30/09/2024
 
-| Responsável      | Tarefa/Requisito          | Iniciado em | Prazo      | Status | Terminado em |
-|------------------|---------------------------|-------------|------------|--------|--------------|
-| Gabriel Madureira| Documentação APC          | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
-| Guilherme Souza  | Documentação GitHub       | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
-| Igor Maia        | Documentação GitHub       | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
-| Luis Sampaio     | Modelagem To Be 1 e 2     | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
-| Luis Sampaio     | Visita extensiva          | 06/09/2024  | 30/09/2024 | ✔️     | 29/09/2024   |
-| Luis Sampaio     | GitHub Projects           | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
-| Thiago Moreira   | Documentação APC          | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
-| Thiago Moreira   | Entrevista extensiva      | 06/09/2024  | 30/09/2024 | ✔️     | 20/09/2024   |
-| Vitor Prates     | Visita extensiva          | 06/09/2024  | 30/09/2024 | ✔️     | 29/09/2024   |
-| Vitor Prates     | Slides                    | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
-| Victor Schneider | Entrevista extensiva      | 06/09/2024  | 30/09/2024 | ✔️     | 20/09/2024   |
-| Victor Schneider | Quadro de tarefas         | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
-| Victor Schneider | Modelagem AS IS 2         | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
-| Wendell Leonardo | Modelagem AS IS 1         | 06/09/2024  | 30/09/2024 | ✔️     | 30/09/2024   |
+| Responsável        | Tarefa/Requisito                | Iniciado em  | Prazo       | Status | Terminado em |
+|--------------------|---------------------------------|--------------|-------------|--------|--------------|
+| Gabriel Madureira  | Documentação APC               | 06/09/2024   | 30/09/2024  | ✔️     | 30/09/2024   |
+| Guilherme Souza    | Documentação GitHub            | 06/09/2024   | 30/09/2024  | ✔️     | 30/09/2024   |
+| Igor Maia          | Documentação GitHub            | 06/09/2024   | 30/09/2024  | ✔️     | 30/09/2024   |
+| Luis Sampaio       | Modelagem To Be 1 e 2          | 06/09/2024   | 30/09/2024  | ✔️     | 30/09/2024   |
+| Luis Sampaio       | Visita extensiva               | 06/09/2024   | 30/09/2024  | ✔️     | 29/09/2024   |
+| Luis Sampaio       | GitHub Projects                | 06/09/2024   | 30/09/2024  | ✔️     | 30/09/2024   |
+| Thiago Moreira     | Documentação APC               | 06/09/2024   | 30/09/2024  | ✔️     | 30/09/2024   |
+| Thiago Moreira     | Entrevista extensiva           | 06/09/2024   | 30/09/2024  | ✔️     | 20/09/2024   |
+| Vitor Prates       | Visita extensiva               | 06/09/2024   | 30/09/2024  | ✔️     | 29/09/2024   |
+| Vitor Prates       | Slides                         | 06/09/2024   | 30/09/2024  | ✔️     | 30/09/2024   |
+| Victor Schneider   | Entrevista extensiva           | 06/09/2024   | 30/09/2024  | ✔️     | 20/09/2024   |
+| Victor Schneider   | Quadro de tarefas              | 06/09/2024   | 30/09/2024  | ✔️     | 30/09/2024   |
+| Victor Schneider   | Modelagem AS IS 2              | 06/09/2024   | 30/09/2024  | ✔️     | 30/09/2024   |
+| Wendell Leonardo   | Modelagem AS IS 1              | 06/09/2024   | 30/09/2024  | ✔️     | 30/09/2024   |
 
+#### Sprint 3
+
+Atualizado em: 15/10/2024
+
+| Responsável        | Tarefa/Requisito                | Iniciado em  | Prazo       | Status | Terminado em |
+|--------------------|---------------------------------|--------------|-------------|--------|--------------|
+| Gabriel Madureira  | Protótipo de telas              | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
+| Gabriel Madureira  | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Gabriel Madureira  | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Guilherme Souza    | Wireframes                      | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
+| Guilherme Souza    | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Guilherme Souza    | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Igor Maia          | Jornada do usuário              | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
+| Igor Maia          | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Igor Maia          | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Luis Sampaio       | Template Padrão                 | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
+| Luis Sampaio       | Esquema Relacional              | --/--/2024   | --/--/2024  |        |              |
+| Luis Sampaio       | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Thiago Moreira     | Documentação GitHub             | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
+| Thiago Moreira     | Documentação APC                | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
+| Thiago Moreira     | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Victor Schneider   | Modelo Entidade Relacionamento  | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
+| Victor Schneider   | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Victor Schneider   | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Vitor Prates       | Documentação GitHub             | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
+| Vitor Prates       | Documentação APC                | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
+| Vitor Prates       | Slides de Apresentação          | --/--/2024   | 18/10/2024  |        |              |
+| Wendell Leonardo   | Diagrama de Classe              | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
+| Wendell Leonardo   | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Wendell Leonardo   | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
 
 Legenda:
-- ✔️: terminado
 - 📝: em execução
-- ⌛: atrasado
+- ✔️: terminado
 - ❌: não iniciado
+
 
 
 <!-- > **Links úteis**:
