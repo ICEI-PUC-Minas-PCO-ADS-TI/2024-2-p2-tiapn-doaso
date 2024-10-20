@@ -5,10 +5,10 @@
 ## O software será estruturado da seguinte maneira:
 
 ![Arquitetura da Solução](images/Aplicação%20DoaSô.jpg)
-- O acesso erá feito por meio da hospedagem;
+- O acesso será feito por meio da hospedagem;
 - Os dados serão guardados no banco de dados;
 - Funções como o pagamento serão feitas atráves de API's;
-- Toda a aplicação será controlada e estruturada atráves de seus códigos Front-end: HTML, CSS, JavaScript. Utilizando tbm a tecnologia NodeJS para o Back-end.
+- Toda a aplicação será controlada e estruturada atráves de seus códigos Front-end: HTML, CSS, JavaScript. Utilizando também a tecnologia NodeJS para o Back-end.
 
 ## Diagrama de classes
 
@@ -36,7 +36,7 @@ O Modelo ER representa, por meio de um diagrama, como as entidades se relacionam
 
 ### Esquema relacional
 
-O Modelo relacional representa como as entidades se relacionam entre si na aplicação e os formatos de seus atributos.
+O Modelo relacional representa como as entidades se relacionam entre si na aplicação e os formatos de seus atributos, além da integridade de chaves de cada entidade.
 ![Terceira seção da página inicial](images/Esquemas%20de%20bd/PéDeGalinhaMySQL.png)
 
 ### Modelo físico

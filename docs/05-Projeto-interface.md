@@ -20,11 +20,12 @@ O projeto de fluxo do usuário visa o permitir que gerencie suas arrecadações/
 
 ### Diagrama de fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo, muitas vezes sem a necessidade de desenhar o design das telas da interface. Isso permite que o design das interações seja bem planejado e tenha impacto na qualidade do design do wireframe interativo que será desenvolvido logo em seguida.
+Os seguintes diagramas ilustram como será o fluxo a ser seguido por usupários na aplicação DoaSô, sendo para os dois tipos de usuários(Doador e Parceiro), caminhos diferentes e dependem um do outro.
+![Diagrama de fluxo doador](images/Diagrama%20de%20fluxo%20doador.png)
+Neste diagrama se percebe o processo padrão de busca de doações pelo usuário doador, podendo contribuir tanto com doações em dinheiro ou em bens materiais.
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem, internamente, a indicação dos principais elementos de interface — tais como menus e acessos — e funcionalidades, como editar, pesquisar, filtrar e configurar, além da conexão entre esses boxes a partir do processo de interação.
-
-![Exemplo de diagrama de fluxo](images/diagrama_fluxo.jpg)
+![Diagrama de fluxo parceiro](images/Diagrama%20de%20fluxo%20parceiro.png)
+Neste diagrama se percebe o processo padrão de publicaçaõ de doações pelo usuário parceiro, podendo publicar tanto doações em dinheiro ou em bens materiais.
 
 > **Links úteis**:
 > - [Como criar um diagrama de fluxo de usuário](https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram)
