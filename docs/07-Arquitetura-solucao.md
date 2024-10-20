@@ -33,7 +33,7 @@ O Modelo ER representa, por meio de um diagrama, como as entidades se relacionam
 ### Esquema relacional
 
 O Modelo relacional representa como as entidades se relacionam entre si na aplicação e os formatos de seus atributos.
-- [Diagrama na notação pé de galinha](images/Esquemas%20de%20bd/PéDeGalinhaMySQL.png)
+![Diagrama na notação pé de galinha](images/Esquemas%20de%20bd/PéDeGalinhaMySQL.png)
 
 
 ### Modelo físico
