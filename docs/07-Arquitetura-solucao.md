@@ -2,9 +2,13 @@
 
 <span style="color:red">Pré-requisitos: <a href="05-Projeto-interface.md"> Projeto de interface</a></span>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+## O software será estruturado da seguinte maneira:
 
-![Arquitetura da Solução](images/arquitetura.png)
+![Arquitetura da Solução](images/Aplicação%20DoaSô.jpg)
+- O acesso erá feito por meio da hospedagem;
+- Os dados serão guardados no banco de dados;
+- Funções como o pagamento serão feitas atráves de API's;
+- Toda a aplicação será controlada e estruturada atráves de seus códigos Front-end: HTML, CSS, JavaScript. Utilizando tbm a tecnologia NodeJS para o Back-end.
 
 ## Diagrama de classes
 
