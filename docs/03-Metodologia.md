@@ -134,9 +134,9 @@ Atualizado em: 15/10/2024
 | Igor Maia          | Jornada do usuário              | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
 | Igor Maia          | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
 | Igor Maia          | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
-| Luis Sampaio       | Template Padrão                 | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
-| Luis Sampaio       | Esquema Relacional              | --/--/2024   | --/--/2024  |        |              |
-| Luis Sampaio       | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Luis Sampaio       | Template Padrão                 | 14/10/2024   | 18/10/2024  | ✔️     | --/--/2024   |
+| Luis Sampaio       | Esquema Relacional              | 18/10/2024   | 19/10/2024  | ✔️     |              |
+| Luis Sampaio       | Protótipo interativo            | 19/10/2024   | 19/10/2024  | ✔️      |              |
 | Thiago Moreira     | Documentação GitHub             | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
 | Thiago Moreira     | Documentação APC                | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
 | Thiago Moreira     | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
