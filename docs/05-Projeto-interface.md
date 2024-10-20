@@ -13,11 +13,6 @@ O projeto de fluxo do usuário visa o permitir que gerencie suas arrecadações/
 
 ![User flow da aplicação DoaSô](images/User_flow_DoaSô.png)
 
-<!-- > **Links úteis**:
-> - [User flow: o quê é e como fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User flow vs site maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 user flow tools & templates for smooth](https://www.mockplus.com/blog/post/user-flow-tools) -->
-
 ### Diagrama de fluxo
 
 Os seguintes diagramas ilustram como será o fluxo a ser seguido por usupários na aplicação DoaSô, sendo para os dois tipos de usuários(Doador e Parceiro), caminhos diferentes e dependem um do outro.
@@ -26,10 +21,6 @@ Neste diagrama se percebe o processo padrão de busca de doações pelo usuário
 
 ![Diagrama de fluxo parceiro](images/Diagrama%20de%20fluxo%20parceiro.png)
 Neste diagrama se percebe o processo padrão de publicaçaõ de doações pelo usuário parceiro, podendo publicar tanto doações em dinheiro ou em bens materiais.
-
-> **Links úteis**:
-> - [Como criar um diagrama de fluxo de usuário](https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram)
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
 
 ## Jornada de Usuário
 
