@@ -169,11 +169,6 @@ Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](.
 
 ## Tecnologias
 
-Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
-
-
 | **Dimensão**   | **Tecnologia**  |
 | ---            | ---             |
 | Front-end      | HTML + CSS + JS + React |
@@ -181,6 +176,12 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 | SGBD           | MySQL           |
 | Deploy         | Vercel          |
 
+### Explicação das tecnologias
+
+- **HTML + CSS + JS + React (Front-end):** HTML estrutura o conteúdo da página, CSS define a aparência e o layout, e JavaScript adiciona interatividade. React é uma biblioteca JavaScript utilizada para criar interfaces de usuário dinâmicas e componentes reutilizáveis.
+- **Node.js (Back-end):** Plataforma que permite usar JavaScript no lado do servidor, possibilitando a criação de aplicações web rápidas e escaláveis.
+- **MySQL (SGBD):** Sistema de gerenciamento de banco de dados relacional, responsável por organizar, armazenar e gerenciar os dados da aplicação.
+- **Vercel (Deploy):** Plataforma de hospedagem que facilita o deploy de aplicações web, especialmente aquelas baseadas em frameworks como React, com suporte para integração contínua e entrega contínua (CI/CD).
 
 ## Hospedagem
 
@@ -193,8 +194,8 @@ Explique como a hospedagem e o lançamento da plataforma foram realizados.
 > - [Publicando seu site no Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
 
 ## Qualidade de software
-
 A equipe de desenvolvimento da DoaSô utilizará como base as métricas para seu projeto os seguintes itens:
+
 ### Funcionalidade
 - Confirmidade: Permitindo que o software esteja de acordo com as normas impostas no inicio do projeto.
 - Segurança de dados: Permitindo que acessos não autorizados, acidentais ou deliberados sejam evitados.
