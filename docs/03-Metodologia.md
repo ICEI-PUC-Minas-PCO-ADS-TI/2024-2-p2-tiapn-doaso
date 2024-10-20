@@ -128,9 +128,7 @@ Atualizado em: 15/10/2024
 | Gabriel Madureira  | Protótipo de telas              | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
 | Gabriel Madureira  | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
 | Gabriel Madureira  | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
-| Guilherme Souza    | Wireframes                      | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
-| Guilherme Souza    | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
-| Guilherme Souza    | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Guilherme Souza    | Diagrama de Classes             | 14/10/2024   | 18/10/2024  | ✔️     |  18/10/2024   |
 | Igor Maia          | Jornada do usuário              | 14/10/2024   | 18/10/2024  | ✔️     | --/--/2024   |
 | Igor Maia          | Modelo Físico Script SQL        | 17/10/2024   | 20/10/2024  | ✔️      |              |
 | Luis Sampaio       | Template Padrão                 | 14/10/2024   | 18/10/2024  | ✔️     | --/--/2024   |
