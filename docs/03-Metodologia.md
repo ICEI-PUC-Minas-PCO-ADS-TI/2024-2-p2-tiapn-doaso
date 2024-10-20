@@ -131,9 +131,8 @@ Atualizado em: 15/10/2024
 | Guilherme Souza    | Wireframes                      | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
 | Guilherme Souza    | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
 | Guilherme Souza    | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
-| Igor Maia          | Jornada do usuário              | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
-| Igor Maia          | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
-| Igor Maia          | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Igor Maia          | Jornada do usuário              | 14/10/2024   | 18/10/2024  | ✔️     | --/--/2024   |
+| Igor Maia          | Modelo Físico Script SQL        | 17/10/2024   | 20/10/2024  | ✔️      |              |
 | Luis Sampaio       | Template Padrão                 | 14/10/2024   | 18/10/2024  | ✔️     | --/--/2024   |
 | Luis Sampaio       | Esquema Relacional              | 18/10/2024   | 19/10/2024  | ✔️     |              |
 | Luis Sampaio       | Protótipo interativo            | 19/10/2024   | 19/10/2024  | ✔️      |              |
@@ -147,9 +146,8 @@ Atualizado em: 15/10/2024
 | Vitor Prates       | Documentação GitHub             | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
 | Vitor Prates       | Documentação APC                | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
 | Vitor Prates       | Slides de Apresentação          | --/--/2024   | 18/10/2024  |        |              |
-| Wendell Leonardo   | Diagrama de Classe              | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024   |
-| Wendell Leonardo   | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
-| Wendell Leonardo   | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Wendell Leonardo   | Diagrama de Classes             | 14/10/2024   | 18/10/2024  | ✔️     | 18/10/2024  |
+
 
 Legenda:
 - 📝: em execução
