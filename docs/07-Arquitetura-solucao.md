@@ -164,9 +164,6 @@ CREATE TABLE Endereco (
 
 ```
 
-Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](../src/db).
-
-
 ## Tecnologias
 
 | **Dimensão**   | **Tecnologia**  |
