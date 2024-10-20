@@ -56,6 +56,9 @@ São protótipos usados no design de interface para sugerir a estrutura de um si
 > - [Axure](https://www.axure.com/edu) (Licença Educacional)
 > - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
 
+## Protótipo interativo
+
+O protótipo interativo das telas da pagina DoaSô se encontram em:   [Figma]([https://www.figma.com/](https://www.figma.com/design/JrDROhX1TekdW4PE24b8Qd/doaS%C3%B4?node-id=0-1&node-type=canvas&t=CdSXDe5a14dHdAE8-0))
 
 ## Interface do sistema
 
