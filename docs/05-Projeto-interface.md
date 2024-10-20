@@ -31,6 +31,23 @@ Neste diagrama se percebe o processo padrão de publicaçaõ de doações pelo u
 > - [Como criar um diagrama de fluxo de usuário](https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram)
 > - [Fluxograma online: seis sites para fazer gráfico sem instalar nada](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
 
+## Jornada de Usuário
+
+Com base nas personas estabelecidas, criamos três jornadas de usuário, um para cada persona, detalhando como foi o processo de descoberta e a experiência de usuário das personas enquanto utilizavam a plataforma DoaSô, baseados nas necessidades e características dos diferentes perfis de usuários. Para pessoas como Fernanda, a plataforma oferece clareza sobre o que doar e a conveniência de encontrar rapidamente centros de doação próximos, por meio de filtros e geolocalização. Já para perfis como o de Pedro, o DoaSô permite confiar nas instituições através de avaliações e feedbacks, além de facilitar o descarte de itens acumulados. A plataforma também oferece interação direta com os parceiros, acompanhamento de metas, e um sistema de notificações e avaliações, garantindo que os usuários se sintam engajados e seguros durante todo o processo de doação.
+
+### Jornada de Jõao Almeida:
+
+![DoaSô - Jornada de Usuário (1)](https://github.com/user-attachments/assets/e6f6277d-758a-4311-abf2-439fbb92bd8b)
+
+### Jornada de Fernanda Costa:
+![DoaSô - Jornada de Usuário (2)](https://github.com/user-attachments/assets/6806e7aa-2574-469b-b2a3-ae712e538e74)
+
+### Jornada de Pedro Nunes:
+![DoaSô - Jornada de Usuário (3)](https://github.com/user-attachments/assets/0f6eedcf-020d-4143-9714-53187ec7a372)
+
+Segue o link para melhor acesso e leitura de cada jornada:
+https://miro.com/welcomeonboard/Yzc0WThiUGJzT2cxbjlNak8zUjFIcGpnbk9kMGt3T045R1dneVIwRngzUWFMek1XQmtXYmt5ZGFzQXZYOGR6cnwzNDU4NzY0NTg0NTY0MjQ0NzgxfDI=?share_link_id=20223096308
+
 ## Wireframes
 
 São protótipos usados no design de interface para sugerir a estrutura de um site web e seu relacionamento entre suas páginas. Um wireframe web é uma ilustração que mostra o layout dos elementos fundamentais na interface.
