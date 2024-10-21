@@ -46,6 +46,24 @@ São protótipos usados no design de interface para sugerir a estrutura de um si
 
 #### Tela Página Inicial:
 ![Tela Página Inicial](images/Wireframes/Tela_Página_Inicial.png)
+
+#### Tela Navegação:
+![Tela Navegação](images/Wireframes/Tela_Navegação.png)
+
+#### Tela Forma de Ingresso:
+![Tela Forma de Ingresso](images/Wireframes/Tela_Forma_Ingresso.png)
+
+#### Tela Cadastro Beneficiário:
+![Tela Cadastro Beneficiário](images/Wireframes/Tela_Cadastro_Beneficiário.png)
+
+#### Tela Cadastro Centro de Doação:
+![Tela Cadastro Centro de Doação](images/Wireframes/Tela_Cadastro_Centro_Doação.png)
+
+#### Tela Perfil Doador:
+![Tela Perfil Doador](images/Wireframes/Tela_Perfil_Doador.png)
+
+#### Tela Perfil Centro:
+![Tela Perfil Centro](images/Wireframes/Tela_Perfil_Centro.png)
  
 > **Links úteis**:
 > - [Protótipos: baixa, média ou alta fidelidade?](https://medium.com/ladies-that-ux-br/prot%C3%B3tipos-baixa-m%C3%A9dia-ou-alta-fidelidade-71d897559135)
