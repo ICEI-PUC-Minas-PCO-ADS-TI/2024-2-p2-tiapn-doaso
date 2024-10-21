@@ -64,6 +64,30 @@ São protótipos usados no design de interface para sugerir a estrutura de um si
 
 #### Tela Perfil Centro:
 ![Tela Perfil Centro](images/Wireframes/Tela_Perfil_Centro.png)
+
+#### Tela Criar Arrecadação 1:
+![Tela Criar Arrecadação 1](images/Wireframes/Tela_Criar_Arrecadação1.png)
+
+#### Tela Criar Arrecadação 2:
+![Tela Criar Arrecadação 2](images/Wireframes/Tela_Criar_Arrecadação2.png)
+
+#### Tela Criar Arrecadação 3:
+![Tela Criar Arrecadação 3](images/Wireframes/Tela_Criar_Arrecadação3.png)
+
+#### Tela Metas:
+![Tela Metas](images/Wireframes/Tela_Metas.png)
+
+#### Tela Chat:
+![Tela Chat](images/Wireframes/Tela_Chat.png)
+
+#### Tela Registrar:
+![Tela Registrar](images/Wireframes/Tela_Registrar.png)
+
+#### Tela Entrar:
+![Tela Entrar](images/Wireframes/Tela_Entrar.png)
+
+#### Tela Contribuir com meta:
+![Tela Contribuir com meta](images/Wireframes/Tela_Contribuir_meta.png)
  
 > **Links úteis**:
 > - [Protótipos: baixa, média ou alta fidelidade?](https://medium.com/ladies-that-ux-br/prot%C3%B3tipos-baixa-m%C3%A9dia-ou-alta-fidelidade-71d897559135)
