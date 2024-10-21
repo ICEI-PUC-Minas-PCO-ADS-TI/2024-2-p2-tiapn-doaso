@@ -69,10 +69,10 @@ São protótipos usados no design de interface para sugerir a estrutura de um si
 ![Tela Criar Arrecadação 1](images/Wireframes/Tela_Criar_Arrecadação1.png)
 
 #### Tela Criar Arrecadação 2:
-![Tela Criar Arrecadação 2](images/Wireframes/Tela_Criar_Arrecadação2.png)
+![Tela Criar Arrecadação 2](images/Wireframes/Tela_Criar_arrecadação2.png)
 
 #### Tela Criar Arrecadação 3:
-![Tela Criar Arrecadação 3](images/Wireframes/Tela_Criar_Arrecadação3.png)
+![Tela Criar Arrecadação 3](images/Wireframes/Tela_Criar_arrecadação3.png)
 
 #### Tela Metas:
 ![Tela Metas](images/Wireframes/Tela_Metas.png)
