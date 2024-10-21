@@ -111,28 +111,24 @@ Visão geral da interação do usuário por meio das telas do sistema. Apresente
 
 ### Tela principal do sistema
 
-Descrição da tela principal do sistema.
+Home page da DoaSô.
 
-> Insira aqui a tela principal do sistema
+![Tela Página Inicial](images/Wireframes/Tela_Página_Inicial.png)
 
 
 ###  Telas do processo 1
 
-Descrição da tela relativa à atividade 1 do processo 1.
+Enviar proposta de doação com imagens / Aceitar ou Recusar proposta (Mesma Tela).
 
-> Insira aqui a tela da atividade 1
-
-Descrição da tela relativa à atividade 2 do processo 1.
-
-> Insira aqui a tela da atividade 2
+![Tela Chat](images/Wireframes/Tela_Chat.png)
 
 
 ### Telas do processo 2
 
-Descrição da tela relativa à atividade 1 do processo 2.
+Criar meta de doação pública na plataforma DoaSô.
 
-> Insira aqui a tela da atividade 1
+![Tela Criar Arrecadação 1](images/Wireframes/Tela_Criar_Arrecadação1.png)
 
-Descrição da tela relativa à atividade 2 do processo 2.
+Ver metas de doação no site.
 
-> Insira aqui a tela da atividade 2
+![Tela Metas](images/Wireframes/Tela_Metas.png)
