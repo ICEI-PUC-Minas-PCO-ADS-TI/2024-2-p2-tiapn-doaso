@@ -36,10 +36,11 @@ Esse processo também envolve muitas etapas manuais, ligações e verificações
 
 Após identificar gargalos e complicações nos modelos AS-IS, a equipe implementou melhorias significativas nos processos de definição de metas e coleta de doações. O processo manual e demorado de contato com potenciais doadores foi substituído pelas ferramentas oferecidas pela plataforma DoaSô.
 
-**Modelo TO BE - Coleta de doações**
+Modelo TO BE - Coleta de doações
 ![ModeloColeta](images/TO%20BE%20-%20Coleta.png)
 
-**Modelo TO BE - Meta de material**
+Modelo TO BE - Meta de material
+
 ![ModeloColeta](images/TO%20BE%20-%20Metas.png)
 
 A equipe propõe substituir os processos manuais pela plataforma DoaSô, economizando esforço e tempo para a **Delvis Modas**. Com a DoaSô, a instituição pode visualizar os itens a serem doados sem a necessidade de encontros presenciais entre doadores e a instituição. Além disso, os doadores podem enviar suas propostas previamente pela plataforma, eliminando a necessidade de ligações telefônicas e permitindo que aguardem o feedback diretamente na plataforma.
