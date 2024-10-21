@@ -51,7 +51,7 @@ São protótipos usados no design de interface para sugerir a estrutura de um si
 ![Tela Navegação](images/Wireframes/Tela_Navegação.png)
 
 #### Tela Forma de Ingresso:
-![Tela Forma de Ingresso](images/Wireframes/Tela_Forma_Ingresso.png)
+![Tela Forma de Ingresso](images/Wireframes/Tela_Forma_ingresso.png)
 
 #### Tela Cadastro Beneficiário:
 ![Tela Cadastro Beneficiário](images/Wireframes/Tela_Cadastro_Beneficiário.png)
