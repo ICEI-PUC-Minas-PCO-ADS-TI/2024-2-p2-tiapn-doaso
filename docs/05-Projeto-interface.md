@@ -45,7 +45,7 @@ https://miro.com/welcomeonboard/Yzc0WThiUGJzT2cxbjlNak8zUjFIcGpnbk9kMGt3T045R1dn
 São protótipos usados no design de interface para sugerir a estrutura de um site web e seu relacionamento entre suas páginas. Um wireframe web é uma ilustração que mostra o layout dos elementos fundamentais na interface.
 
 #### Tela Página Inicial:
-![Tela Página Inicial](images/Wireframes/TelaPáginaInicial.png)
+![Tela Página Inicial](images/Wireframes/Tela Página Inicial.png)
  
 > **Links úteis**:
 > - [Protótipos: baixa, média ou alta fidelidade?](https://medium.com/ladies-that-ux-br/prot%C3%B3tipos-baixa-m%C3%A9dia-ou-alta-fidelidade-71d897559135)
