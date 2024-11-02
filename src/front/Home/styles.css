@@ -1,0 +1,120 @@
+:root {
+    --cor-primaria: #284854;
+    --cor-secundaria: #8BC441;
+    --cor-btn: #4FEB4F;
+    --cor-branco: white;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0;
+}
+
+body {
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+.background-1 {
+    background-color: var(--cor-primaria);
+    height: 955px;
+    width: 100%;
+}
+
+.imgProfileItem {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.searchBar {
+    max-width: 235px;
+    max-height: 70px;
+}
+
+.myAccountBtn {
+    text-decoration: none;
+    color: var(--cor-branco);
+}
+
+.btn {
+    background-color: var(--cor-btn);
+}
+
+.configBar {
+    padding-top: 50px;
+    margin-inline: 35%;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.textoCentral {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin-inline: 15%;
+    padding-top: 10%;
+    max-height: 60%;
+}
+
+.titulo h1 {
+    color: var(--cor-secundaria);
+    font-size: 8em;
+}
+
+.subtitulo h2 {
+    color: var(--cor-branco);
+}
+
+.imgCentralItem {
+    width: 360px;
+    height: 380px;
+}
+
+.background-2 {
+    background-color: var(--cor-secundaria);
+    height: 955px;
+    width: 100%;
+    padding-left: 50px;
+}
+
+.textoCentralTela2 {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.pt1 {
+    color: var(--cor-primaria);
+}
+
+.pt2 {
+    padding-left: 10px;
+    color: var(--cor-branco);
+}
+
+.subTexto {
+    padding-top: 50px;
+}
+
+.imgsTela2 {
+    padding-top: 100px;
+    margin-inline: 10%;
+}
+
+.background-3 {
+    width: 100%;
+    height: 1700px;
+}
+
+.background-3 .textoCentral3 .titulo .comoFunciona {
+    font-size: 75px;
+}
+
+.textoCentral3 {
+    padding-inline: 30%;
+    padding-top: 5%;
+}
