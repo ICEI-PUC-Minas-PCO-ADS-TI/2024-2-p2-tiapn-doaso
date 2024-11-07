@@ -36,58 +36,60 @@
             </h2>
         </div>
         <div class="containerForms">
-            <div class="formularios1">
-                <form class="formulario">
+            <form class="formulario">
+                <div class="formularios1">
+                    <div class="campos">
+                        <div class="mb-3">
+                            <label for="nomeCompleto" class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" id="nomeCompleto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cnpj" class="form-label">CNPJ</label>
+                            <input type="number" class="form-control" id="cpf" required pattern="\d{14}" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="perfil">
+                        <label for="fotoPerfil" class="form-label">Foto de perfil</label>
+                        <div class="imgPerfil">
+                            <img src="../../images/logo sem fundo.jpeg" class="imgPerfilItem rounded-circle" alt="Foto de perfil">
+                        </div>
+                        <button type="button" class="btn btn-success btn-foto">Mudar Foto</button>
+                    </div>
+                </div>
+                <div class="formularios2">
                     <div class="mb-3">
-                        <label for="nomeCompleto" class="form-label">Nome Completo</label>
-                        <input type="text" class="form-control" id="nomeCompleto" required>
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="number" class="form-control" id="telefone" required>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <label for="CEP" class="form-label">CEP</label>
+                        <input type="number" class="form-control" id="CEP" required>
                     </div>
                     <div class="mb-3">
-                        <label for="cpf" class="form-label">CPF</label>
-                        <input type="number" class="form-control" id="cpf" required pattern="\d{11}" inputmode="numeric">
+                        <label for="endereco" class="form-label">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" required>
                     </div>
-                </form>
-                <div class="perfil">
-                    <label for="fotoPerfil" class="form-label">Foto de perfil</label>
-                    <div class="imgPerfil">
-                        <img src="../../images/logo sem fundo.jpeg" class="imgPerfilItem rounded-circle" alt="Foto de perfil">
+                </div>
+                <div class="formularios3">
+                    <div class="mb-3">
+                        <label for="bairro" class="form-label">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" required>
                     </div>
-                    <button type="button" class="btn btn-success btn-foto">Mudar Foto</button>
+                    <div class="mb-3">
+                        <label for="cidade" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="cidade" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado</label>
+                        <input type="text" class="form-control" id="estado" required>
+                    </div>
                 </div>
-            </div>
-            <div class="formularios2">
-                <div class="mb-3">
-                    <label for="telefone" class="form-label">Telefone</label>
-                    <input type="number" class="form-control" id="telefone" required>
-                </div>
-                <div class="mb-3">
-                    <label for="CNPJ" class="form-label">CNPJ</label>
-                    <input type="number" class="form-control" id="CNPJ" required>
-                </div>
-                <div class="mb-3">
-                    <label for="endereco" class="form-label">Endereço</label>
-                    <input type="text" class="form-control" id="endereco" required>
-                </div>
-            </div>
-            <div class="formularios3">
-                <div class="mb-3">
-                    <label for="bairro" class="form-label">Bairro</label>
-                    <input type="text" class="form-control" id="bairro" required>
-                </div>
-                <div class="mb-3">
-                    <label for="cidade" class="form-label">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" required>
-                </div>
-                <div class="mb-3">
-                    <label for="estado" class="form-label">Estado</label>
-                    <input type="text" class="form-control" id="estado" required>
-                </div>
-            </div>
-            <button type="submit" class="btn" onclick="window.location.href='../../Home/Home.html'">Cadastrar</button>
+                <button type="submit" class="btn" onclick="window.location.href='../../Home/Home.html'">Cadastrar</button>
+            </form>
         </div>
         
        

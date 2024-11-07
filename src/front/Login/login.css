@@ -1,0 +1,144 @@
+:root {
+    --cor-primaria: #284854;
+    --cor-secundaria: #8BC441;
+    --cor-btn: #4FEB4F;
+    --cor-branco: white;
+    --cor-preto: #000000;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.containerLogin {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+}
+
+.sessaoEsquerda {
+    width: 40vw;
+    height: 100vh;
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    padding-top: 27vh;
+}
+
+.containerTitulo {
+    display: flex;
+    gap: 0.5vw;
+    margin: 10vh auto;
+}
+
+.parte1 {
+    color: var(--cor-branco);
+}
+
+.parte2 {
+    color: var(--cor-secundaria);
+}
+
+.subtitulo {
+    margin: 0 2vw;
+    text-align: center;
+    color: var(--cor-branco);
+}
+
+.sessaoDireita {
+    width: 40vw;
+    height: 100vh;
+    background-color: var(--cor-branco);
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 10vw;
+    padding-top: 18%;
+}
+
+.bemVindo {
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+.formulario {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.btn {
+    background-color: var(--cor-btn);
+    color: var(--cor-branco);
+    margin-top: 2rem;
+    width: 100%;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    .containerLogin {
+        width: 100vw;
+    }
+
+    .sessaoEsquerda,
+    .sessaoDireita {
+        width: 50vw;
+    }
+    .containerTitulo{
+        margin-inline-start: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerLogin {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sessaoEsquerda {
+        display: none; /* Esconde a sessão esquerda */
+    }
+
+    .sessaoDireita {
+        width: 100%;
+        height: 50vh; /* Ajusta para ocupar toda a altura */
+        padding-top: 5vh;
+        margin-inline-start: 0;
+        text-align: center;
+    }
+
+    .containerTitulo {
+        margin: 5vh 0;
+        justify-content: center;
+    }
+
+    .formulario {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerTitulo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bemVindo,
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+}
