@@ -19,11 +19,11 @@ body {
 }
 .configWrapper{
     background-color: var(--cor-primaria);
-    height: 10vh;
+    height: 0;
 }
 .background-1 {
     background-color: var(--cor-primaria);
-    height: 90vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .imgCentralItem {
-    width: 30vw;
+    width: 27vw;
     height: 50vh;
 }
 
@@ -174,8 +174,15 @@ body {
         height: 40vh;
         margin-bottom: 20px;
     }
-     .img1{
+    .img1{
         display: none;
+    }
+    .imgsTela2 .imgCentralItem:nth-child(n+2) {
+        display: none;
+    }
+    .imgsTela2 .imgCentralItem{
+        height: 40vh;
+        width: 40vw;
     }
     .background-3 .textoCentral3 .titulo .comoFunciona {
         font-size: 250%;
@@ -232,9 +239,7 @@ body {
         flex-direction: column;
         padding-top: 2vh;
     }
-    .imgsTela2 .imgCentralItem:nth-child(n+2) {
-        display: none;
-    }
+    
     .imgsTela2 .imgCentralItem{
         width: 70vw;
         height: auto;

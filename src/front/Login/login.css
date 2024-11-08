@@ -59,9 +59,12 @@ body {
     display: flex;
     flex-direction: column;
     margin-inline-start: 10vw;
-    padding-top: 18%;
+    justify-content: center;
 }
-
+.sessaoDireita h3{
+    display: flex;
+    justify-content: center;
+}
 .bemVindo {
     text-align: center;
     color: var(--cor-primaria);

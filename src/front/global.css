@@ -1,3 +1,10 @@
+:root {
+    --cor-primaria: #284854;
+    --cor-secundaria: #8BC441;
+    --cor-btn: #4FEB4F;
+    --cor-branco: white;
+    --cor-preto: #000000
+}
 /*CSS GLOBAL BARRA PRINCIPAL*/
 .imgProfileItem {
     max-width: 70px;
@@ -144,7 +151,7 @@
 }
 
 /* Media Query para Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .configBar {
         display: none;
     }
@@ -229,4 +236,21 @@
 
 .btn {
     color: var(--cor-branco);
+}
+
+/* Estilização dos forms da página */
+.form-label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: block;
+}
+.form-control {
+  background-color: #d3d3d3;
+  border-radius: 15px;
+  border: none;
+  height: 40px;
+}
+
+h1, h2, h3, h4, h5{
+  color: black;
 }
