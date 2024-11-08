@@ -206,6 +206,9 @@ body {
     .background-3 {
         height: 150vh;
     }
+    .configWrapper{
+        height: 0;
+    }
 }
 
 @media (max-width: 768px) {
