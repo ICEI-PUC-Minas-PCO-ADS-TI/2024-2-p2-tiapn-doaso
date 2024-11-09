@@ -26,12 +26,14 @@
 }
 
 .configBar {
-    padding-top: 50px;
-    margin-inline: 33vw;
-    width: 33%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  min-width: 100vw;
+  background-color: var(--cor-primaria);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  padding-top: 2vh;
 }
 /* Botão de menu hambúrguer fixo no lado direito */
 .btnHamburguer {

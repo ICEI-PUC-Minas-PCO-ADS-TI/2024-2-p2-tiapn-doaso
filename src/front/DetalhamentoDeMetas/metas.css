@@ -1,0 +1,228 @@
+:root {
+    /* Definindo cores primárias e secundárias, cor dos botões e cores de fundo */
+    --cor-primaria: #284854;
+    --cor-secundaria: #8BC441;
+    --cor-btn: #4FEB4F;
+    --cor-branco: white;
+    --cor-preto: #000000;
+}
+
+html,
+body {
+    /* Definindo altura total e eliminando margem padrão */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    /* Centralizando o conteúdo vertical e horizontalmente */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden; /* Removendo scroll horizontal */
+}
+
+
+.configBar {
+    height: 15vh;
+}
+
+.sessaoEsq{
+    width: 60vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline-start: 5vw;
+}   
+
+.imgDoacaoItem{
+    width: 40vw;
+    height: 65vh;
+    padding-top: 4vh;
+}
+
+.dadosCentro{
+    display: flex;
+}
+
+.imgCentroItem{
+    width: 5vw;
+}
+
+.nome, .localizacao{
+    font-size: 100%;
+}
+
+.verPerfil{
+    margin-inline-start: 22vw;
+    padding-top: 25px;    
+}
+
+.background-1{
+    display: flex;
+}
+
+.sessaoDir{
+    background-color: var(--cor-primaria);
+    width: 40vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+.elementosDir{
+    margin-inline-start: 2vw;
+}
+.tituloItem{
+    color: var(--cor-btn);
+    font-size: 30px;
+    padding-top: 40px;
+}   
+.progress{
+    width: 20vw;
+    height: 2.5vh;
+    margin-inline-start: 5vw;
+}
+
+.contribuir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contribuirBtn{
+    margin-top: 40px;
+}
+
+.progress-bar{
+    background-color: var(--cor-btn);
+}
+
+.background-2{
+    height: 100vh;
+    width: 100%;
+}
+.pt2{
+    color: var(--cor-btn);
+}
+.maisDoacoes{
+    padding: 60px;
+}
+.imgsTela2 {
+    /* Organização das imagens na tela 2 */
+    padding-top: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgsTela2 .imgCentralItem {
+    /* Dimensões das imagens na tela 2 */
+    width: 25vw;
+    height: 50vh;
+}
+
+@media (max-width: 1024px) {
+    
+    .imgsTela2 .imgCentralItem:nth-child(n+2) {
+        /* Mostrando apenas uma imagem na tela 2 */
+        display: none;
+    }
+
+    .imgsTela2 .imgCentralItem {
+        /* Ajuste de tamanho das imagens restantes */
+        height: 40vh;
+        width: 80vw;
+    }
+
+}
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos móveis em geral */
+
+    .sessaoEsq, .sessaoDir {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+    }
+
+    .imgDoacaoItem {
+        width: 90vw;
+        height: auto;
+    }
+
+    .dadosCentro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgCentroItem {
+        width: 20vw;
+    }
+
+    .verPerfil {
+        margin-inline-start: 0;
+        padding-top: 15px;
+    }
+
+    .elementosDir {
+        margin-inline-start: 10px;
+    }
+
+    .tituloItem {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .progress {
+        width: 80%;
+        margin-inline-start: 10%;
+    }
+
+    .background-2 {
+        padding: 20px;
+    }
+
+    .imgsTela2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .imgsTela2 .imgCentralItem {
+        width: 80vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para telas muito pequenas, como smartphones */
+    
+    .configBar {
+        gap: 5px;
+    }
+
+    .imgDoacaoItem {
+        width: 95vw;
+    }
+
+    .tituloItem {
+        font-size: 20px;
+    }
+
+    .progress {
+        width: 90%;
+        height: 2vh;
+        margin-inline-start: 5%;
+    }
+
+    .contribuirBtn {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .imgsTela2 .imgCentralItem {
+        width: 90vw;
+    }
+}
