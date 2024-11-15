@@ -1,0 +1,83 @@
+:root {
+    /* Definindo cores primárias e secundárias, cor dos botões e cores de fundo */
+    --cor-primaria: #284854;
+    --cor-secundaria: #8BC441;
+    --cor-btn: #4FEB4F;
+    --cor-branco: white;
+    --cor-preto: #000000;
+}
+
+html,
+body {
+    /* Definindo altura total e eliminando margem padrão */
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    /* Centralizando o conteúdo vertical e horizontalmente */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden; /* Removendo scroll horizontal */
+}
+
+.containerLados{
+    display: flex;
+}
+
+.sessaoEsquerda{
+    width: 40vw;
+    height: 90vh;
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+}
+
+.titulo h1 {
+    /* Estilo do título principal com cor secundária */
+    color: var(--cor-secundaria);
+    font-size: 300%;
+}
+
+.texto h3{
+    color: var(--cor-branco);
+}
+
+.sessaoDireita{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pLabel{
+    color: gray;
+}
+
+.formularios .btn{
+    width: 10vw;
+}
+
+@media (max-width: 1024px){
+    .containerLados{
+        flex-direction: column;
+    }
+    .sessaoEsquerda, .sessaoDireita{
+        width: 100vw;
+    }
+    .sessaoEsquerda{
+        height: 45vh;
+    }
+    .sessaoDireita{
+        padding: 40px;
+    }
+    .formularios .btn{
+        width: 30vw;
+    }
+}

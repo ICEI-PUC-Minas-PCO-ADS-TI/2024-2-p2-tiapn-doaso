@@ -28,6 +28,7 @@
 .configBar {
   width: 100%;
   min-width: 100vw;
+  height: 10vh;
   background-color: var(--cor-primaria);
   display: flex;
   align-items: center;
@@ -189,8 +190,11 @@
   }
   
   .bell {
-    width: 18px;
-  }
+    width: 24px; /* Define o tamanho correto */
+    height: 24px;
+    fill: #000; /* Cor padrão */
+    transition: transform 0.3s ease; /* Adiciona a animação */
+}
   
   .bell path {
     fill: var(--cor-branco);
@@ -252,6 +256,20 @@
   border: none;
   height: 40px;
 }
+
+/* Remove as setinhas do campo de número em navegadores WebKit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove as setinhas do campo de número no Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: text;
+}
+
 
 h1, h2, h3, h4, h5{
   color: black;

@@ -1,0 +1,190 @@
+:root {
+    /* Definindo cores primárias e secundárias, cor dos botões e cores de fundo */
+    --cor-primaria: #284854;
+    --cor-secundaria: #8BC441;
+    --cor-btn: #4FEB4F;
+    --cor-branco: white;
+    --cor-preto: #000000;
+}
+
+html,
+body {
+    /* Definindo altura total e eliminando margem padrão */
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    /* Centralizando o conteúdo vertical e horizontalmente */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden; /* Removendo scroll horizontal */
+}
+
+.background1{
+    background-color: var(--cor-primaria);
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloBCK1{
+    gap: 20px;
+    display: flex;
+    text-align: center;
+    font-size: 5vw;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+}
+
+.pt1{
+    color: var(--cor-branco);
+}
+
+.pt2{
+    color: var(--cor-btn);
+}
+
+.background2{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.checksContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilização dos radio buttons */
+.form-check-input[type="radio"] {
+    appearance: none; /* Remove o estilo padrão */
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--cor-preto); /* Cor e espessura da borda */
+    border-radius: 50%; /* Forma circular */
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.form-check-input[type="radio"]:checked {
+    background-color: var(--cor-primaria); /* Cor de fundo ao selecionar */
+}
+
+.form-check-label {
+    margin-left: 8px; /* Espaçamento entre o botão e o texto */
+    font-weight: 500;
+    color: var(--cor-preto);
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.form-check-inline {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do select */
+.form-select {
+    appearance: none; 
+    width: 200px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid var(--cor-primaria); 
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.form-select::after {
+    content: "▼";
+    position: absolute;
+    right: 16px;
+    color: #333;
+    pointer-events: none;
+}
+
+.form-select:hover {
+    border-color: var(--cor-primaria);
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.background3{
+    background-color: var(--cor-secundaria);
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4%;
+}
+
+.tituloBCK3{
+    display: flex;
+    gap: 10px;
+    font-size: 3vw;
+
+}
+
+.tituloBCK3 .pt1{
+    color: var(--cor-branco);
+}
+
+.tituloBCK3 .pt2{
+    color: var(--cor-preto);
+}
+
+.background3 p{
+    color: gray;
+    text-align: center;
+}
+.background3 .input-group  .form-control {
+    height: 20vh;
+    margin-inline: 33vw;
+    resize: none;
+    background-color: var(--cor-branco);
+}
+
+.adicionarImg {
+    cursor: pointer; 
+    transition: transform 0.6s ease;
+}
+
+.icon-button {
+    border: none; 
+    background: none;
+    padding: 0;
+    margin: 0; 
+    cursor: pointer;
+}
+
+.adicionarImg:hover {
+    transform: scale(1.1);
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+@media (max-width: 1024px){
+    .checksContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

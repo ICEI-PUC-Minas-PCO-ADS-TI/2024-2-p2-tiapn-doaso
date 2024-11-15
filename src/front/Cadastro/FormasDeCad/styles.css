@@ -71,6 +71,7 @@ body {
 
 .titulo {
     display: flex;
+    flex-direction: column;
 }
 
 .Centro {
@@ -90,4 +91,37 @@ body {
 
 .Centro h3 {
     color: var(--cor-branco);
+}
+
+@media (max-width: 1024px){
+    .containerFormas {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 200vh;
+    }
+
+    .formaBeneficiario, .formaCentro {
+        height: 50vh;
+        width: 100vw;
+        transition: transform 0.6s;
+        position: relative;
+    }
+    .formaBeneficiario{
+        height: 100vh;
+    }
+    .beneficiario {
+        align-self: center;
+        margin-top: 70vh;
+        margin-inline: 10vw;
+    }
+    .Centro {
+        align-self: center;
+        margin-top: 15vh;
+        margin-inline: 7vw;
+    }
+
+    .titulo {
+        flex-direction: column;
+    }
 }
