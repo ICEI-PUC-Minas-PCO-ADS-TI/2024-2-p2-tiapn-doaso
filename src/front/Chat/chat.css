@@ -34,27 +34,6 @@ body {
     overflow-x: hidden;
 }
 
-.configWrapper{
-    background-color: var(--cor-primaria);
-    height: 16vh;
-
-}
-
-.cabecalho {
-    height: 10vh;
-    position: relative;
-}
-
-.cabecalho::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: rgb(217, 217, 217);
-    position: absolute;
-    top: 100%;
-    left: 0%;
-}
-
 .mensagens {
     height: 60vh;
     position: relative;
