@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .background{
@@ -23,7 +23,7 @@ body {
     height: 100vh;
 }
 
-.titulo {
+.titulo h2{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -44,6 +44,12 @@ body {
     background-color: var(--cor-primaria);
     padding: 20px;
     border-radius: 10px;
+}
+
+.textoFoto{
+    color: var(--cor-branco);
+    text-align: center;
+    font-size: 100%;
 }
 
 .formularios1 {
@@ -91,7 +97,6 @@ body {
 
 .containerForms .btn {
     display: block;
-    margin: 20px auto 0;
     background-color: var(--cor-btn);
     color: white;
     border: none;
@@ -109,3 +114,35 @@ body {
     padding-top: 0;
 }
 
+@media (max-width: 1024px) {
+    .background{
+        height: 200vh;
+    }
+
+    .formulario, .campos, .formularios3 .mb-3 {
+        width: 100%;
+        min-width: 70vw;
+
+    }
+    .containerForms{
+        display: flex;
+        flex-direction: column;
+    }
+    .titulo h2{
+        padding-top: 50vh;
+    }
+
+    .formularios1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .textoFoto{
+        width: 100vw;
+        text-align: center;
+    }
+
+    .formularios3{
+        flex-direction: column;
+    }
+}

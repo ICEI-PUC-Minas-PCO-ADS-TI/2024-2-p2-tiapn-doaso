@@ -19,6 +19,13 @@
         <div class="containerForms">
             <form class="formulario">
                 <div class="formularios1">
+                    <div class="perfil">
+                        <label for="fotoPerfil" class="form-label"><h1 class="textoFoto">Foto de perfil</h1></label>
+                        <div class="imgPerfil">
+                            <img src="../../images/logo sem fundo.jpeg" class="imgPerfilItem rounded-circle" alt="Foto de perfil">
+                        </div>
+                        <button type="button" class="btn btn-success btn-foto">Mudar Foto</button>
+                    </div>
                     <div class="campos">
                         <div class="mb-3">
                             <label for="nomeCompleto" class="form-label">Nome Completo</label>
@@ -29,16 +36,9 @@
                             <input type="email" class="form-control" id="email" required>
                         </div>
                         <div class="mb-3">
-                            <label for="cnpj" class="form-label">CNPJ</label>
-                            <input type="number" class="form-control" id="cpf" required pattern="\d{14}" inputmode="numeric">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="number" class="form-control" id="cpf" required pattern="\d{11}" inputmode="numeric">
                         </div>
-                    </div>
-                    <div class="perfil">
-                        <label for="fotoPerfil" class="form-label">Foto de perfil</label>
-                        <div class="imgPerfil">
-                            <img src="../../images/logo sem fundo.jpeg" class="imgPerfilItem rounded-circle" alt="Foto de perfil">
-                        </div>
-                        <button type="button" class="btn btn-success btn-foto">Mudar Foto</button>
                     </div>
                 </div>
                 <div class="formularios2">
