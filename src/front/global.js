@@ -156,7 +156,8 @@ function createConfigWrapper(containerId) {
 // Chame a função passando o ID do container onde você quer inserir a estrutura
 createConfigWrapper("seuContainerId");
 
- // Configuração inicial do mapa
+// MAPBOX INICIO ---------------------------------------------------------------------------------------------------
+// Configuração inicial do mapa
 mapboxgl.accessToken = 'pk.eyJ1IjoiaWdvcm1tZiIsImEiOiJjbTNtYWx5ajMwdzloMmxvb2d5amJxZDQ0In0.xwhRysuUeQmQcGUwylABKw';
 const map = new mapboxgl.Map({
     container: 'map', // ID do container
@@ -165,21 +166,18 @@ const map = new mapboxgl.Map({
     zoom: 14 // Nível de zoom inicial
 });
 
-
-//MAPBOX INICIO ---------------------------------------------------------------------------------------------------------
 // Adicionando controle de navegação ao mapa
 const nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 
-//adiciona marcadores de doações
+// Função para adicionar marcadores de doações
 function addMarkers(donations) {
     donations.forEach(donation => {
-        
-        let markerElement;
+        let markerElement = null;
         if (donation.icon) {
             markerElement = document.createElement('img');
             markerElement.src = donation.icon; // URL do ícone personalizado
-            markerElement.style.width = '30px'; // Ajusta o tamanho do ícone ///// descartar
+            markerElement.style.width = '30px'; // Ajusta o tamanho do ícone
         }
 
         // Cria popup com informações da doação
@@ -201,7 +199,7 @@ const donations = [
     {
         name: "Ponto de Alimento",
         description: "Comida pra rapaziada",
-        location: { latitude: -19.9319, longitude: -44.0635 },
+        location: { latitude: -19.9319, longitude: -44.0635 }
     },
     {
         name: "Doação de roupas",
@@ -233,7 +231,7 @@ const donations = [
 // Adicionando os marcadores das doações ao mapa
 addMarkers(donations);
 
-//LOCALIZAÇÃO DO USUARIO--------------------------------------------------------------------------------------------------
+// LOCALIZAÇÃO DO USUÁRIO --------------------------------------------------------------------------------------------------
 // Obtendo a localização atual do usuário
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -257,13 +255,31 @@ if (navigator.geolocation) {
         });
 
         map.fitBounds(bounds, { padding: 50 }); // Ajusta o mapa para mostrar todos os marcadores
+
+        // Obtém o endereço usando a API de geocodificação reversa do Mapbox
+        const accessToken = mapboxgl.accessToken; // Reutiliza o token já definido
+        const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${userLocation.longitude},${userLocation.latitude}.json?access_token=${accessToken}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const address = data.features[0]?.place_name || "Endereço não encontrado.";
+                document.getElementById("user-address").textContent = `Seu endereço: ${address}`;
+            })
+            .catch(error => {
+                console.error("Erro ao obter o endereço:", error);
+                document.getElementById("user-address").textContent = "Não foi possível determinar o endereço.";
+            });
+
     }, error => {
         console.error("Erro ao obter localização do usuário:", error);
+        document.getElementById("user-address").textContent = "Localização não encontrada.";
     });
 } else {
     console.error("Geolocalização não é suportada pelo navegador.");
+    document.getElementById("user-address").textContent = "Geolocalização não suportada pelo navegador.";
 }
-//LOCALIZAÇÃO DO USUARIO FIM --------------------------------------------------------------------------------------------------
+// LOCALIZAÇÃO DO USUÁRIO FIM --------------------------------------------------------------------------------------------------
 
-//MAPBOX INICIO FIM ---------------------------------------------------------------------------------------------------------
+// MAPBOX INICIO FIM ---------------------------------------------------------------------------------------------------------
 
