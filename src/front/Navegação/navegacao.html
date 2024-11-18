@@ -8,13 +8,18 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="navegacao.css" rel="stylesheet">
     <link href="../global.css" rel="stylesheet">
+    <!-- CSS Mapbox -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <!-- JS Mapbox -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
     <title>Navegação</title>
 </head>
 
 <body>
     <!-- Container do menu -->
     <div id="menuContainer"></div>
-    <!-- Precisa dessa classe em todos as páginas que possuem o hamburguer, ela empurra o conteudo quando se abre a side bar via javascript -->
+    <!-- Precisa dessa classe em todos as páginas que possuem o hamburguer -->
     <div class="pageContent">
         <div class="background1">
             <div class="partePrincipal">
@@ -55,31 +60,31 @@
                 </select>
                 <div class="cardMetas shadow-lg mb-3 mt-5 rounded-4">
                     <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="../images/logo sem fundo.jpeg" class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">Titulo da meta</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repudiandae consectetur nesciunt culpa beatae dignissimos voluptates voluptatibus, totam architecto saepe.</p>
-                          <div class="barraProgresso">
-                            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar" style="width: 25%">25%</div>
+                        <div class="col-md-4">
+                            <img src="../images/logo sem fundo.jpeg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Titulo da meta</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <div class="barraProgresso">
+                                    <div class="progress" role="progressbar" aria-label="Example with label"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 25%">25%</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                      </div>
                     </div>
                 </div>
             </div>
             <h1 class="titulo"><span class="pt1">Doações perto</span> <span class="pt2">de você</span></h1>
-            <div class="geoLoc rounded-5">
-                <h3>Geolocalização</h3>
-            </div>
+            <div id="map" class="geoLoc rounded-5"></div>
         </div>
     </div>
 </body>
 <script src="../global.js"></script>
+
 <!-- Chama a função da barra para a classe menuContainer -->
 <script>createConfigWrapper('menuContainer');</script>
 
