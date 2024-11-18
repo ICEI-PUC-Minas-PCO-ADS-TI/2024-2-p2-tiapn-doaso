@@ -156,47 +156,47 @@ function createConfigWrapper(containerId) {
 // Chame a função passando o ID do container onde você quer inserir a estrutura
 createConfigWrapper("seuContainerId");
 
-  // GEOLOCALIZAÇÃO ---------------------------------------------------------------------------------------------------------- MAPA
-// Configurando o mapa
+ // Configuração inicial do mapa
 mapboxgl.accessToken = 'pk.eyJ1IjoiaWdvcm1tZiIsImEiOiJjbTNtYWx5ajMwdzloMmxvb2d5amJxZDQ0In0.xwhRysuUeQmQcGUwylABKw';
 const map = new mapboxgl.Map({
     container: 'map', // ID do container
     style: 'mapbox://styles/mapbox/streets-v11', // Estilo do mapa
-    center: [-44.0635, -19.9319], // Coordenadas de Contagem, MG
+    center: [-44.0635, -19.9319], // Coordenadas iniciais (Contagem, MG)
     zoom: 14 // Nível de zoom inicial
 });
 
-// Adicionando controle de navegação
+
+//MAPBOX INICIO ---------------------------------------------------------------------------------------------------------
+// Adicionando controle de navegação ao mapa
 const nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 
-// Função para criar e adicionar marcadores
+//adiciona marcadores de doações
 function addMarkers(donations) {
     donations.forEach(donation => {
-        // Verifica se há um ícone específico definido para o marcador
+        
         let markerElement;
         if (donation.icon) {
-            // Cria um elemento personalizado para o marcador
             markerElement = document.createElement('img');
             markerElement.src = donation.icon; // URL do ícone personalizado
-            markerElement.style.width = '30px'; // Ajusta o tamanho do ícone
+            markerElement.style.width = '30px'; // Ajusta o tamanho do ícone ///// descartar
         }
 
-        // Cria popup com informações
+        // Cria popup com informações da doação
         const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
             <h3>${donation.name}</h3>
             <p>${donation.description}</p>
         `);
 
         // Adiciona marcador no mapa
-        const marker = new mapboxgl.Marker(markerElement ? { element: markerElement } : { color: "blue" }) // Usa ícone personalizado ou marcador padrão
+        new mapboxgl.Marker(markerElement ? { element: markerElement } : { color: "blue" }) // Usa ícone personalizado ou marcador padrão
             .setLngLat([donation.location.longitude, donation.location.latitude]) // Localização do marcador
             .setPopup(popup) // Associa o popup ao marcador
             .addTo(map);
     });
 }
 
-// Simulando um backend com a lista de doações 
+// Simulando um backend com a lista de doações
 const donations = [
     {
         name: "Ponto de Alimento",
@@ -230,11 +230,40 @@ const donations = [
     }
 ];
 
-// Adicionando os marcadores no mapa
+// Adicionando os marcadores das doações ao mapa
 addMarkers(donations);
 
-// GEOLOCALIZAÇÃO ---------------------------------------------------------------------------------------------------------- MAPA FIM
+//LOCALIZAÇÃO DO USUARIO--------------------------------------------------------------------------------------------------
+// Obtendo a localização atual do usuário
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position => {
+        const userLocation = {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
+        };
 
+        // Adiciona o marcador da localização atual do usuário
+        const userMarker = new mapboxgl.Marker({ color: "red" }) // Marcador vermelho para a localização do usuário
+            .setLngLat([userLocation.longitude, userLocation.latitude])
+            .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML("<h3>Você está aqui!</h3>"))
+            .addTo(map);
 
+        // Centraliza o mapa para incluir todos os marcadores
+        const bounds = new mapboxgl.LngLatBounds();
+        bounds.extend([userLocation.longitude, userLocation.latitude]); // Adiciona a localização do usuário
 
+        donations.forEach(donation => {
+            bounds.extend([donation.location.longitude, donation.location.latitude]); // Adiciona os marcadores das doações
+        });
+
+        map.fitBounds(bounds, { padding: 50 }); // Ajusta o mapa para mostrar todos os marcadores
+    }, error => {
+        console.error("Erro ao obter localização do usuário:", error);
+    });
+} else {
+    console.error("Geolocalização não é suportada pelo navegador.");
+}
+//LOCALIZAÇÃO DO USUARIO FIM --------------------------------------------------------------------------------------------------
+
+//MAPBOX INICIO FIM ---------------------------------------------------------------------------------------------------------
 
