@@ -8,6 +8,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="navegacao.css" rel="stylesheet">
     <link href="../global.css" rel="stylesheet">
+    <!-- CSS Mapbox -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <!-- JS Mapbox -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     <title>Navegação por Centros disponíveis</title>
 </head>
 
@@ -67,10 +71,9 @@
                     </div>
                 </div>
             </div>
-            <h1 class="titulo"><span class="pt1">Centros de doações perto</span> <span class="pt2">de você</span></h1>
-            <div class="geoLoc rounded-5">
-                <h3>Geolocalização</h3>
-            </div>
+            <h1 class="titulo"><span class="pt1">Doações perto</span> <span class="pt2">de você</span></h1>
+            <div id="map" class="geoLoc rounded-5"></div> <!---VERIFICAR SE ISSO SERÃO CENTROS OU DOAÇÕES-->
+        </div>
         </div>
     </div>
 </body>
