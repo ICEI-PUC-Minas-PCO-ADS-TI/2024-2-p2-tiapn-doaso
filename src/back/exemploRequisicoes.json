@@ -1,0 +1,34 @@
+{
+    "doador": {
+        "nome": "nome",
+        "email": "email",
+        "senha": "senha",
+        "imagemPerfil": "link.imagem",
+        "descricao": "descricao",
+        "cpf": 12345678910,
+        "ruaEnd": "nome da rua",
+        "bairroEnd": "nome do bairro",
+        "numeroEnd": 100,
+        "cidadeEnd": "nome da cidade",
+        "estadoEnd": "MG",
+        "cepEnd": 12345678,
+        "numeroTel": "12 34567-8910"
+    },
+
+    "centro": {
+        "nome": "nome",
+        "email": "email",
+        "senha": "senha",
+        "imagemPerfil": "link.imagem",
+        "descricao": "descricao",
+        "cnpj": 12345678910,
+        "valorArrecadado": 0,
+        "ruaEnd": "nome da rua",
+        "bairroEnd": "nome do bairro",
+        "numeroEnd": 100,
+        "cidadeEnd": "nome da cidade",
+        "estadoEnd": "sigla do estado",
+        "cepEnd": 12345678,
+        "numeroTel": "12 34567-8910"
+    }
+}

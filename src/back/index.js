@@ -85,20 +85,29 @@ app.get("/api/centro/:cnpj", (req, res) => {
 
 
 // Rota para cadastrar um usuário Doador
-app.post('/api/usuario/doador', (req, res) => {
+app.post('/api/doador', (req, res) => {
     var nome = req.body.nome;
     var email = req.body.email;
     var senha = req.body.senha;
     var imagemPerfil = req.body.imagemPerfil;
-    var descricao = "";
+    var descricao = req.body.descricao;
     var cpf = req.body.cpf;
+    var ruaEnd = req.body.ruaEnd;
+    var bairroEnd = req.body.bairroEnd;
+    var numeroEnd = req.body.numeroEnd;
+    var cidadeEnd = req.body.cidadeEnd;
+    var estadoEnd = req.body.estadoEnd; //Sigla do estado
+    var cepEnd = req.body.cepEnd;
+    var numeroTel = req.body.numeroTel;
+
+
     db.query("INSERT INTO Usuario (tipo_usuario) VALUES (?)", ["Doador"], (err, result) => {
         if (err) {
             console.log(err)
         }
         var idUsuario = result.insertId;
 
-        db.query("INSERT INTO Doador (id_doador, CPF, nome_doador, email_doador, senha_doador, imagem_perfil_doador, bio_doador) VALUES (?,?,?,?,?,?,?)", [idUsuario, cpf, nome, email, senha, imagemPerfil, descricao], (err, result) => {
+        db.query("INSERT INTO Doador (id_doador, CPF, nome_doador, email_doador, senha_doador, imagem_perfil_doador, bio_doador, endereco_rua, endereco_bairro, endereco_numero, endereco_cidade, endereco_estado_sigla, endereco_cep, telefone_numero) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [idUsuario, cpf, nome, email, senha, imagemPerfil, descricao, ruaEnd, bairroEnd, numeroEnd, cidadeEnd, estadoEnd, cepEnd, numeroTel], (err, result) => {
             if (err) {
                 console.log(err)
             }
@@ -108,14 +117,21 @@ app.post('/api/usuario/doador', (req, res) => {
 });
 
 //Rota para cadastrar um usuário CENTRO DE DOAÇÃO
-app.post('/api/usuario/centro', (req, res) => {
+app.post('/api/centro', (req, res) => {
     const nome = req.body.nome;
     const email = req.body.email;
     const senha = req.body.senha;
     const imagemPerfil = req.body.imagemPerfil;
-    const descricao = "";
+    const descricao = req.body.descricao;
     const cnpj = req.body.cpf;
-    const valorArrecadado = 0;
+    const valorArrecadado = req.body.valorArrecadado;
+    var ruaEnd = req.body.ruaEnd;
+    var bairroEnd = req.body.bairroEnd;
+    var numeroEnd = req.body.numeroEnd;
+    var cidadeEnd = req.body.cidadeEnd;
+    var estadoEnd = req.body.estadoEnd; //Sigla do estado
+    var cepEnd = req.body.cepEnd;
+    var numeroTel = req.body.numeroTel;
 
     db.query("INSERT INTO Usuario (tipo_usuario) VALUES (?)", ["Centro"], (err, result) => {
         if (err) {
@@ -123,7 +139,7 @@ app.post('/api/usuario/centro', (req, res) => {
         }
         const idUsuario = result.insertId;
 
-        db.query("INSERT INTO Centro_de_doacao (id_centro, CNPJ, nome_centro, email_centro, senha_centro, imagem_perfil_centro, desc_centro, valor_total_arrecadado) VALUES (?,?,?,?,?,?,?,?)", [idUsuario, cpf, nome, email, senha, imagemPerfil, descricao, valorArrecadado], (err, result) => {
+        db.query("INSERT INTO Centro_de_doacao (id_centro, CNPJ, nome_centro, email_centro, senha_centro, imagem_perfil_centro, desc_centro, valor_total_arrecadado, endereco_rua, endereco_bairro, endereco_numero, endereco_cidade, endereco_estado_sigla, endereco_cep, telefone_numero) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [idUsuario, cnpj, nome, email, senha, imagemPerfil, descricao, valorArrecadado, ruaEnd, bairroEnd, numeroEnd, cidadeEnd, estadoEnd, cepEnd, numeroTel], (err, result) => {
             if (err) {
                 console.log(err)
             }
