@@ -95,7 +95,10 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 15%;
+    padding-inline: 2%;
 }
+
+
 
 @media (max-width: 1024px) {
     .infosPerfil{
@@ -120,4 +123,11 @@ body {
         padding-top: 3%;
     }
     
+    .progress{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .card-body{
+        text-align: center;
+    }
 }

@@ -86,3 +86,10 @@ body {
         height: 300vh;
     }
 }
+
+@media (max-width: 768px) {
+    .card{
+        width: 80vw;
+        height: 60vh;
+    }
+  }

@@ -146,3 +146,8 @@ body {
         flex-direction: column;
     }
 }
+@media (max-width: 768px) {
+    .background{
+        height: 250vh;
+    }
+}

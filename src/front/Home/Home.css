@@ -291,8 +291,8 @@ body {
     .imgCentralItem {
         /* Ajuste das dimensões da imagem central */
         margin-top: 20px;
-        width: 50vw;
-        height: 30vh;
+        width: 35vw;
+        height: 20vh;
     }
 
     .imgsTela2 {
@@ -303,8 +303,8 @@ body {
 
     .imgsTela2 .imgCentralItem {
         /* Ajuste das dimensões das imagens */
-        width: 70vw;
-        height: auto;
+        width: 50vw;
+        height: 30vh;
     }
 
     .textoCentral3 {
@@ -312,5 +312,9 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+  
+    h1, h2, h3, h4{
+        font-size: 100%;
     }
 }

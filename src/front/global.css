@@ -274,3 +274,9 @@ input[type="number"] {
 h1, h2, h3, h4, h5{
   color: black;
 }
+
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, .titulo, .subtitulo{
+    font-size: 100%;
+  }
+}

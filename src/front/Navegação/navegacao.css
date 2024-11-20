@@ -73,6 +73,9 @@ body {
     min-width: 13vw;
     margin-inline-start: -3vw;
 }
+.progress-bar{
+    background-color: var(--cor-btn);
+}
 
 .background2 {
     background-color: var(--cor-secundaria);
@@ -89,6 +92,7 @@ body {
 }
 .titulo{
     font-size: 3vw;
+    margin-inline-start: 2vw;
 }
 
 .textoCentralTela2 .titulo .pt1{
