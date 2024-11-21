@@ -1,0 +1,95 @@
+:root {
+    /* Definindo cores primárias e secundárias, cor dos botões e cores de fundo */
+    --cor-primaria: #284854;
+    --cor-secundaria: #8BC441;
+    --cor-btn: #4FEB4F;
+    --cor-branco: white;
+    --cor-preto: #000000;
+}
+
+html,
+body {
+    /* Definindo altura total e eliminando margem padrão */
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    /* Centralizando o conteúdo vertical e horizontalmente */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden; /* Removendo scroll horizontal */
+}
+
+.background1{
+    background-color: var(--cor-primaria);
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tituloBCK1{
+    gap: 20px;
+    display: flex;
+    text-align: center;
+    font-size: 5vw;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+}
+
+.pt1{
+    color: var(--cor-branco);
+}
+
+.pt2{
+    color: var(--cor-btn);
+}
+
+.cardsPlanos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.card{
+    width: 20vw;
+    height: 60vh;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 1024px){
+    .cardsPlanos{
+        display: block;
+    }
+
+    .card{
+        width: 50vw;
+        height: 60vh;
+        margin-top: 5vw;
+    }
+    .background1{
+        width: 100vw;
+        height: 300vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .card{
+        width: 80vw;
+        height: 60vh;
+    }
+  }

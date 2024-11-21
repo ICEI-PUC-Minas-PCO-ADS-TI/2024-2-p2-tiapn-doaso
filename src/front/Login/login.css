@@ -34,6 +34,10 @@ body {
 
 .containerTitulo {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: 0.5vw;
     margin: 10vh auto;
 }
@@ -92,9 +96,6 @@ body {
     .sessaoDireita {
         width: 50vw;
     }
-    .containerTitulo{
-        margin-inline-start: 10%;
-    }
 }
 
 @media (max-width: 768px) {
@@ -142,6 +143,6 @@ body {
     }
 
     .formulario {
-        width: 100%;
+        width: 70vw;
     }
 }

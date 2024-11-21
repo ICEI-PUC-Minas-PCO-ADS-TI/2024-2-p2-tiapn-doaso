@@ -1,0 +1,133 @@
+:root {
+    /* Definindo cores primárias e secundárias, cor dos botões e cores de fundo */
+    --cor-primaria: #284854;
+    --cor-secundaria: #8BC441;
+    --cor-btn: #4FEB4F;
+    --cor-branco: white;
+    --cor-preto: #000000;
+}
+
+html,
+body {
+    /* Definindo altura total e eliminando margem padrão */
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    /* Centralizando o conteúdo vertical e horizontalmente */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden; /* Removendo scroll horizontal */
+}
+
+.infosPerfil{
+    width: 100vw;
+    height: 40vh;
+    background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagemContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.imgPerfil{
+    width: 10vw;
+    height: 20vh;
+}
+
+.containerGeral{
+    margin-inline: 4vw;
+}
+
+.containerInfos{
+    display: flex;
+    gap: 10vw;
+}
+
+.nomeItem, .info{
+    color: var(--cor-branco);
+}
+
+.barraHR, .titulo{
+    color: var(--cor-btn);
+}
+
+.barraHR{
+    height: 0.7vh;
+    width: 70vw;
+    border: none;     
+    background-color: var(--cor-btn); 
+    opacity: 1;
+}
+
+.pt1{
+    color: var(--cor-preto);
+}
+.progress{
+    width: 20vw;
+    height: 2.5vh;
+}
+.progress-bar{
+    background-color: var(--cor-btn);
+}
+
+.background2{
+    height: 100%;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardMetas{
+    width: 50vw;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15%;
+    padding-inline: 2%;
+}
+
+
+
+@media (max-width: 1024px) {
+    .infosPerfil{
+        height: 110vh;
+        flex-direction: column;
+    }
+    .containerInfos{
+        flex-direction: column;
+        gap: 0;
+    }
+    .imgPerfil{
+        width: 40vw;
+        height: 30vh;
+    }
+    .cardMetas{
+        width: 70vw;
+    }
+    
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        padding-top: 3%;
+    }
+    
+    .progress{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .card-body{
+        text-align: center;
+    }
+}
