@@ -30,5 +30,12 @@
         "estadoEnd": "sigla do estado",
         "cepEnd": 12345678,
         "numeroTel": "12 34567-8910"
+    },
+    "meta": {
+        "valorObjetivo": 1000,
+        "valorArrecadado": 0,
+        "descricao": "descricao da meta",
+        "titulo": "titulo da meta",
+        "idCentroCriador": 2
     }
 }
