@@ -84,7 +84,7 @@ app.get("/api/centro/:cnpj", (req, res) => {
 
 
 
-// Rota para cadastrar um usuário Doador
+// Rota para cadastrar/post um usuário Doador
 app.post('/api/doador', (req, res) => {
     var nome = req.body.nome;
     var email = req.body.email;
@@ -115,15 +115,14 @@ app.post('/api/doador', (req, res) => {
         });
     });
 });
-
-//Rota para cadastrar um usuário CENTRO DE DOAÇÃO
+//Rota para cadastrar/post um usuário CENTRO DE DOAÇÃO
 app.post('/api/centro', (req, res) => {
     const nome = req.body.nome;
     const email = req.body.email;
     const senha = req.body.senha;
     const imagemPerfil = req.body.imagemPerfil;
     const descricao = req.body.descricao;
-    const cnpj = req.body.cpf;
+    const cnpj = req.body.cnpj;
     const valorArrecadado = req.body.valorArrecadado;
     var ruaEnd = req.body.ruaEnd;
     var bairroEnd = req.body.bairroEnd;
@@ -149,20 +148,91 @@ app.post('/api/centro', (req, res) => {
 });
 
 
-// Route to delete a post
+// Rota para remover/delete usuarios
+// DELETE doador
+app.delete('/api/doador/:id', (req, res) => {
+    var idUsuario = req.params.id;
 
-// app.delete('/api/delete/:id', (req, res) => {
-//     console.log("api delete")
-//     const id = req.params.id;
-//     console.log(id)
-    
-//     db.query("DELETE FROM post WHERE id= ?", id, (err, result) => {
-//         if (err) {
-//             console.log(err)
-//         }
-//         result.send('post deletado.')
-//     })
-// })
+    // Deleta o usuário da tabela Doador
+    db.query("DELETE FROM Doador WHERE id_doador = ?", [idUsuario], (err, result) => {
+        if (err) {
+            console.log(err);
+            return res.status(500).json({ error: 'Erro ao deletar doador' });
+        }
+
+        // Deleta o usuário da tabela Usuario
+        db.query("DELETE FROM Usuario WHERE id_usuario = ?", [idUsuario], (err, result) => {
+            if (err) {
+                console.log(err);
+                return res.status(500).json({ error: 'Erro ao deletar usuário' });
+            }
+
+            res.status(200).json({ message: 'Usuário deletado com sucesso' });
+        });
+    });
+});
+//DELETE centros de doação
+app.delete('/api/centro/:id', (req, res) => {
+    var idUsuario = req.params.id;
+
+    // Deleta o usuário da tabela Doador
+    db.query("DELETE FROM Centro_de_doacao WHERE id_centro = ?", [idUsuario], (err, result) => {
+        if (err) {
+            console.log(err);
+            return res.status(500).json({ error: 'Erro ao deletar doador' });
+        }
+
+        // Deleta o usuário da tabela Usuario
+        db.query("DELETE FROM Usuario WHERE id_usuario = ?", [idUsuario], (err, result) => {
+            if (err) {
+                console.log(err);
+                return res.status(500).json({ error: 'Erro ao deletar usuário' });
+            }
+
+            res.status(200).json({ message: 'Usuário deletado com sucesso' });
+        });
+    });
+});
+
+
+//Rota para selecionar/get as metas de doação
+//GET todas as Metas de doação
+app.get("/api/meta", (req, res) => {
+    db.query("SELECT * FROM Meta_de_doacao", (err, result) => {
+        if (err) {
+            console.log(err)
+        }
+        res.send(result)
+    }
+    );
+});
+//GET Metas de doação por id
+app.get("/api/meta/:id", (req, res) => {
+    const idMeta = req.params.id
+    db.query("SELECT * FROM Meta_de_doacao WHERE id_meta = ?", idMeta, (err, result) => {
+        if (err) {
+            console.log(err)
+        }
+        res.send(result)
+    }
+    );
+});
+
+//Rota para cadastrar metas de doação no sistema
+//POST Metas de Doacao
+app.post('/api/meta', (req, res) => {
+    var valorObjetivo = req.body.valorObjetivo;
+    var valorArrecadado = 0;
+    var descricao = req.body.descricao;
+    var titulo = req.body.titulo;
+    var idCentroCriador = req.body.idCentroCriador;
+
+    db.query("INSERT INTO Meta_de_doacao(valor_objetivo_meta, valor_recebido_meta, desc_meta, titulo_meta, id_centro_criador) VALUES (?, ?, ?, ?, ?)", [valorObjetivo, valorArrecadado, descricao, titulo, idCentroCriador], (err, result) => {
+        if (err) {
+            console.log(err)
+        }
+    });
+});
 
 
 app.listen(PORT, () => {

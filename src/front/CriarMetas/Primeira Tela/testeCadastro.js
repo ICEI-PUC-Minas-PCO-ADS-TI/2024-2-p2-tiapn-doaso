@@ -40,3 +40,55 @@ function cadastrarUsuario(){
             console.error("Erro ao fazer a requisição POST:", error);
         });
 }
+
+function deleteUsuario() {
+    userId = 1;
+    fetch(`http://localhost:3307/api/centro/${userId}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            console.error('Error:', data.error);
+        } else {
+            console.log('Success:', data.message);
+            alert('User deleted successfully');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+function postarMeta(){
+    const doador = {
+        valorObjetivo: 1000,
+        valorArrecadado: 0,
+        descricao: "descricao da meta",
+        titulo: "titulo da meta",
+        idCentroCriador: "2"
+    };
+
+    fetch(`http://localhost:3307/api/meta`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(doador) // Dados no formato JSON
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            console.error('Error:', data.error);
+        } else {
+            console.log('Success:', data.message);
+            alert('User deleted successfully');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
