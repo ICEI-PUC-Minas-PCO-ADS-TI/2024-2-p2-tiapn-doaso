@@ -37,4 +37,19 @@ document.addEventListener('DOMContentLoaded', function () {
         imgPerfil.src = fotoPerfil;
         imgPerfil.alt = `Foto de perfil de ${nomeCompleto}`;
     }
-});
+
+    // Lógica do botão de favoritos
+    document.addEventListener('DOMContentLoaded', function () {
+        const favoriteIcon = document.getElementById('favorite-icon');
+        
+        favoriteIcon.addEventListener('click', function () {
+            if (favoriteIcon.classList.contains('fa-regular')) {
+                favoriteIcon.classList.remove('fa-regular');
+                favoriteIcon.classList.add('fa-solid'); // Ícone preenchido
+            } else {
+                favoriteIcon.classList.remove('fa-solid');
+                favoriteIcon.classList.add('fa-regular'); // Ícone contornado
+            }
+        });
+    });
+}); 
