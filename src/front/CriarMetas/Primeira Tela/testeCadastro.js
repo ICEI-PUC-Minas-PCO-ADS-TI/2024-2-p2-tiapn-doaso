@@ -85,7 +85,6 @@ function postarMeta(){
             console.error('Error:', data.error);
         } else {
             console.log('Success:', data.message);
-            alert('User deleted successfully');
         }
     })
     .catch(error => {

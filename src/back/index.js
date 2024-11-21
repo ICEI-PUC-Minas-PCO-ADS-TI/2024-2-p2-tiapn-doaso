@@ -235,6 +235,19 @@ app.post('/api/meta', (req, res) => {
 });
 
 
+//Rota para deletar metas de doação
+app.delete('/api/meta/:id', (req, res) => {
+    
+    id = req.params.id;
+
+    db.query("DELETE FROM Meta_de_doacao WHERE id_meta = ?", [id], (err, result) => {
+        if (err) {
+            console.log(err);
+            return res.status(500).json({ error: 'Erro ao deletar meta' });
+        }   
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`)
-})
+});
