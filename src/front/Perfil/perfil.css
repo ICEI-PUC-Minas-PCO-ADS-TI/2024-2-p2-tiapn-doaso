@@ -98,6 +98,27 @@ body {
     padding-inline: 2%;
 }
 
+/* Estilo para o botão de favoritos */
+.favorite-btn {
+    cursor: pointer;
+    color: gray;
+    font-size: 1.5rem;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.2);
+    color: gold;
+}
+
+/* Garantir que os botões não sobreponham */
+.verPerfilBtn {
+    z-index: 1;
+}
+
+.favorite-btn {
+    z-index: 1;
+}
 
 
 @media (max-width: 1024px) {
