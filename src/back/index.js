@@ -305,9 +305,9 @@ app.get("/api/proposta/:id", (req, res) => {
 });
 // POST proposta de doação
 app.post('/api/proposta', (req, res) => {
-    const { desc_proposta, data_proposta, id_doador_remetente, id_centro_destinatario } = req.body;
+    const { descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario } = req.body;
     db.query("INSERT INTO Proposta_de_doacao (desc_proposta, data_proposta, id_doador_remetente, id_centro_destinatario) VALUES (?, ?, ?, ?)", 
-    [desc_proposta, data_proposta, id_doador_remetente, id_centro_destinatario], (err, result) => {
+    [descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario], (err, result) => {
         if (err) {
             console.log(err);
         } else {
@@ -326,95 +326,85 @@ app.delete('/api/proposta/:id', (req, res) => {
         res.status(200).json({ message: 'Proposta deletada com sucesso' });
     });
 });
-// // PUT proposta de doação (Acredito não ser necessário, mas o código está comentado abaixo)
-// app.put('/api/proposta/:id', (req, res) => {
-//     const idProposta = req.params.id;
-//     const { desc_proposta, data_proposta } = req.body;
-//     db.query("UPDATE Proposta_de_doacao SET desc_proposta = ?, data_proposta = ? WHERE id_proposta = ?", 
-//     [desc_proposta, data_proposta, idProposta], (err, result) => {
-//         if (err) {
-//             console.log(err);
-//             res.status(500).send("Erro ao atualizar a proposta de doação");
-//         } else {
-//             res.status(200).send("Proposta de doação atualizada com sucesso");
-//         }
-//     });
-// });
 
 
 
-//TABELA CHAT PROVAVELMENTE SERÁ EXCLUÍDA E INTEGRADA NA TABELA DE PROPOSTA DE DOAÇÃO
-// // GET todos os chats (acredito que não vá ser necessário tbm)
-// app.get("/api/chat", (req, res) => {
-//     db.query("SELECT * FROM Chat", (err, result) => {
-//         if (err) {
-//             console.log(err);
-//         }
-//         res.send(result);
-//     });
-// });
-// // GET chat por id do chat
-// app.get("/api/chat/:id", (req, res) => {
-//     const idChat = req.params.id;
-//     db.query("SELECT * FROM Chat WHERE id_chat = ?", [idChat], (err, result) => {
-//         if (err) {
-//             console.log(err);
-//         }
-//         res.send(result);
-//     });
-// });
-// //GET chat por id da proposta
-// app.get("/api/chat/:id", (req, res) => {
-//     const idChat = req.params.id;
-//     db.query("SELECT * FROM Chat WHERE id_chat = ?", [idChat], (err, result) => {
-//         if (err) {
-//             console.log(err);
-//         }
-//         res.send(result);
-//     });
-// });
-// // POST chat
-// app.post('/api/chat', (req, res) => {
-//     const { Proposta_de_doacao_id_proposta } = req.body;
-//     db.query("INSERT INTO Chat (Proposta_de_doacao_id_proposta) VALUES (?)", 
-//     [Proposta_de_doacao_id_proposta], (err, result) => {
-//         if (err) {
-//             console.log(err);
-//         } else {
-//             res.status(201).send("Chat criado com sucesso");
-//         }
-//     });
-// });
-// // DELETE chat
-// app.delete('/api/chat/:id', (req, res) => {
-//     const idChat = req.params.id;
-//     db.query("DELETE FROM Chat WHERE id_chat = ?", [idChat], (err, result) => {
-//         if (err) {
-//             console.log(err);
-//             return res.status(500).json({ error: 'Erro ao deletar chat' });
-//         }
-//         res.status(200).json({ message: 'Chat deletado com sucesso' });
-//     });
-// });
-// // PUT chat
-// app.put('/api/chat/:id', (req, res) => {
-//     const idChat = req.params.id;
-//     const { Proposta_de_doacao_id_proposta } = req.body;
-//     db.query("UPDATE Chat SET Proposta_de_doacao_id_proposta = ? WHERE id_chat = ?", 
-//     [Proposta_de_doacao_id_proposta, idChat], (err, result) => {
-//         if (err) {
-//             console.log(err);
-//             res.status(500).send("Erro ao atualizar o chat");
-//         } else {
-//             res.status(200).send("Chat atualizado com sucesso");
-//         }
-//     });
-// });
+// GET todas as Imagens da proposta by id da proposta
+app.get("/api/proposta/imagem/:id", (req, res) => {
+
+    const idImg = req.params.id;   
+    db.query("SELECT * FROM Imagem_doacao WHERE id_proposta = ?", [id], (err, result) => {
+        if (err) {
+            console.log(err);
+        }
+        res.send(result);
+    });
+});
+// POST imagem da proposta
+app.post('/api/proposta/imagem', (req, res) => {
+    const { idProposta, linkImagem} = req.body;
+    db.query("INSERT INTO Imagem_doacao (id_proposta, imagem) VALUES (?,?)", 
+    [idProposta, linkImagem], (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.status(201).send("Imagem adicionada com sucesso");
+        }
+    });
+});
+
+
+
+
+//GET Mensagens da proposta (a fazer)
+app.get("/api/proposta", (req, res) => {
+    db.query("SELECT * FROM Proposta_de_doacao", (err, result) => {
+        if (err) {
+            console.log(err);
+        }
+        res.send(result);
+    });
+});
+// GET proposta de doação por id
+app.get("/api/proposta/:id", (req, res) => {
+    const idProposta = req.params.id;
+    db.query("SELECT * FROM Proposta_de_doacao WHERE id_proposta = ?", [idProposta], (err, result) => {
+        if (err) {
+            console.log(err);
+        }
+        res.send(result);
+    });
+});
+// POST proposta de doação
+app.post('/api/proposta', (req, res) => {
+    const { descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario } = req.body;
+    db.query("INSERT INTO Proposta_de_doacao (desc_proposta, data_proposta, id_doador_remetente, id_centro_destinatario) VALUES (?, ?, ?, ?)", 
+    [descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario], (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.status(201).send("Proposta de doação criada com sucesso");
+        }
+    });
+});
+// DELETE proposta de doação
+app.delete('/api/proposta/:id', (req, res) => {
+    const idProposta = req.params.id;
+    db.query("DELETE FROM Proposta_de_doacao WHERE id_proposta = ?", [idProposta], (err, result) => {
+        if (err) {
+            console.log(err);
+            return res.status(500).json({ error: 'Erro ao deletar proposta' });
+        }
+        res.status(200).json({ message: 'Proposta deletada com sucesso' });
+    });
+});
+
+
+
 
 
 
 //Ativação do servidor
-
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`)
 });

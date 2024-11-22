@@ -37,5 +37,15 @@
         "descricao": "descricao da meta",
         "titulo": "titulo da meta",
         "idCentroCriador": 2
+    },
+    "proposta de doacao": {
+        "descricaoProposta": "proposta de doação",
+        "dataProposta": "hoje",
+        "idDoadorRemetente": "5",
+        "idCentroDestinatario": "3"
+    },
+    "imagem da proposta":{
+        "idProposta": "2",
+        "linkImagem": "link da imagem"
     }
 }
