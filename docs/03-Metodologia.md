@@ -148,21 +148,21 @@ Atualizado em: 20/10/2024
 
 #### Sprint 4
 
-Gabriel Madureira Matos:
+Gabriel Madureira Matos: Crud da tela de perfil e favoritos do usuário
 
-Guilherme de Oliveira Souza:
+Guilherme de Oliveira Souza: Criação do banco com apoio do Victor Schneider, e criação do artefato de notificações do usuário.
 
-Igor Maia Moreira Fernandes:
+Igor Maia Moreira Fernandes: Geolocalização com implementação do MapBox na tela Navegação.
 
 Luis Henrique Sampaio Vieira:
 
 Thiago Moreira de Queiroz: Criação do script para armazenar as informações do formulário de cadastro de doador e documentação APC. 
 
-Victor Schneider do Vale:
+Victor Schneider do Vale: Criação e conexão com o banco de dados, definição das rotas da api do node express, criação das classes Helper (métodos create/POST, read/GET, update/PUT, delete/DELETE) e criação do artefato de cadastro de metas no sistema.
 
 Vitor Prates Souza Lima:
 
-Wendell Leonardo Machado Miranda:
+Wendell Leonardo Machado Miranda: Tela de Chat e Aceitar/Recusar Proposta de Doação.
 
 
 Legenda:
