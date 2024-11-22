@@ -8,8 +8,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="criarMetas.css" rel="stylesheet">
     <link href="../../global.css" rel="stylesheet">
-    <script type="module" src="testeCadastro.js" defer></script>
-    <script type="module" src="../../script/Usuario.js" defer></script>
+    <script type="module" src="./criarMetas.js" defer></script>
     <title>Metas</title>
 </head>
 
@@ -33,8 +32,8 @@
                         <div class="formularios">
                             <div class="campos">
                                 <div class="mb-3">
-                                    <label for="metaArrecadacao" class="form-label">Meta de arrecadação</label>
-                                    <p class="pLabel">Defina sua meta para que doadores possam saber quanto falta para você chegar lá. Você  pode editar esse valor quando quiser.</p>
+                                    <label for="metaArrecadacao" class="form-label">Valor objetivo</label>
+                                    <p class="pLabel">Defina o valor que você deseja alcançar. Esse valor poderá ser editado a qualquer momento.</p>
                                     <input type="number" class="form-control" id="metaArrecadacao">
                                 </div>
                                 <div class="mb-3">
@@ -54,7 +53,11 @@
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email">
                             </div>
-                            <button type="submit" class="btn mt-3" onclick="window.locatio">Próxima Etapa</button>
+                            <div class="mb-3">
+                                <label for="descricao" class="form-label">Descrição</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <button class="btn mt-3" id="btnCriarMeta">Próxima Etapa</button>
                         </div>
                     </form>
                 </div>
