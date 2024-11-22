@@ -1,8 +1,7 @@
-import UsuarioHelper from "../../script/Usuario.js";
 import MetaHelper from "../../script/Metas.js";
-import PropostaHelper from "../../script/Proposta.js";
 
 var btn = document.getElementById('btnCriarMeta');
+var btn2 = document.getElementById('btnDeletarMeta');
 
 function postarMeta() {
     var valorObjetivo = document.getElementById('valorObjetivo').value;
@@ -14,11 +13,17 @@ function postarMeta() {
         valorArrecadado: 0,
         descricao: descricao,
         titulo: titulo,
-        idCentroCriador: 3
+        idCentroCriador: 1
     }
 
     MetaHelper.postMeta(body);
 
 }
 
+function deletarMeta() {
+    MetaHelper.deleteMeta(8);
+
+}
+
 btn.addEventListener('click', postarMeta);
+btn2.addEventListener('click', deletarMeta);

@@ -239,11 +239,7 @@ app.get("/api/meta/:id", (req, res) => {
 });
 //POST Metas de Doacao
 app.post('/api/meta', (req, res) => {
-    var valorObjetivo = req.body.valorObjetivo;
-    var valorArrecadado = 0;
-    var descricao = req.body.descricao;
-    var titulo = req.body.titulo;
-    var idCentroCriador = req.body.idCentroCriador;
+    const { valorObjetivo, valorArrecadado, descricao, titulo, idCentroCriador} = req.body;
 
     db.query("INSERT INTO Meta_de_doacao(valor_objetivo_meta, valor_recebido_meta, desc_meta, titulo_meta, id_centro_criador) VALUES (?, ?, ?, ?, ?)", [valorObjetivo, valorArrecadado, descricao, titulo, idCentroCriador], (err, result) => {
         if (err) {
@@ -266,10 +262,8 @@ app.delete('/api/meta/:id', (req, res) => {
 //PUT metas de doação
 app.put('/api/meta/:id', (req, res) => {
     var id = req.params.id;
-    var valorObjetivo = req.body.valorObjetivo;
-    var valorArrecadado = req.body.valorArrecadado;
-    var descricao = req.body.descricao;
-    var titulo = req.body.titulo;
+    const { valorObjetivo, valorArrecadado, descricao, titulo } = req.body;
+
 
     db.query("UPDATE Meta_de_doacao SET valor_objetivo_meta = ?, valor_recebido_meta = ?, desc_meta = ?, titulo_meta = ? WHERE id_meta = ?", 
     [valorObjetivo, valorArrecadado, descricao, titulo, id], (err, result) => {

@@ -12,11 +12,12 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
     <!-- JS Mapbox -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script type="module" src="./printarMetas.js" defer></script>
 
     <title>Navegação</title>
 </head>
 
-<body>
+<body onload="carregarMetas()">
     <!-- Container do menu -->
     <div id="menuContainer"></div>
     <!-- Precisa dessa classe em todos as páginas que possuem o hamburguer -->
@@ -103,6 +104,7 @@
     </div>
 </body>
 <script src="../global.js"></script>
+
 
 <!-- Chama a função da barra para a classe menuContainer -->
 <script>createConfigWrapper('menuContainer');</script>
