@@ -148,27 +148,22 @@ Atualizado em: 20/10/2024
 
 #### Sprint 4
 
-Atualizado em: 21/11/2024
+Gabriel Madureira Matos:
 
-| Responsável        | Tarefa/Requisito                | Iniciado em  | Prazo       | Status | Terminado em |
-|--------------------|---------------------------------|--------------|-------------|--------|--------------|
-| Gabriel Madureira  | **Tarefa em branco**              | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024  |
-| Gabriel Madureira  | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
-| Gabriel Madureira  | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
-| Guilherme Souza    | **Tarefa em branco**             | 14/10/2024   | 18/10/2024  | ✔️     |  18/10/2024  |
-| Igor Maia          | **Tarefa em branco**              | 14/10/2024   | 18/10/2024  | ✔️     |  18/10/2024  |
-| Igor Maia          | Construção das páginas em HTML        | 09/11/2024   | 21/11/2024  | ✔️     |  15/11/2024  |
-| Luis Sampaio       | **Tarefa em branco**               | 20/10/2024   | 20/10/2024  | ✔️     |  20/10/2024  |
-| Thiago Moreira     | **Tarefa em branco**             | 14/10/2024   | 18/10/2024  | ✔️     | --/--/2024   |
-| Thiago Moreira     | **Tarefa em branco**                | 14/10/2024   | 18/10/2024  | ✔️     | --/--/2024   |
-| Thiago Moreira     | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
-| Victor Schneider   | **Tarefa em branco**  | 14/10/2024   | 18/10/2024  | ✔️     | 18/10/2024   |
-| Victor Schneider   | **Tarefa em branco**             | 19/10/2024   | 20/10/2024  | ✔️     | 20/10/2024   |
-| Victor Schneider   | **Tarefa em branco**              | 19/10/2024   | 20/10/2024  | ✔️     | 20/10/2024   |
-| Vitor Prates       | **Tarefa em branco**             | 14/10/2024   | 18/10/2024  | ✔️     | 18/10/2024   |
-| Vitor Prates       | **Tarefa em branco**                | 14/10/2024   | 18/10/2024  | ✔️     | 18/10/2024   |
-| Vitor Prates       | **Tarefa em branco**          | 17/10/2024   | 18/10/2024  | ✔️     | 18/10/2024   |
-| Wendell Leonardo   | **Tarefa em branco**             | 14/10/2024   | 18/10/2024  | ✔️     | 18/10/2024   |
+Guilherme de Oliveira Souza:
+
+Igor Maia Moreira Fernandes:
+
+Luis Henrique Sampaio Vieira:
+
+Thiago Moreira de Queiroz:
+
+Victor Schneider do Vale:
+
+Vitor Prates Souza Lima:
+
+Wendell Leonardo Machado Miranda:
+
 
 Legenda:
 - 📝: em execução
