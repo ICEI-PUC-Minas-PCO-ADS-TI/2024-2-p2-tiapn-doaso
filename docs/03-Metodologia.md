@@ -152,7 +152,7 @@ Gabriel Madureira Matos: Crud da tela de perfil e favoritos do usuário
 
 Guilherme de Oliveira Souza: Criação do banco com apoio do Victor Schneider, e criação do artefato de notificações do usuário.
 
-Igor Maia Moreira Fernandes:
+Igor Maia Moreira Fernandes: Geolocalização com implementação do MapBox na tela Navegação.
 
 Luis Henrique Sampaio Vieira:
 
