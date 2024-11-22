@@ -150,7 +150,7 @@ Atualizado em: 20/10/2024
 
 Gabriel Madureira Matos:
 
-Guilherme de Oliveira Souza:
+Guilherme de Oliveira Souza: Criação do banco com apoio do Victor Schneider, e criação do artefato de notificações do usuário.
 
 Igor Maia Moreira Fernandes:
 
