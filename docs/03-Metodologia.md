@@ -158,7 +158,7 @@ Luis Henrique Sampaio Vieira:
 
 Thiago Moreira de Queiroz: Criação do script para armazenar as informações do formulário de cadastro de doador e documentação APC. 
 
-Victor Schneider do Vale:
+Victor Schneider do Vale: Criação e conexão com o banco de dados, definição das rotas da api do node express, criação das classes Helper (métodos create/POST, read/GET, update/PUT, delete/DELETE) e criação do artefato de cadastro de metas no sistema.
 
 Vitor Prates Souza Lima:
 
