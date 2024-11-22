@@ -162,7 +162,7 @@ Victor Schneider do Vale: Criação e conexão com o banco de dados, definição
 
 Vitor Prates Souza Lima:
 
-Wendell Leonardo Machado Miranda:
+Wendell Leonardo Machado Miranda: Tela de Chat e Aceitar/Recusar Proposta de Doação.
 
 
 Legenda:
