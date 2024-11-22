@@ -156,7 +156,7 @@ Igor Maia Moreira Fernandes:
 
 Luis Henrique Sampaio Vieira:
 
-Thiago Moreira de Queiroz:
+Thiago Moreira de Queiroz: Criação do script para armazenar as informações do formulário de cadastro de doador e documentação APC. 
 
 Victor Schneider do Vale:
 
