@@ -47,5 +47,12 @@
     "imagem da proposta":{
         "idProposta": "2",
         "linkImagem": "link da imagem"
+    },
+
+    "mensagem":{
+        "dataMensagem": "hoje",
+        "conteudoMensagem": "corpo da mensagem",
+        "visualizacaoMensagem": false,
+        "idProposta": "2"
     }
 }

@@ -357,9 +357,9 @@ app.post('/api/proposta/imagem', (req, res) => {
 
 
 //GET Mensagens da proposta
-app.get("/api/proposta/mensagem/:id", (req, res) => {
+app.get("/api/proposta/mensagem/:idProposta", (req, res) => {
 
-    const idProposta = req.params.id;
+    const idProposta = req.params.idProposta;
     db.query("SELECT * FROM Mensagem WHERE  id_proposta = ?", [idProposta], (err, result) => {
         if (err) {
             console.log(err);
@@ -379,10 +379,13 @@ app.post('/api/proposta/mensagem', (req, res) => {
         }
     });
 });
-// DELETE proposta de doação
-app.delete('/api/proposta/mensagem/:idProposta', (req, res) => {
-    const idProposta = req.params.id;
-    db.query("DELETE FROM Mensagem WHERE id_proposta = ?", [idProposta], (err, result) => {
+// PUT proposta de doação
+app.put('/api/proposta/mensagem/:idProposta/:idMensagem', (req, res) => {
+    const idProposta = req.params.idProposta;
+    const idMensagem = req.params.idMensagem;
+    const {conteudoMensagem, visualizacaoMensagem} = req.body;
+
+    db.query("UPDATE Mensagem SET conteudo_mensagem = ?, visualizacao_mensagem = ? WHERE id_proposta = ? AND id_mensagem = ?", [conteudoMensagem, visualizacaoMensagem, idProposta, idMensagem], (err, result) => {
         if (err) {
             console.log(err);
             return res.status(500).json({ error: 'Erro ao deletar proposta' });
@@ -390,7 +393,19 @@ app.delete('/api/proposta/mensagem/:idProposta', (req, res) => {
         res.status(200).json({ message: 'Proposta deletada com sucesso' });
     });
 });
+// DELETE proposta de doação
+app.delete('/api/proposta/mensagem/:idProposta/:idMensagem', (req, res) => {
+    const idProposta = req.params.idProposta;
+    const idMensagem = req.params.idMensagem;
 
+    db.query("DELETE FROM Mensagem WHERE id_proposta = ? AND id_mensagem = ?", [idProposta, idMensagem], (err, result) => {
+        if (err) {
+            console.log(err);
+            return res.status(500).json({ error: 'Erro ao deletar proposta' });
+        }
+        res.status(200).json({ message: 'Proposta deletada com sucesso' });
+    });
+});
 
 
 
