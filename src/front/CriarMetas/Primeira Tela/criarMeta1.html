@@ -34,28 +34,17 @@
                                 <div class="mb-3">
                                     <label for="metaArrecadacao" class="form-label">Valor objetivo</label>
                                     <p class="pLabel">Defina o valor que você deseja alcançar. Esse valor poderá ser editado a qualquer momento.</p>
-                                    <input type="number" class="form-control" id="metaArrecadacao">
+                                    <input type="number" class="form-control" id="valorObjetivo" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="nomeProjeto" class="form-label">Nome do projeto</label>
-                                    <input type="text" class="form-control" id="nomeProjeto">
+                                    <label for="nomeProjeto" class="form-label">Título da Meta</label>
+                                    <input type="text" class="form-control" id="tituloMeta" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="nomeCompleto" class="form-label">Seu nome completo</label>
-                                    <input type="text" class="form-control" id="nomeCompleto">
+                                    <label for="descricao" class="form-label">Descrição da meta:</label>
+                                    <p class="pLabel">Insira um breve paragrafo explicando o motivo dessa meta de arrecadação.</p>
+                                    <input type="text" class="form-control" id="descricaoMeta" required>
                                 </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="cnpj" class="form-label">CNPJ</label>
-                                <input type="number" class="form-control" id="cnpj" pattern="\d{14}" inputmode="numeric">
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email">
-                            </div>
-                            <div class="mb-3">
-                                <label for="descricao" class="form-label">Descrição</label>
-                                <input type="email" class="form-control" id="email">
                             </div>
                             <button class="btn mt-3" id="btnCriarMeta">Próxima Etapa</button>
                         </div>
