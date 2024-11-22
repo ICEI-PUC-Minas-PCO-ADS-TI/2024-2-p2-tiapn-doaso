@@ -356,19 +356,11 @@ app.post('/api/proposta/imagem', (req, res) => {
 
 
 
-//GET Mensagens da proposta (a fazer)
-app.get("/api/proposta", (req, res) => {
-    db.query("SELECT * FROM Proposta_de_doacao", (err, result) => {
-        if (err) {
-            console.log(err);
-        }
-        res.send(result);
-    });
-});
-// GET proposta de doação por id
-app.get("/api/proposta/:id", (req, res) => {
+//GET Mensagens da proposta
+app.get("/api/proposta/mensagem/:id", (req, res) => {
+
     const idProposta = req.params.id;
-    db.query("SELECT * FROM Proposta_de_doacao WHERE id_proposta = ?", [idProposta], (err, result) => {
+    db.query("SELECT * FROM Mensagem WHERE  id_proposta = ?", [idProposta], (err, result) => {
         if (err) {
             console.log(err);
         }
@@ -376,10 +368,10 @@ app.get("/api/proposta/:id", (req, res) => {
     });
 });
 // POST proposta de doação
-app.post('/api/proposta', (req, res) => {
-    const { descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario } = req.body;
-    db.query("INSERT INTO Proposta_de_doacao (desc_proposta, data_proposta, id_doador_remetente, id_centro_destinatario) VALUES (?, ?, ?, ?)", 
-    [descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario], (err, result) => {
+app.post('/api/proposta/mensagem', (req, res) => {
+    const { dataMensagem, conteudoMensagem, visualizacaoMensagem, idProposta } = req.body;
+    db.query("INSERT INTO Mensagem (data_mensagem, conteudo_mensagem, visualizacao_mensagem, id_proposta) VALUES (?, ?, ?, ?)", 
+    [dataMensagem, conteudoMensagem, visualizacaoMensagem, idProposta], (err, result) => {
         if (err) {
             console.log(err);
         } else {
@@ -388,9 +380,9 @@ app.post('/api/proposta', (req, res) => {
     });
 });
 // DELETE proposta de doação
-app.delete('/api/proposta/:id', (req, res) => {
+app.delete('/api/proposta/mensagem/:idProposta', (req, res) => {
     const idProposta = req.params.id;
-    db.query("DELETE FROM Proposta_de_doacao WHERE id_proposta = ?", [idProposta], (err, result) => {
+    db.query("DELETE FROM Mensagem WHERE id_proposta = ?", [idProposta], (err, result) => {
         if (err) {
             console.log(err);
             return res.status(500).json({ error: 'Erro ao deletar proposta' });
