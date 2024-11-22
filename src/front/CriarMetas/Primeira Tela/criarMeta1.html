@@ -8,6 +8,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="criarMetas.css" rel="stylesheet">
     <link href="../../global.css" rel="stylesheet">
+    <script type="module" src="testeCadastro.js" defer></script>
+    <script type="module" src="../../script/Usuario.js" defer></script>
     <title>Metas</title>
 </head>
 
@@ -15,7 +17,7 @@
     <!-- Container do menu -->
     <div id="menuContainer"></div>
     <!-- Conteudo da página -->
-    <!-- <div class="pageContent">
+    <div class="pageContent">
         <div class="containerLados">
             <div class="sessaoEsquerda">
                 <div class="titulo">
@@ -33,43 +35,33 @@
                                 <div class="mb-3">
                                     <label for="metaArrecadacao" class="form-label">Meta de arrecadação</label>
                                     <p class="pLabel">Defina sua meta para que doadores possam saber quanto falta para você chegar lá. Você  pode editar esse valor quando quiser.</p>
-                                    <input type="number" class="form-control" id="metaArrecadacao" required>
+                                    <input type="number" class="form-control" id="metaArrecadacao">
                                 </div>
                                 <div class="mb-3">
                                     <label for="nomeProjeto" class="form-label">Nome do projeto</label>
-                                    <input type="text" class="form-control" id="nomeProjeto" required>
+                                    <input type="text" class="form-control" id="nomeProjeto">
                                 </div>
                                 <div class="mb-3">
                                     <label for="nomeCompleto" class="form-label">Seu nome completo</label>
-                                    <input type="number" class="form-control" id="nomeCompleto" required>
+                                    <input type="text" class="form-control" id="nomeCompleto">
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="cnpj" class="form-label">CNPJ</label>
-                                <input type="number" class="form-control" id="cpf" required pattern="\d{14}" inputmode="numeric">
+                                <input type="number" class="form-control" id="cnpj" pattern="\d{14}" inputmode="numeric">
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
+                                <input type="email" class="form-control" id="email">
                             </div>
-                            <button type="submit" class="btn mt-3" onclick="">Próxima Etapa</button>
+                            <button type="submit" class="btn mt-3" onclick="window.locatio">Próxima Etapa</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div> -->
-    <button type="submit" class="btn mt-3" onclick="cadastrarUsuario()">Cadastro</button>
-    <button type="submit" class="btn mt-3" onclick="deleteUsuario()">Delete</button>
-    <button type="submit" class="btn mt-3" onclick="postarMeta()">Post Metas</button>
-    <button type="submit" class="btn mt-3" onclick="updateUsuario()">Update centro</button>
-    <button type="submit" class="btn mt-3" onclick="updateMeta()">Update Metas</button>
-
-
-
-
+    </div>
 </body>
 <script src="../../global.js"></script>
-<script src="testeCadastro.js"></script>
 <!-- Chama a função da barra para a classe menuContainer -->
 <script>createConfigWrapper('menuContainer');</script>

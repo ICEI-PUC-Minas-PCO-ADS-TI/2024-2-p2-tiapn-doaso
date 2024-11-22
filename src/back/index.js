@@ -31,18 +31,6 @@ app.get("/api/doador/:id", (req, res) => {
     }
     );
 });
-// Rota para requisitar um DOADOR especifico pelo cpf
-app.get("/api/doador/:cpf", (req, res) => {
-    console.log(req.params.cpf)
-    const cpf = req.params.cpf;
-    db.query("SELECT * FROM Doador WHERE CPF = ?", cpf, (err, result) => {
-        if (err) {
-            console.log(err)
-        }
-        res.send(result)
-    }
-    );
-});
 //GET CENTROS DE DOAÇÃO
 // Rota para requisitar todos os CENTROS DE DOAÇÃO
 app.get("/api/centro", (req, res) => {
@@ -59,18 +47,6 @@ app.get("/api/centro/:id", (req, res) => {
     console.log(req.params.id)
     const id = req.params.id;
     db.query("SELECT * FROM Centro_de_doacao WHERE id_centro = ?", id, (err, result) => {
-        if (err) {
-            console.log(err)
-        }
-        res.send(result)
-    }
-    );
-});
-// Rota para requisitar um CENTRO DE DOAÇÃO especifico pelo cnpj
-app.get("/api/centro/:cnpj", (req, res) => {
-    console.log(req.params.cnpj)
-    const cnpj = req.params.cnpj;
-    db.query("SELECT * FROM Centro_de_doacao WHERE CNPJ = ?", cnpj, (err, result) => {
         if (err) {
             console.log(err)
         }
