@@ -404,6 +404,44 @@ app.delete('/api/proposta/mensagem/:idProposta/:idMensagem', (req, res) => {
 
 
 
+//Rotas para Favoritar um centro
+//GET favoritos por id do doador
+app.get("/api/favorito/:idDoador", (req, res) => {
+
+    const idDoador = req.params.idDoador;
+    db.query("SELECT * FROM Favorito WHERE  id_doador = ?", [idDoador], (err, result) => {
+        if (err) {
+            console.log(err);
+        }
+        res.send(result);
+    });
+});
+// POST favorito no banco
+app.post('/api/favorito', (req, res) => {
+    const { idDoador, idCentroFavoritado } = req.body;
+    db.query("INSERT INTO Favorito (id_centro_favoritado, id_doador) VALUES (?, ?)", 
+    [idCentroFavoritado, idDoador], (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.status(201).send("Favorito registrado com sucesso");
+        }
+    });
+});
+// DELETE favorito
+app.delete('/api/favorito/:idDoador/:idCentroFavoritado', (req, res) => {
+    const idDoador = req.params.idDoador;
+    const idCentroFavoritado = req.params.idCentroFavoritado;
+
+    db.query("DELETE FROM Favorito WHERE id_doador = ? AND id_centro_favoritado = ?", [idDoador, idCentroFavoritado], (err, result) => {
+        if (err) {
+            console.log(err);
+            return res.status(500).json({ error: 'Erro ao deletar favorito' });
+        }
+        res.status(200).json({ message: 'Favorito deletao com sucesso' });
+    });
+});
+
 
 //Ativação do servidor
 app.listen(PORT, () => {
