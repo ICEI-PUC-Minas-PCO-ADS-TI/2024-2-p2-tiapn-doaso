@@ -20,14 +20,14 @@ body {
 .background{
     background-color: var(--cor-primaria);
     width: 100vw;
-    height: 100vh;
+    height: 125vh;
+    padding-top: 5%;
 }
 
 .titulo h2{
     display: flex;
     justify-content: center;
     width: 100%;
-    padding-top: 5vh;
     color: var(--cor-branco);
 }
 
@@ -35,7 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 2px;
 }
 
 .formulario {
@@ -112,11 +112,13 @@ body {
     width: 100%;
     margin: 0 auto;
     padding-top: 0;
+    gap: 2%;
 }
 
 @media (max-width: 1024px) {
     .background{
-        height: 200vh;
+        padding-top: 20%;
+        height: 250vh;
     }
 
     .formulario, .campos, .formularios3 .mb-3 {
@@ -149,5 +151,9 @@ body {
 @media (max-width: 768px) {
     .background{
         height: 250vh;
+        padding-top: 0%;
+    }
+    .titulo h2{
+        margin-top: 30vh;
     }
 }
