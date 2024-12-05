@@ -1,55 +1,38 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Recupera os dados do localStorage
-    const nomeCompleto = localStorage.getItem('nomeCompleto');
-    const email = localStorage.getItem('email');
-    const cnpj = localStorage.getItem('cnpj');
-    const telefone = localStorage.getItem('telefone');
-    const cep = localStorage.getItem('cep');
-    const endereco = localStorage.getItem('endereco');
-    const bairro = localStorage.getItem('bairro');
-    const cidade = localStorage.getItem('cidade');
-    const estado = localStorage.getItem('estado');
-    const fotoPerfil = localStorage.getItem('fotoPerfil');
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom'; // Para pegar o ID da URL
+import api from './api';
 
-    // Preenche os campos da página de perfil
-    if (nomeCompleto) {
-        document.querySelector('.nomeItem').textContent = nomeCompleto;
-    }
+const PerfilCentro = () => {
+    const { id } = useParams(); // Captura o ID do centro na URL
+    const [centro, setCentro] = useState(null);
 
-    if (email) {
-        document.querySelector('.containerInfos .info:nth-of-type(4)').textContent = email;
-    }
-
-    if (cnpj) {
-        document.querySelector('.containerInfos .info:nth-of-type(1)').textContent = cnpj;
-    }
-
-    if (cep) {
-        document.querySelector('.containerInfos .info:nth-of-type(2)').textContent = cep;
-    }
-
-    if (telefone) {
-        document.querySelector('.containerInfos .info:nth-of-type(3)').textContent = telefone;
-    }
-
-    if (fotoPerfil) {
-        const imgPerfil = document.querySelector('.imgPerfil');
-        imgPerfil.src = fotoPerfil;
-        imgPerfil.alt = `Foto de perfil de ${nomeCompleto}`;
-    }
-
-    // Lógica do botão de favoritos
-    document.addEventListener('DOMContentLoaded', function () {
-        const favoriteIcon = document.getElementById('favorite-icon');
-        
-        favoriteIcon.addEventListener('click', function () {
-            if (favoriteIcon.classList.contains('fa-regular')) {
-                favoriteIcon.classList.remove('fa-regular');
-                favoriteIcon.classList.add('fa-solid'); // Ícone preenchido
-            } else {
-                favoriteIcon.classList.remove('fa-solid');
-                favoriteIcon.classList.add('fa-regular'); // Ícone contornado
+    useEffect(() => {
+        const fetchCentro = async () => {
+            try {
+                const response = await api.get(`/centro/${id}`);
+                setCentro(response.data);
+            } catch (error) {
+                console.error('Erro ao carregar o centro:', error);
+                alert('Erro ao carregar os detalhes do centro.');
             }
-        });
-    });
-}); 
+        };
+
+        fetchCentro();
+    }, [id]);
+
+    if (!centro) {
+        return <div>Carregando...</div>;
+    }
+
+    return (
+        <div>
+            <h1>{centro.nome}</h1>
+            <p><strong>Descrição:</strong> {centro.descricao}</p>
+            <p><strong>Endereço:</strong> {centro.ruaEnd}, {centro.numeroEnd}, {centro.bairroEnd}, {centro.cidadeEnd} - {centro.estadoEnd}</p>
+            <p><strong>CEP:</strong> {centro.cepEnd}</p>
+            <p><strong>Telefone:</strong> {centro.numeroTel}</p>
+        </div>
+    );
+};
+
+export default perfilCentro;
