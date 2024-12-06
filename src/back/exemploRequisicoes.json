@@ -53,6 +53,8 @@
         "dataMensagem": "hoje",
         "conteudoMensagem": "corpo da mensagem",
         "visualizacaoMensagem": false,
-        "idProposta": "2"
+        "idProposta": "2",
+        "idRemetente": "4",
+        "idDestinatario": "5"
     }
 }

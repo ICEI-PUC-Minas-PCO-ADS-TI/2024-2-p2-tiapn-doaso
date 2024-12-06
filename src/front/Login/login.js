@@ -1,4 +1,4 @@
-import UsuarioHelper from "../../script/Metas.js";
+import UsuarioHelper from "../script/Usuario.js";
 
 async function loginUsuario(event) {
     event.preventDefault();

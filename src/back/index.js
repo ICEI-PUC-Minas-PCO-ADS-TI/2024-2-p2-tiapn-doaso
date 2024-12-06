@@ -363,9 +363,9 @@ app.get("/api/proposta/mensagem/:idProposta", (req, res) => {
 });
 // POST proposta de doação
 app.post('/api/proposta/mensagem', (req, res) => {
-    const { dataMensagem, conteudoMensagem, visualizacaoMensagem, idProposta } = req.body;
-    db.query("INSERT INTO Mensagem (data_mensagem, conteudo_mensagem, visualizacao_mensagem, id_proposta) VALUES (?, ?, ?, ?)", 
-    [dataMensagem, conteudoMensagem, visualizacaoMensagem, idProposta], (err, result) => {
+    const { dataMensagem, conteudoMensagem, visualizacaoMensagem, idPropost, idRemetente, idDestinatario } = req.body;
+    db.query("INSERT INTO Mensagem (data_mensagem, conteudo_mensagem, visualizacao_mensagem, id_proposta, id_remetente, id_destinatario) VALUES (?, ?, ?, ?, ?, ?)", 
+    [dataMensagem, conteudoMensagem, visualizacaoMensagem, idProposta, idRemetente, idDestinatario], (err, result) => {
         if (err) {
             console.log(err);
         } else {
