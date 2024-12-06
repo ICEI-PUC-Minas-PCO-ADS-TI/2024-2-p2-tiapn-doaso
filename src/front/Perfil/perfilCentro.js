@@ -71,3 +71,19 @@ function editarPerfilCentro(idCentro){
     //
     //Faz a mesma coisa pra carregar o perfil, mas a função de carregar deve vir junto com o load do documento, pq os dados tem que estarem la assim que for carregada a pagina
 }
+
+//PROPOSTAS DE DOAÇÃO
+
+import PropostaHelper from "../script/Proposta.js";
+
+function cadastrarProposta(){
+
+    let dadosProposta ={
+        categoria : "categoria selecionada",
+        desc: "Descrição da proposta",
+        idUsuario: getUsuarioLogado(),
+        idCentro: 1
+    }   
+
+    PropostaHelper.postProposta(dadosProposta)
+}

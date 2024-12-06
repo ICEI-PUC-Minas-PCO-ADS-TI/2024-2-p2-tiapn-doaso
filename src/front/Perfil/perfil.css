@@ -43,12 +43,12 @@ body {
 }
 
 .containerGeral{
-    margin-inline: 4vw;
+    margin-inline: 2vw;
 }
 
 .containerInfos{
     display: flex;
-    gap: 10vw;
+    gap: 7vw;
 }
 
 .nomeItem, .info{
