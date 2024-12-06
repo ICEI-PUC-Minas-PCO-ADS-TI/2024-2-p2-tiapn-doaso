@@ -6,28 +6,40 @@ function getUsuarioLogado(){
     var idUsuarioLogado = localStorage.getItem("id");
     return idUsuarioLogado;
 }
-function carregaPerfilDoador(idCentro){
+function carregaPerfilCentro(idCentro){
+    // Obtém os dados do Centro pelo ID
     let dadosCentro = UsuarioHelper.getCentroById(idCentro);
-    
-    //no dadosDoador você vai ter o seguinte JSON armazenado: EXEMEPLO
-    //      dadosDoador: {
-    //         "nome": "nome",
-    //        "email": "email",
-    //         "senha": "senha",
-    //         "imagemPerfil": "link.imagem",
-    //         "descricao": "descricao",
-    //         "cnpj": 12345678910,
-    //         "ruaEnd": "nome da rua",
-    //         "bairroEnd": "nome do bairro",
-    //         "numeroEnd": 100,
-    //         "cidadeEnd": "nome da cidade",
-    //         "estadoEnd": "MG",
-    //         "cepEnd": 12345678,
-    //         "numeroTel": "12 34567-8910"
-    //      }
-    //
-    //Pega o valor dessas variaveis e coloca no HTML, para carregar os dados do perfil do doador, seguindo os ids e classes usadas nas divs/h1/p/etc no arquivo de perfilDoador.html
-    //Não vai funcionar de cara, pq a função de login n ta implementada. Só faz a funcionalidade e eu corrijo se não funcionar depois
+
+    if (!dadosCentro) {
+        console.error("Centro não encontrado");
+        return;
+    }
+
+    // Atualiza os elementos do HTML com os dados do Centro
+    document.querySelector(".imgPerfil").src = dadosCentro.imagemPerfil || "../images/default-profile.png";
+    document.querySelector(".nomeItem").textContent = dadosCentro.nome || "Nome não disponível";
+
+    const infos = [
+        { selector: ".infosItens:nth-child(1) .info", value: dadosCentro.cnpj },
+        { selector: ".infosItens:nth-child(2) .info", value: dadosCentro.cepEnd },
+        { selector: ".infosItens:nth-child(3) .info", value: dadosCentro.numeroTel },
+        { selector: ".infosItens:nth-child(4) .info", value: dadosCentro.email },
+    ];
+
+    infos.forEach(info => {
+        const element = document.querySelector(info.selector);
+        if (element) {
+            element.textContent = info.value || "Não informado";
+        }
+    });
+}
+
+// Carrega o perfil do Centro ao iniciar a página
+const idCentro = getUsuarioLogado();
+if (idCentro) {
+    carregaPerfilCentro(idCentro);
+} else {
+    console.error("Usuário não está logado");
 }
 
 function editarPerfilCentro(idCentro){
@@ -40,7 +52,7 @@ function editarPerfilCentro(idCentro){
         senha: "input da senha", //Aqui tem que ter algum método de confirmação, tipo digitar duas vezes e ver se é igual
         imagemPerfil: "input da imagem", //Aqui vai ser necessário usar uma função que jogue o arquivo fa imagem numa api externa que retorne um link. Depois te ajudo nisso
         descricao: "input da descricao",
-        cnpj: 12345678910, //Esse nao pode ser alterado, ent vc nem precisa colocar na requisicao pq ele n vai entrar no banco
+        cnpj: 12345678912345, //Esse nao pode ser alterado, ent vc nem precisa colocar na requisicao pq ele n vai entrar no banco
         ruaEnd: "input nome da rua",
         bairroEnd: "input nome do bairro",
         numeroEnd: 100, //input numero do endereço
