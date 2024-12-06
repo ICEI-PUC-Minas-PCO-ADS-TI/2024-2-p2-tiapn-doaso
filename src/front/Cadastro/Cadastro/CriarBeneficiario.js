@@ -1,46 +1,37 @@
-import UsuarioHelper from "../../script/Metas.js";
+import UsuarioHelper from "../../script/Usuario.js";
 
-var btn = document.getElementById('btnCriarDoador');
-var btn2 = document.getElementById('btnDeletarDoador');
+var btnCadastrar = document.getElementById('btnCadastrar');
+var btnDeletar = document.getElementById('btnDeletar');
 
 async function postarDoador() {
     var nome = document.getElementById('nomeCompleto').value;
     var email = document.getElementById('email').value;
-    var senha = document.getElementById('senha').value;
-    var imagemPerfil = document.getElementById('link.imagem').value;
-    var descricao = document.getElementById('descricao').value;
+    // var senha = document.getElementById('senha').value;
+    // var imagemPerfil = document.getElementById('link.imagem').value;
+    // var descricao = document.getElementById('descricao').value;
     var cpf = document.getElementById('cpf').value;
-    var ruaEnd = document.getElementById('nome da rua').value;
+    var ruaEnd = document.getElementById('rua').value;
     var bairroEnd = document.getElementById('bairro').value;
-    var numeroEnd = document.getElementById('numero do endereço').value;
+    // var numeroEnd = document.getElementById('numero do endereço').value;
     var cidadeEnd = document.getElementById('cidade').value;
     var estadoEnd = document.getElementById('estado').value;
     var cepEnd = document.getElementById('CEP').value;
     var numeroTel = document.getElementById('telefone').value;
 
-    try {
-        // Obtém todos os doadores e centros
-        const doadores = await UsuarioHelper.getDoador();
-        const centros = await UsuarioHelper.getCentro();
-
-        // Verifica se o e-mail ou CPF já existem
-        const existeUsuario = [...doadores, ...centros].some(user => user.email === email || user.cpf === cpf);
-
-        if (existeUsuario) {
-            alert("E-mail ou CPF já estão cadastrados no sistema.");
-            return;
-        }
-
+    try{
+        // if(await verificaCadastro(email, cpf) == false){
+        //     return;
+        // }
         const body = {
             nome: nome,
             email: email,
-            senha: senha,
-            imagemPerfil: imagemPerfil,
-            descricao: descricao,
+            senha: "1234",
+            imagemPerfil: "link da imagem.png",
+            descricao: "",
             cpf: cpf,
             ruaEnd: ruaEnd,
             bairroEnd: bairroEnd,
-            numeroEnd: numeroEnd,
+            numeroEnd: 1,
             cidadeEnd: cidadeEnd,
             estadoEnd: estadoEnd,
             cepEnd: cepEnd,
@@ -48,17 +39,69 @@ async function postarDoador() {
         };
 
         await UsuarioHelper.postDoador(body);
-        alert("Beneficiário cadastrado com sucesso!");
-    } catch (error) {
-        console.error("Erro ao cadastrar beneficiário:", error);
-        alert("Erro ao cadastrar beneficiário. Tente novamente mais tarde.");
+        await UsuarioHelper.getDoador();
+        // alert("Beneficiário cadastrado com sucesso!");
+    } catch(error){
+        console.log(error);
     }
 }
 
 function deletarDoador() {
-    UsuarioHelper.deleteDoador("id");
+    for (let i = 29; i < 34; i++){
+        UsuarioHelper.deleteDoador(i);
+    }
+}
+
+async function verificaCadastro(emailCad, cpfCad){
+        const doadores = await UsuarioHelper.getDoador();
+        const centros = await UsuarioHelper.getCentro();
+        var existeUsuario = 0;
+
+        console.log(doadores, centros)
+
+        // Verifica se o e-mail ou CPF já existem
+        for(let doador of doadores){
+            if(doador.email === emailCad){
+                window.alert("Esse endereço de e-mail ja está cadastrado no sistema! Por favor, use outro!")
+                existeUsuario++;
+            }
+            if(doador.cpf === cpfCad){
+                window.alert("Esse CPF ja está cadastrado no sistema! Por favor, use outro!")
+                existeUsuario++;
+            }
+        }
+
+        for(let centro of centros){
+            if(centro.email === emailCad){
+                window.alert("Esse endereço de e-mail ja está cadastrado no sistema! Por favor, use outro!")
+                existeUsuario++;
+            }
+        }
+
+        if(existeUsuario > 0){  
+            return false;
+        }
 
 }
 
-btn.addEventListener('click', postarDoador);
-btn2.addEventListener('click', deletarDoador);
+btnCadastrar.addEventListener('click', postarDoador);
+btnDeletar.addEventListener('click', deletarDoador);
+
+// Salvar a foto de perfil no localStorage
+// function selecionarFoto() {
+//     const inputFile = document.getElementById('selecaoFoto');
+//     inputFile.click(); // Abre o seletor de arquivos
+
+//     inputFile.addEventListener('change', function () {
+//         const file = inputFile.files[0];
+//         if (file) {
+//             const reader = new FileReader();
+//             reader.onload = function (e) {
+//                 const fotoBase64 = e.target.result;
+//                 document.getElementById('fotoPreview').src = fotoBase64; // Atualiza o preview
+//                 localStorage.setItem('fotoPerfil', fotoBase64); // Salva no localStorage
+//             };
+//             reader.readAsDataURL(file); // Lê o arquivo como base64
+//         }
+//     });
+// }

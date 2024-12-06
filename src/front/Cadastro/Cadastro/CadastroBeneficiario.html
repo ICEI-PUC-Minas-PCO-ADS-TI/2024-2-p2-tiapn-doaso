@@ -7,6 +7,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="cadastros.css" rel="stylesheet">
     <link href="../../global.css" rel="stylesheet">
+    <script type="module" src="CriarBeneficiario.js"></script>
     <title>Cadastro de beneficiário</title>
 </head>
 <body>
@@ -51,8 +52,8 @@
                         <input type="number" class="form-control" id="CEP" required>
                     </div>
                     <div class="mb-3">
-                        <label for="endereco" class="form-label">Endereço</label>
-                        <input type="text" class="form-control" id="endereco" required>
+                        <label for="endereco" class="form-label">Rua</label>
+                        <input type="text" class="form-control" id="rua" required>
                     </div>
                 </div>
                 <div class="formularios3">
@@ -67,11 +68,12 @@
                     <div class="mb-3">
                         <label for="estado" class="form-label">Estado</label>
                         <input type="text" class="form-control" id="estado" required>
+                        <!-- tem que ser uma caixa de seleção com as 26 siglas dos estados -->
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary" id="btnCadastrar">Cadastrar</button>
+                <button type="submit" class="btn btn-primary" id="btnDeletar">Delete</button>
             </form>
         </div>  
     </div>
-    <script src="./CrudBeneficiario.js"></script>
 </body>

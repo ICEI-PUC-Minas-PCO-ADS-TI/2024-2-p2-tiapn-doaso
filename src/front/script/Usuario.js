@@ -48,7 +48,7 @@ const UsuarioHelper = {
     },
 
     getCentro: async function(){
-        return fetch(url+"doador", {
+        return fetch(url+"centro", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

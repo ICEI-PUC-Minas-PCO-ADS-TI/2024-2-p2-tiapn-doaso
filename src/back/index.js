@@ -75,7 +75,7 @@ app.post('/api/doador', (req, res) => {
         if (err) {
             console.log(err)
         }
-        var idUsuario = result.insertId;
+        const idUsuario = result.insertId;
 
         db.query("INSERT INTO Doador (id_doador, CPF, nome_doador, email_doador, senha_doador, imagem_perfil_doador, bio_doador, endereco_rua, endereco_bairro, endereco_numero, endereco_cidade, endereco_estado_sigla, endereco_cep, telefone_numero) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [idUsuario, cpf, nome, email, senha, imagemPerfil, descricao, ruaEnd, bairroEnd, numeroEnd, cidadeEnd, estadoEnd, cepEnd, numeroTel], (err, result) => {
             if (err) {

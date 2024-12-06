@@ -4,6 +4,7 @@ function getUsuarioLogado(){
     var idUsuarioLogado = localStorage.getItem("id");
     return idUsuarioLogado;
 }
+
 function carregaPerfilDoador(idDoador){
     let dadosDoador = UsuarioHelper.getDoadorById(idDoador);
     
