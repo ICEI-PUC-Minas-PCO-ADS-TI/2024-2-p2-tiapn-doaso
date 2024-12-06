@@ -1,4 +1,5 @@
-		use doaso;
+		create database doaso;
+        use doaso;
 
 		-- Criação da tabela Usuario
 		CREATE TABLE Usuario (
@@ -95,3 +96,12 @@
 			FOREIGN KEY (id_centro_favoritado) REFERENCES Centro_de_doacao(id_centro) ON DELETE CASCADE,
 			FOREIGN KEY (id_doador) REFERENCES Doador(id_doador) ON DELETE CASCADE
 		);
+        
+        CREATE TABLE Notificacao(
+			id_notificacao INT PRIMARY KEY AUTO_INCREMENT,
+            tipo_notificacao VARCHAR(50),
+            id_usuario INT,
+            visualizacao_notificacao BOOLEAN,
+            data_notificacao DATE,
+            foreign key (id_usuario) REFERENCES Usuario(id_usuario) ON DELETE CASCADE
+        );
