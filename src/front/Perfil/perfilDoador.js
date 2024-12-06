@@ -1,32 +1,44 @@
 import UsuarioHelper from "../script/Usuario.js";
 
-function getUsuarioLogado(){
+function getUsuarioLogado() {
     var idUsuarioLogado = localStorage.getItem("id");
     return idUsuarioLogado;
 }
 
-function carregaPerfilDoador(idDoador){
+function carregaPerfilDoador(idDoador) {
+    // Obtém os dados do doador pelo ID
     let dadosDoador = UsuarioHelper.getDoadorById(idDoador);
-    
-    //no dadosDoador você vai ter o seguinte JSON armazenado: EXEMEPLO
-    //      dadosDoador: {
-    //         "nome": "nome",
-    //        "email": "email",
-    //         "senha": "senha",
-    //         "imagemPerfil": "link.imagem",
-    //         "descricao": "descricao",
-    //         "cpf": 12345678910,
-    //         "ruaEnd": "nome da rua",
-    //         "bairroEnd": "nome do bairro",
-    //         "numeroEnd": 100,
-    //         "cidadeEnd": "nome da cidade",
-    //         "estadoEnd": "MG",
-    //         "cepEnd": 12345678,
-    //         "numeroTel": "12 34567-8910"
-    //      }
-    //
-    //Pega o valor dessas variaveis e coloca no HTML, para carregar os dados do perfil do doador, seguindo os ids e classes usadas nas divs/h1/p/etc no arquivo de perfilDoador.html
-    //Não vai funcionar de cara, pq a função de login n ta implementada. Só faz a funcionalidade e eu corrijo se não funcionar depois
+
+    if (!dadosDoador) {
+        console.error("Doador não encontrado");
+        return;
+    }
+
+    // Atualiza os elementos do HTML com os dados do doador
+    document.querySelector(".imgPerfil").src = dadosDoador.imagemPerfil || "../images/default-profile.png";
+    document.querySelector(".nomeItem").textContent = dadosDoador.nome || "Nome não disponível";
+
+    const infos = [
+        { selector: ".infosItens:nth-child(1) .info", value: dadosDoador.cpf },
+        { selector: ".infosItens:nth-child(2) .info", value: dadosDoador.cepEnd },
+        { selector: ".infosItens:nth-child(3) .info", value: dadosDoador.numeroTel },
+        { selector: ".infosItens:nth-child(4) .info", value: dadosDoador.email },
+    ];
+
+    infos.forEach(info => {
+        const element = document.querySelector(info.selector);
+        if (element) {
+            element.textContent = info.value || "Não informado";
+        }
+    });
+}
+
+// Carrega o perfil do doador ao iniciar a página
+const idDoador = getUsuarioLogado();
+if (idDoador) {
+    carregaPerfilDoador(idDoador);
+} else {
+    console.error("Usuário não está logado");
 }
 
 function editarPerfilDoador(idDoador){
