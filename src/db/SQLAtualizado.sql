@@ -85,7 +85,11 @@
 			conteudo_mensagem VARCHAR(500),
 			visualizacao_mensagem BOOLEAN,
 			id_proposta INT,
-			FOREIGN KEY (id_proposta) REFERENCES Proposta_de_doacao(id_proposta) ON DELETE CASCADE
+			id_remetente INT,
+			id_destinatario INT,
+			FOREIGN KEY (id_proposta) REFERENCES Proposta_de_doacao(id_proposta) ON DELETE CASCADE,
+			FOREIGN KEY (id_remetente) REFERENCES Proposta_de_doacao(id_remetente) ON DELETE CASCADE,
+			FOREIGN KEY (id_destinatario) REFERENCES Proposta_de_doacao(id_destinatario) ON DELETE CASCADE
 		);
 
 		-- Criação da tabela de Favorito
