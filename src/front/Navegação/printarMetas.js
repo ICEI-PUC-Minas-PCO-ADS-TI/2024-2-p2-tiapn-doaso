@@ -13,13 +13,13 @@ function createMetaCard(meta) {
     // Monta o HTML do card
     return `
     <div class="cardMetas shadow-lg mb-3 mt-5 rounded-4">
-            <h5 class="card-title mt-3">${meta.titulo_meta}</h5>
+            <h5 class="card-title mt-4 mb-5 ">${meta.titulo_meta}</h5>
             <img src="../images/logo sem fundo.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
                 <p class="card-text">${meta.desc_meta}</p>
                 <div class="progress barraCard mt-3" role="progressbar" aria-label="Example with label" aria-valuenow="${progresso}"
                     aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar" style="width: ${progresso}%">25%</div>
+                    <div class="progress-bar" style="width: ${progresso}%">${progresso}%</div>
                 </div>
             </div>
     </div>
@@ -30,8 +30,8 @@ function createMetaCard(meta) {
 async function renderMetas() {
     try {
         const metasContainer = document.getElementById("metasContainer");
-        const url = "http://localhost:3307/api/meta"; // Substitua pela URL correta
-        const metas = await fetch(url, {
+        const url = "http://localhost:3307/api/meta";
+        const metas =await fetch(url, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
