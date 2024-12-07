@@ -157,6 +157,7 @@ body {
 .cardMetas {
     flex: 1 1 calc(30% - 20px); /* Cada card ocupa 30% do espaço menos o gap */
     max-width: calc(25% - 20px); /* Define um limite para garantir a consistência */
+    min-width: 150%;
     height: 60vh;
     display: flex;
     flex-direction: column;
