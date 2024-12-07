@@ -1,5 +1,3 @@
-import MetaHelper from "../script/Metas.js";
-
 // Função para criar os cards
 function createMetaCard(meta) {
     // Calcula o progresso
@@ -12,11 +10,11 @@ function createMetaCard(meta) {
 
     // Monta o HTML do card
     return `
-    <div class="cardMetas shadow-lg mb-3 mt-5 rounded-4">
+    <div class="cardMetas shadow-lg mb-3 mt-5 rounded-4" onclick="abrirDetalhes(${meta.id_meta})">
             <h5 class="card-title mt-4 mb-5 ">${meta.titulo_meta}</h5>
             <img src="../images/logo sem fundo.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
-                <p class="card-text">${meta.desc_meta}</p>
+                <p class="card-text">${descricaoTruncada}</p>
                 <div class="progress barraCard mt-3" role="progressbar" aria-label="Example with label" aria-valuenow="${progresso}"
                     aria-valuemin="0" aria-valuemax="100">
                     <div class="progress-bar" style="width: ${progresso}%">${progresso}%</div>
@@ -52,3 +50,10 @@ async function renderMetas() {
 
 // Executa a função ao carregar a página
 renderMetas();
+
+//REDIRECIONAMENTO PARA DETALHAMENTO
+
+function abrirDetalhes(metaId) {
+    // Redireciona para a página de detalhes, passando o ID da meta na URL
+    window.location.href = `../DetalhamentoDeMetas/telaMetas.html?id=${metaId}`;
+}
