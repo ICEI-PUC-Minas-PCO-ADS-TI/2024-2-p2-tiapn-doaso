@@ -8,7 +8,7 @@ function getMetaIdFromUrl() {
 const metaId = getMetaIdFromUrl();
 var id_centro_criador = 0;
 
-// Exemplo de requisição ao backend (substitua pela lógica do seu backend)
+// Requisição dos dados da meta
 fetch(`http://localhost:3307/api/meta/${metaId}`)
     .then(response => response.json())
     .then(data => {
@@ -29,8 +29,9 @@ fetch(`http://localhost:3307/api/meta/${metaId}`)
             document.querySelector('.barra-arrecadado').style.width = `${meta.valor_recebido_meta / meta.valor_objetivo_meta * 100}%`;
             document.querySelector('.barra-arrecadado').textContent = `${meta.valor_recebido_meta / meta.valor_objetivo_meta * 100}%`;
 
-            id_centro_criador = meta.id_centro_criador;
             //Busca os dados do Centro
+            id_centro_criador = meta.id_centro_criador;
+
             fetch(`http://localhost:3307/api/centro/${id_centro_criador}`)
             .then(response => response.json())
             .then(data => {
@@ -62,16 +63,13 @@ fetch(`http://localhost:3307/api/meta/${metaId}`)
     });
 
 
-    // Adiciona o evento de clique ao botão
+    // Adiciona o evento de clique ao botão de ver perfil
     document.addEventListener("DOMContentLoaded", function () {
         const verPerfilBtn = document.getElementById("verPerfilBtn");
 
         // Verifica se o botão existe no DOM
         if (verPerfilBtn) {
             verPerfilBtn.addEventListener("click", function () {
-                console.log("Botão clicado");
-                // ID do centro criador (substitua pelo valor dinâmico, se necessário)
-
                 // Redireciona para a página de perfil com o ID
                 window.location.href = `../Perfil/perfilCentro.html?id=${id_centro_criador}`;
             });
