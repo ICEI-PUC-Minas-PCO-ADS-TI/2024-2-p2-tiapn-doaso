@@ -200,6 +200,38 @@ body {
     margin-top: 10vh;
 }
 
+.cardCentros{
+    flex: 1 1 calc(50% - 20px);   /* Cada card ocupa 50% do espaço menos o gap */
+    max-width: calc(40% - 20px);  /* Garante que o tamanho máximo seja 50% */
+    height: 40vh;
+    width: 50vw;
+    display: flex;
+    transition: transform 0.6s;
+}
+
+#centroContainer {
+    display: flex;                /* Usa flexbox para organizar os cards */
+    flex-wrap: wrap;              /* Permite que os cards quebrem para a próxima linha */
+    gap: 20px;                    /* Adiciona espaço entre os cards */
+    justify-content: center;      /* Centraliza os cards no container */
+}
+
+.imgCardCentroContainer{
+    width: 20vw;
+}
+.cardCentroContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cardCentros:hover{
+    transform: scale(1.05);
+    z-index: 2;
+}
+
 @media (max-width: 1024px) {
 
     .background1{
