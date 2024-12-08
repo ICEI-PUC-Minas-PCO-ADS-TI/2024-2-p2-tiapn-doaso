@@ -3,9 +3,9 @@ function createMetaCard(meta) {
     // Calcula o progresso
     const progresso = (meta.valor_recebido_meta / meta.valor_objetivo_meta) * 100;
 
-     // Limita a descrição a 300 caracteres e adiciona reticências se necessário
-    const descricaoTruncada = meta.desc_meta.length > 300 
-    ? meta.desc_meta.substring(0, 300) + "..." 
+     // Limita a descrição a 50 caracteres e adiciona reticências se necessário
+    const descricaoTruncada = meta.desc_meta.length > 50 
+    ? meta.desc_meta.substring(0, 50) + "..." 
     : meta.desc_meta;
 
     // Monta o HTML do card
