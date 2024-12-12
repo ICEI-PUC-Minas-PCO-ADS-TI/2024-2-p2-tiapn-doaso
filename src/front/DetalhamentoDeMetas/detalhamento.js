@@ -19,8 +19,8 @@ fetch(`http://localhost:3307/api/meta/${metaId}`)
             console.log("Descrição da meta:", meta.desc_meta);
 
             const descricaoTruncada = meta.desc_meta.length > 100
-            ? meta.desc_meta.substring(0, 100) + "..." 
-            : meta.desc_meta;
+                ? meta.desc_meta.substring(0, 100) + "..."
+                : meta.desc_meta;
 
             // Atualiza os elementos HTML com os dados da meta
             document.querySelector('.nomeMeta').textContent = meta.titulo_meta;
@@ -28,30 +28,40 @@ fetch(`http://localhost:3307/api/meta/${metaId}`)
             document.querySelector('.barra-Total').textContent = 'R$' + meta.valor_objetivo_meta;
             document.querySelector('.barra-arrecadado').style.width = `${meta.valor_recebido_meta / meta.valor_objetivo_meta * 100}%`;
             document.querySelector('.barra-arrecadado').textContent = `${meta.valor_recebido_meta / meta.valor_objetivo_meta * 100}%`;
+            const imgMeta = meta.imagem_meta;
+
+            function carregaImgMeta() {
+                const imgDoacao = document.getElementById("imgDoacao");
+                imgDoacao.innerHTML = `
+                    <img src="${imgMeta}" class="imgDoacaoItem" alt="...">
+                `;
+
+            }
+            carregaImgMeta();
 
             //Busca os dados do Centro
             id_centro_criador = meta.id_centro_criador;
 
             fetch(`http://localhost:3307/api/centro/${id_centro_criador}`)
-            .then(response => response.json())
-            .then(data => {
-                // Verifica se o array retornado contém algum item
-                if (data.length > 0) {
-                    const centro = data[0];
-                    console.log("Dados recebidos da API:", centro);
+                .then(response => response.json())
+                .then(data => {
+                    // Verifica se o array retornado contém algum item
+                    if (data.length > 0) {
+                        const centro = data[0];
+                        console.log("Dados recebidos da API:", centro);
 
-                    //Troca as informações para informações sobre o Centro
-                    document.querySelector('.nomeCentro').textContent = centro.nome_centro;
-                    document.querySelector('.localizacao').textContent = centro.endereco_bairro + " " + centro.endereco_cidade;
+                        //Troca as informações para informações sobre o Centro
+                        document.querySelector('.nomeCentro').textContent = centro.nome_centro;
+                        document.querySelector('.localizacao').textContent = centro.endereco_bairro + " " + centro.endereco_cidade;
 
-                } else {
-                    console.error("Nenhum dado encontrado para esta centro.");
-                    document.querySelector('.desc h4').textContent = "Centro não encontrado.";
-                }
-            })
-            .catch(error => {
-                console.error("Erro ao buscar os dados do centro:", error);
-            });
+                    } else {
+                        console.error("Nenhum dado encontrado para esta centro.");
+                        document.querySelector('.desc h4').textContent = "Centro não encontrado.";
+                    }
+                })
+                .catch(error => {
+                    console.error("Erro ao buscar os dados do centro:", error);
+                });
 
         } else {
             console.error("Nenhum dado encontrado para esta meta.");
@@ -63,17 +73,18 @@ fetch(`http://localhost:3307/api/meta/${metaId}`)
     });
 
 
-    // Adiciona o evento de clique ao botão de ver perfil
-    document.addEventListener("DOMContentLoaded", function () {
-        const verPerfilBtn = document.getElementById("verPerfilBtn");
+// Adiciona o evento de clique ao botão de ver perfil
+document.addEventListener("DOMContentLoaded", function () {
+    const verPerfilBtn = document.getElementById("verPerfilBtn");
 
-        // Verifica se o botão existe no DOM
-        if (verPerfilBtn) {
-            verPerfilBtn.addEventListener("click", function () {
-                // Redireciona para a página de perfil com o ID
-                window.location.href = `../Perfil/perfilCentro.html?id=${id_centro_criador}`;
-            });
-        } else {
-            console.error("Botão com a classe '.verPerfilBtn' não encontrado!");
-        }
-    });
+    // Verifica se o botão existe no DOM
+    if (verPerfilBtn) {
+        verPerfilBtn.addEventListener("click", function () {
+            // Redireciona para a página de perfil com o ID
+            window.location.href = `../Perfil/perfilCentro.html?id=${id_centro_criador}`;
+        });
+    } else {
+        console.error("Botão com a classe '.verPerfilBtn' não encontrado!");
+    }
+});
+

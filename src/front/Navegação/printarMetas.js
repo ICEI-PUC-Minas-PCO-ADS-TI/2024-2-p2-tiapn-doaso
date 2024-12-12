@@ -11,11 +11,11 @@ function createMetaCard(meta) {
     // Monta o HTML do card
     return `
     <div class="cardMetas shadow-lg mb-3 mt-5 rounded-4" onclick="abrirDetalhes(${meta.id_meta})">
-            <h5 class="card-title mt-4 mb-5 ">${meta.titulo_meta}</h5>
-            <img src="${meta.imagem_meta}" class="card-img-top" alt="...">
+            <h5 class="card-title mt-5 mb-5 ">${meta.titulo_meta}</h5>
+            <img src="${meta.imagem_meta}" class="card-img-top rounded-2 mb-5" alt="...">
             <div class="card-body">
                 <p class="card-text">${descricaoTruncada}</p>
-                <div class="progress barraCard mt-3" role="progressbar" aria-label="Example with label" aria-valuenow="${progresso}"
+                <div class="progress barraCard mt-3 mb-5" role="progressbar" aria-label="Example with label" aria-valuenow="${progresso}"
                     aria-valuemin="0" aria-valuemax="100">
                     <div class="progress-bar" style="width: ${progresso}%">${progresso}%</div>
                 </div>
