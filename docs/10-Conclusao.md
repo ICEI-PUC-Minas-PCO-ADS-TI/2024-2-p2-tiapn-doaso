@@ -1,3 +1,7 @@
 # 7. Conclusão
 
-_Apresente, aqui, a conclusão do trabalho, que deve conter uma síntese dos principais resultados obtidos com a melhoria dos processos, uma discussão das limitações da solução proposta e sugestões de novas linhas de estudo._
+_O projeto DoaSô apresenta uma solução eficaz para os desafios relacionados à desigualdade social e ao desperdício de recursos, em consonância com os Objetivos de Desenvolvimento Sustentável 10 e 12. A iniciativa promove a reutilização de itens que, de outra forma, seriam descartados, ao mesmo tempo em que facilita o acesso de pessoas em situação de vulnerabilidade a doações. Com a automação dos processos de coleta e distribuição, que anteriormente eram realizados de forma manual, foi possível otimizar as etapas envolvidas, reduzindo o tempo e o esforço necessários para a realização dessas atividades.
+
+Embora os resultados obtidos sejam expressivos, algumas limitações foram identificadas. A dependência inicial de infraestrutura tecnológica representa um desafio para comunidades com acesso limitado à internet ou a dispositivos digitais. Ademais, a aceitação e adesão à plataforma demandam esforços contínuos no sentido de engajar e educar a sociedade sobre a relevância de práticas solidárias e sustentáveis.
+
+Diante disso, algumas melhorias são indispensáveis para o aprimoramento do projeto. Entre elas, destacam-se a ampliação do escopo da plataforma para incluir outros tipos de itens reutilizáveis, o desenvolvimento de funcionalidades que assegurem maior acessibilidade digital e a implementação de campanhas educativas que incentivem o uso da solução tecnológica, como o  Sftware, e  promovam a conscientização sobre sua importância social e ambiental._
