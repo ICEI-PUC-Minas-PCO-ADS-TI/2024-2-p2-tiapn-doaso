@@ -44,11 +44,23 @@ function createConfigWrapper(containerId) {
     // Botão Minha Conta
     const myAccount = document.createElement("div");
     myAccount.className = "myAccount";
+
     const myAccountBtn = document.createElement("a");
     myAccountBtn.className = "myAccountBtn";
-    myAccountBtn.href = "";
-    myAccountBtn.textContent = "Minha conta";
-    myAccount.appendChild(myAccountBtn);
+
+    // Verifica se o usuário corrente está presente no localStorage
+    const usuarioCorrente = localStorage.getItem("UsuarioLogado");
+
+    if (usuarioCorrente) {
+        myAccountBtn.textContent = "Minha conta";
+        myAccountBtn.href = "/Perfil/perfilDoador.html"; // TROCAR LINK
+    } else {
+        // Se não houver usuário corrente, o botão será "Fazer Login"
+        myAccountBtn.textContent = "Fazer Login";
+        myAccountBtn.href = "../../2024-2-p2-tiapn-doaso/src/front/Login/login.html"; //TROCAR LINK
+    }
+
+myAccount.appendChild(myAccountBtn);
 
     // Botão Quero Doar
     const queroDoar = document.createElement("div");
@@ -74,7 +86,7 @@ function createConfigWrapper(containerId) {
     notificacao.appendChild(notificationButton);
 
     // Montando a barra de configuração
-    configBar.append(imgProfile, search, myAccount, queroDoar, notificacao);
+    configBar.append(imgProfile, myAccount, queroDoar, notificacao);
     configWrapper.appendChild(configBar);
 
     // Menu Hambúrguer

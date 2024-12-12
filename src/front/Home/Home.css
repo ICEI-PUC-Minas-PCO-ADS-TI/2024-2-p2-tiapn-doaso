@@ -48,13 +48,14 @@ body {
 
 .titulo h1 {
     /* Estilo do título principal com cor secundária */
-    color: var(--cor-secundaria);
+    color: var(--cor-btn);
     font-size: 600%;
 }
 
 .subtitulo h2 {
     /* Estilo do subtítulo com cor branca */
     color: var(--cor-branco);
+    font-size: 150%;
 }
 
 .imgCentralItem {
@@ -69,13 +70,15 @@ body {
     height: 100vh;
     width: 100%;
     padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .textoCentralTela2 {
     /* Configuração para centralizar o texto da tela 2 */
     display: flex;
     align-items: center;
-    padding-top: 5vh;
 }
 
 .pt1 {
@@ -110,7 +113,7 @@ body {
 
 .background-3 {
     /* Altura do fundo da terceira tela */
-    height: 270vh;
+    height: 220vh;
     width: 100%;
 }
 
@@ -156,20 +159,6 @@ body {
 
 .numeracaoContainer .img1 .imgCentralItem {
     /* Dimensões das imagens nas instruções */
-    margin: 2vw;
-    width: 25vw;
-}
-
-.nossaMissao {
-    /* Estilo e alinhamento da seção "Nossa Missão" */
-    padding-top: 5%;
-    display: flex;
-    width: 40vw;
-    margin-left: 20vw;
-}
-
-.nossaMissao .img1 .imgCentralItem {
-    /* Dimensões das imagens na seção "Nossa Missão" */
     margin: 2vw;
     width: 25vw;
 }
