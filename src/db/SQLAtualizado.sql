@@ -53,6 +53,7 @@
 			valor_recebido_meta DOUBLE,
 			desc_meta VARCHAR(1000),
 			titulo_meta VARCHAR(50),
+			imagem_meta VARCHAR(2000),
 			id_centro_criador INT,
 			FOREIGN KEY (id_centro_criador) REFERENCES Centro_de_doacao(id_centro) ON DELETE CASCADE
 			);
@@ -64,6 +65,7 @@
 			data_proposta DATE,
 			id_doador_remetente INT,
 			id_centro_destinatario INT,
+			status_proposta BOOLEAN,
 			FOREIGN KEY (id_doador_remetente) REFERENCES Doador(id_doador),
 			FOREIGN KEY (id_centro_destinatario) REFERENCES Centro_de_doacao(id_centro) ON DELETE CASCADE
 		);
