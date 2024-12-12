@@ -7,6 +7,8 @@ import ImagemHelper from "../../script/ImagemDoacao.js";
 
 const propostas = await PropostaHelper.getProposta();
 
+
+
 const propostasFiltradas = propostas.filter((proposta) => {
     return proposta.id_doador_remetente === userId || proposta.id_centro_destinatario === userId;
   });
@@ -32,7 +34,7 @@ async function renderizarPropostas() {
     chatsDiv.innerHTML = '';
   
     propostas.forEach((proposta) => {
-      const imagem = await ImagemHelper.getImagemByIdProposta(proposta.id_proposta);
+      const imagem = getImagem(proposta.id_proposta);
     
       const chatDiv = document.createElement('div');
       chatDiv.classList.add('chats');
@@ -94,7 +96,11 @@ async function getProposta(propostaId){
 
 async function getImagem(propostaId){
     return await ImagemHelper.getImagemByIdProposta(propostaId);
- }
+}
+
+async function getUser(propostaId){
+    return await UsuarioHelper.getImagemByIdProposta(propostaId);
+}
 
 async function enviarMensagem() {
   const conteudoMensagem = mensagemInput.value;
