@@ -10,18 +10,18 @@ html, body {
     height: 100%; 
     margin: 0;
 }
+
 body {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .background{
     background-color: var(--cor-primaria);
     width: 100vw;
-    height: 125vh;
-    padding-top: 5%;
+    height: 100vh;
 }
 
 .titulo h2{
@@ -36,6 +36,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2px;
+    height: 60vh;
+    padding-top: 15%;
 }
 
 .formulario {
@@ -116,9 +118,16 @@ body {
 }
 
 @media (max-width: 1024px) {
+    body {
+        margin-top: 5vh;
+        overflow: visible;
+    }
+    .background{
+        margin-top: 20vh;
+    }
     .background{
         padding-top: 20%;
-        height: 250vh;
+        height: 200vh;
     }
 
     .formulario, .campos, .formularios3 .mb-3 {
@@ -150,7 +159,7 @@ body {
 }
 @media (max-width: 768px) {
     .background{
-        height: 250vh;
+        height: 200vh;
         padding-top: 0%;
     }
     .titulo h2{
