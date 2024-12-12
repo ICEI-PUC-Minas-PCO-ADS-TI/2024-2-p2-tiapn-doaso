@@ -39,7 +39,6 @@ async function getLatLong(cep) {
 // Função para adicionar marcadores de doações
 async function addMarkers() {
     try {
-     
         var donations = await UsuarioHelper.getCentro(); // Pega os centros de doação no backend 
 
         // Para cada doação, obtemos as coordenadas e criamos o marcador
@@ -47,10 +46,14 @@ async function addMarkers() {
             const { latitude, longitude } = await getLatLong(donation.endereco_cep);
             console.log(latitude, longitude);
 
+            // Ajusta os campos para corresponder ao banco de dados
+            const name = donation.nome_centro; // Nome do centro
+            const description = donation.desc_centro; // Descrição do centro
+
             // Cria popup com informações da doação
             const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
-                <h3>${donation.name}</h3>
-                <p>${donation.description}</p>
+                <h3>${name}</h3>
+                <p>${description}</p>
             `);
 
             // Cria o marcador
@@ -63,6 +66,7 @@ async function addMarkers() {
         console.error("Erro ao adicionar marcadores:", error);
     }
 }
+
 
 // Adicionando os marcadores das doações ao mapa
 addMarkers();
