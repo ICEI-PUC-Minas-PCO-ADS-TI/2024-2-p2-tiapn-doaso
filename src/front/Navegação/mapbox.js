@@ -1,6 +1,5 @@
 import UsuarioHelper from "../script/Usuario.js";
 
-
 // MAPBOX INICIO ---------------------------------------------------------------------------------------------------
 // Configuração inicial do mapa
 mapboxgl.accessToken = 'pk.eyJ1IjoiaWdvcm1tZiIsImEiOiJjbTNtYWx5ajMwdzloMmxvb2d5amJxZDQ0In0.xwhRysuUeQmQcGUwylABKw';
@@ -67,7 +66,6 @@ async function addMarkers() {
     }
 }
 
-
 // Adicionando os marcadores das doações ao mapa
 addMarkers();
 
@@ -86,17 +84,6 @@ if (navigator.geolocation) {
             .setPopup(new mapboxgl.Popup({ offset: 25 }).setHTML("<h3>Você está aqui!</h3>"))
             .addTo(map);
 
-        // Centraliza o mapa para incluir todos os marcadores
-        const bounds = new mapboxgl.LngLatBounds();
-        bounds.extend([userLocation.longitude, userLocation.latitude]); // Adiciona a localização do usuário
-
-        // Ajuste dos bounds de doações para mostrar todos os marcadores
-        donations.forEach(donation => {
-            bounds.extend([donation.location.longitude, donation.location.latitude]); // Adiciona os marcadores das doações
-        });
-
-        map.fitBounds(bounds, { padding: 50 }); // Ajusta o mapa para mostrar todos os marcadores
-
         // Obtém o endereço usando a API de geocodificação reversa do Mapbox
         const accessToken = mapboxgl.accessToken; // Reutiliza o token já definido
         const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${userLocation.longitude},${userLocation.latitude}.json?access_token=${accessToken}`;
@@ -104,12 +91,12 @@ if (navigator.geolocation) {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                const address = data.features[0]?.place_name || "Endereço não encontrado.";
-                document.getElementById("user-address").textContent = `Seu endereço: ${address}`;
+                const street = data.features.find(feature => feature.place_type.includes('address'))?.text || "Rua não encontrada.";
+                document.getElementById("user-address").textContent = `Sua rua: ${street}`;
             })
             .catch(error => {
                 console.error("Erro ao obter o endereço:", error);
-                document.getElementById("user-address").textContent = "Não foi possível determinar o endereço.";
+                document.getElementById("user-address").textContent = "Não foi possível determinar sua rua.";
             });
 
     }, error => {
