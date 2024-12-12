@@ -64,6 +64,24 @@ body {
     width: 10vw;
 }
 
+.adicionarImg {
+    cursor: pointer; 
+    transition: transform 0.6s ease;
+}
+
+.icon-button {
+    border: none; 
+    background: none;
+    padding: 0;
+    margin: 0; 
+    cursor: pointer;
+}
+
+.adicionarImg:hover {
+    transform: scale(1.1);
+}
+
+
 @media (max-width: 1024px){
     .containerLados{
         flex-direction: column;
