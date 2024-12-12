@@ -11,7 +11,7 @@ function createCentroCard(centro) {
     <div class="cardCentros shadow-lg mb-3 mt-5 rounded-4" onclick="abrirPerfil(${centro.id_centro})">
         <div class="row g-0">
                 <div class="col-md-4 mt-5 ps-3 pt-4">
-                    <img src="../images/logo sem fundo.jpeg" class="img-fluid rounded-start" alt="...">
+                    <img src="../images/logo sem fundo.jpeg" class="img-fluid rounded-5" alt="...">
                 </div>
             <div class="cardCentroContainer col-md-8">
                 <div class="cardCentroBody">

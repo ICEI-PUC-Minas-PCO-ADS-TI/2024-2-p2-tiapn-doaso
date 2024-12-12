@@ -12,6 +12,8 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
     <!-- JS Mapbox -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script type="module" src="./mapbox.js" defer></script>
+    
     <title>Navegação por Centros disponíveis</title>
 </head>
 
@@ -25,7 +27,7 @@
                 <h1 class="titulo"><span class="pt1">Centros de doações</span><span class="pt2"> disponíveis</span></h1>
                 <img class="imgIlustrativa rounded-4" src="../images/logo sem fundo.jpeg" alt="">
             </div>
-            <div class="partePesquisa">
+            <!-- <div class="partePesquisa">
                 <h3>Busque por Centros</h3>
                 <div class="search">
                     <form class="searchBar d-flex" role="search">
@@ -33,40 +35,25 @@
                         <button class="btn" type="submit">Pesquisar</button>
                     </form>
                 </div>
-            </div>
-        </div>
-        <div class="background2">
-            <div class="textoTela2">
-                <div class="textoCentralTela2">
-                    <h1 class="titulo"><span class="pt1">Centros</span> <span class="pt2">em destaque</span></h1>
-                </div>
-            </div>
-
-            <div class="imgsTela2">
-                <img src="../images/logo sem fundo.jpeg" class="imgCentralItem mx-3 rounded-5" alt="...">
-                <img src="../images/logo sem fundo.jpeg" class="imgCentralItem mx-3 rounded-5" alt="...">
-                <img src="../images/logo sem fundo.jpeg" class="imgCentralItem mx-3 rounded-5" alt="...">
-            </div>
+            </div> -->
         </div>
         <div class="background3">
-            <h1 class="titulo"><span class="pt1">Mais alguns </span> <span class="pt2">centros de doações</span></h1>
-            <div class="containerMetas">
-                <select class="form-select" aria-label="Default select">
-                    <option selected>Filtros</option>
-                    <option value="1">Primeira</option>
-                    <option value="2">Segunda</option>
-                    <option value="3">Terceira</option>
-                </select>
+            <h1 class="titulo"><span class="pt1">Centros</span> <span class="pt2">parceiros</span></h1>
+            <!-- CONTAINER PARA CARREGAR OS CENTROS -->
+            <div id="centroContainer" class="mt-5"></div>
 
-                <!-- CONTAINER PARA CARREGAR OS CENTROS -->
-                <div id="centroContainer"></div></div>
-                
-                <div class="background4">
-                    <h1 class="titulo"><span class="pt1">Centros perto</span> <span class="pt2">de você</span></h1>
-                    <div id="map" class="geoLoc rounded-5"></div>
-                </div>
+            <div class="MapBoxContainer">
+                <h1 class="titulo"><span class="pt1">Centros perto</span> <span class="pt2">de você</span></h1>
+            <div id="map" class="geoLoc rounded-5" style="height: 500px;"></div>
+            <p id="user-address" style="text-align: center; margin-top: 10px; font-size: 18px; color: #333;">
+                Localizando seu endereço...
+            </p>
             </div>
-           
+        </div>
+
+       
+    </div>
+
     </div>
     </div>
 </body>
