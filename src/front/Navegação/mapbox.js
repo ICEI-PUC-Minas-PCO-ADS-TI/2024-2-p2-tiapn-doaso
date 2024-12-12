@@ -40,11 +40,11 @@ async function getLatLong(cep) {
 async function addMarkers() {
     try {
      
-        const donations = UsuarioHelper.getCentro();
-console.log(donations,"asdkasjdkaj" )
+        var donations = await UsuarioHelper.getCentro(); // Pega os centros de doação no backend 
+
         // Para cada doação, obtemos as coordenadas e criamos o marcador
         for (let donation of donations) {
-            const { latitude, longitude } = await getLatLong(donation.cepEnd);
+            const { latitude, longitude } = await getLatLong(donation.endereco_cep);
             console.log(latitude, longitude);
 
             // Cria popup com informações da doação
