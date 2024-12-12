@@ -96,7 +96,7 @@
                                     <div class="modal-body">
                                         <!-- Formulário -->
                                         <form id="doacaoForm">
-                                            <div class="mb-3">
+                                            <!-- <div class="mb-3">
                                                 <label for="categoria" class="form-label">Categoria</label>
                                                 <select class="form-select" id="categoria" name="categoria" required>
                                                     <option value="" selected disabled>Escolha uma categoria</option>
@@ -108,15 +108,13 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="descricao" class="form-label">Descrição da proposta</label>
-                                                <textarea class="form-control" id="descricaoProposta" name="descricao" rows="3"
-                                                    required></textarea>
-                                            </div>
+                                                <textarea class="form-control" id="descricaoProposta" name="descricao" rows="3" required></textarea>
+                                            </div> -->
                                             <div class="mb-3">
                                                 <label for="imagem" class="form-label">Imagem da proposta</label>
-                                                <input type="file" class="form-control" id="imagemProposta" name="imagem"
-                                                    accept="image/*" required />
+                                                <input type="file" class="btnCadastrarImagem form-control" id="imagemProposta" name="imagem" accept="image/*" required />
                                             </div>
-                                            <button type="submit" class="btn" id="btnCadastrarProposta">Enviar Proposta</button>
+                                            <button type="submit" class="btnCadastrarProposta btn" id="btnCadastrarProposta">Enviar Proposta</button>   
                                         </form>
                                     </div>
                                 </div>
@@ -190,11 +188,11 @@
     <script src="../global.js"></script>
     <script src="perfilCentro.js"></script>
     <script src="infoCentro.js"></script>
+    <script src="../script/API_img.js"></script>
     <script type="module" src="propostas.js"></script>
     <script>
         createConfigWrapper('menuContainer');
     </script>
-
 </body>
 
 </html>
