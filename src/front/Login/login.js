@@ -1,58 +1,57 @@
 import UsuarioHelper from "../script/Usuario.js";
 
-async function loginUsuario(event) {
-    event.preventDefault();
+var btnLogin = document.getElementById("btnLogin")
+
+btnLogin.addEventListener('click', verificaLogin)
+
+async function verificaLogin() {    
 
     // Captura os valores dos campos do formulário
-    const login = document.getElementById('login').value.trim();
-    const senha = document.getElementById('senha').value.trim();
+    var login = document.getElementById("login").value;
+    var senha = document.getElementById("senha").value;
 
-    if (!login || !senha) {
-        alert("Por favor, preencha todos os campos.");
-        return;
+    // Obtém todos os doadores e centros
+    var doadores = await UsuarioHelper.getDoador();
+    var centros = await UsuarioHelper.getCentro();
+    var tipoUsuario = document.querySelector('input[name="tipoUsuario"]:checked').value;
+
+    console.log("123", doadores, centros, tipoUsuario)
+    
+    // Verifica se o login (email) existe em doadores ou centros
+    if(tipoUsuario == "Doador"){
+        doadores.forEach(doador => {
+            if(doador.email_doador == login){
+                if(doador.senha_doador == senha){
+                    logarUsuario(doador);
+                }
+                else {
+                    window.alert(`A senha para o usuário ${doador.nome_doador} está incorreta`);
+                }
+            }
+
+        });
     }
-
-        // Obtém todos os doadores e centros
-        const doadores = await UsuarioHelper.getDoador();
-        const centros = await UsuarioHelper.getCentro();
-        const tipoUsuario = document.getElementById("tipoUsuario").value;
-
-        // Verifica se o login (email) existe em doadores ou centros
-        if(tipoUsuario == "Doador"){
-            doadores.array.forEach(doador => {
-                if(doador.email === login){
-                    if(doador.senha === senha){
-                        logarUsuario(doador.id);
-                    }
-                    else {
-                        window.alert(`A senha para o usuário ${doador.nome} está incorreta`);
-                    }
-                } else {
-                    window.alert(`O email para o usuário ${doador.nome} está incorreto`);
+    else if(tipoUsuario == "Centro"){
+        centros.forEach(centro => {
+            if(centro.email_centro == login){
+                if(centro.senha_centro == senha){
+                    logarUsuario(centro);
                 }
-    
-            });
-        }
-        else if(tipoUsuario == "Centro"){
-            centros.array.forEach(centro => {
-                if(centro.email === login){
-                    if(centro.senha === senha){
-                        logarUsuario(centro.id);
-                    }
-                    else {
-                        window.alert(`A senha para o usuário ${centro.nome} está incorreta`);
-                    }
-                } else {
-                    window.alert(`O email para o usuário ${centro.nome} está incorreto`);
+                else {
+                    window.alert(`A senha para o usuário ${centro.nome_centro} está incorreta`);
                 }
-    
-            });
-        }
+            } else {
+                window.alert(`O email para o usuário ${centro.nome_centro} está incorreto`);
+            }
+
+        });
+    } else {
+        console.log("Tipo Inválido")
+    }
 }
 
-function logarUsuario(id){
-    localStorage.setItem("UsuarioLogado", id)
+function logarUsuario(usuario){
+    localStorage.setItem("UsuarioLogado", JSON.stringify(usuario))
+    window.alert(`Usuário logado`)
+    window.location.href = "../Home/Home.html";
 }
-
-// Adiciona o evento de submit ao formulário
-document.querySelector('.formulario').addEventListener('submit', loginUsuario);
