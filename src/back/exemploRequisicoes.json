@@ -56,5 +56,9 @@
         "idProposta": "2",
         "idRemetente": "4",
         "idDestinatario": "5"
+    },
+
+    "notificacao": {
+        
     }
 }

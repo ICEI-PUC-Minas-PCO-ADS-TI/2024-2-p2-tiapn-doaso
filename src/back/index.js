@@ -239,9 +239,9 @@ app.get("/api/meta/:id", (req, res) => {
 });
 //POST Metas de Doacao
 app.post('/api/meta', (req, res) => {
-    const { valorObjetivo, valorArrecadado, descricao, titulo, idCentroCriador} = req.body;
+    const { valorObjetivo, valorArrecadado, descricao, titulo, idCentroCriador, imagemMeta} = req.body;
 
-    db.query("INSERT INTO Meta_de_doacao(valor_objetivo_meta, valor_recebido_meta, desc_meta, titulo_meta, id_centro_criador) VALUES (?, ?, ?, ?, ?)", [valorObjetivo, valorArrecadado, descricao, titulo, idCentroCriador], (err, result) => {
+    db.query("INSERT INTO Meta_de_doacao(valor_objetivo_meta, valor_recebido_meta, desc_meta, titulo_meta, id_centro_criador, imagem_meta) VALUES (?, ?, ?, ?, ?, ?)", [valorObjetivo, valorArrecadado, descricao, titulo, idCentroCriador, imagemMeta], (err, result) => {
         if (err) {
             console.log(err)
         }
@@ -300,8 +300,9 @@ app.get("/api/proposta/:id", (req, res) => {
 // POST proposta de doação
 app.post('/api/proposta', (req, res) => {
     const { descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario } = req.body;
-    db.query("INSERT INTO Proposta_de_doacao (desc_proposta, data_proposta, id_doador_remetente, id_centro_destinatario) VALUES (?, ?, ?, ?)", 
-    [descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario], (err, result) => {
+    const statusProposta = false;
+    db.query("INSERT INTO Proposta_de_doacao (desc_proposta, data_proposta, id_doador_remetente, id_centro_destinatario, status_proposta) VALUES (?, ?, ?, ?, ?)", 
+    [descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario, statusProposta], (err, result) => {
         if (err) {
             console.log(err);
         } else {
@@ -361,7 +362,7 @@ app.get("/api/proposta/mensagem/:idProposta", (req, res) => {
         res.send(result);
     });
 });
-// POST proposta de doação
+// POST Mensagens na proposta de doação
 app.post('/api/proposta/mensagem', (req, res) => {
     const { dataMensagem, conteudoMensagem, visualizacaoMensagem, idPropost, idRemetente, idDestinatario } = req.body;
     db.query("INSERT INTO Mensagem (data_mensagem, conteudo_mensagem, visualizacao_mensagem, id_proposta, id_remetente, id_destinatario) VALUES (?, ?, ?, ?, ?, ?)", 
@@ -373,7 +374,7 @@ app.post('/api/proposta/mensagem', (req, res) => {
         }
     });
 });
-// PUT proposta de doação
+// PUT Mensagens proposta de doação
 app.put('/api/proposta/mensagem/:idProposta/:idMensagem', (req, res) => {
     const idProposta = req.params.idProposta;
     const idMensagem = req.params.idMensagem;
@@ -387,7 +388,7 @@ app.put('/api/proposta/mensagem/:idProposta/:idMensagem', (req, res) => {
         res.status(200).json({ message: 'Proposta deletada com sucesso' });
     });
 });
-// DELETE proposta de doação
+// DELETE mensagens proposta de doação
 app.delete('/api/proposta/mensagem/:idProposta/:idMensagem', (req, res) => {
     const idProposta = req.params.idProposta;
     const idMensagem = req.params.idMensagem;
@@ -442,6 +443,43 @@ app.delete('/api/favorito/:idDoador/:idCentroFavoritado', (req, res) => {
     });
 });
 
+
+//ROTAS DAS NOTIFICACOES
+//GET notificao por id
+app.get("/api/favorito/:idUsuario", (req, res) => {
+
+    const idUsuario = req.params.idDoador;
+
+    db.query("SELECT * FROM Notificacao WHERE  id_usuario = ?", [idUsuario], (err, result) => {
+        if (err) {
+            console.log(err);
+        }
+        res.send(result);
+    });
+});
+// POST favorito no banco
+app.post('/api/notificacao', (req, res) => {
+    const { tipoNotificacao, idUsuario, visualizacaoNotificacao, dataNotificacao } = req.body;
+    db.query("INSERT INTO Notificacao (tipo_notificacao, id_ususario, visualizacao_notificacao, data_notificacao) VALUES (?, ?, ?, ?)", 
+    [tipoNotificacao, idUsuario, visualizacaoNotificacao, dataNotificacao], (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.status(201).send("Favorito registrado com sucesso");
+        }
+    });
+});
+// PUT Mensagens proposta de doação
+app.put('/api/notificacao', (req, res) => {
+    const { idNotificacao, tipoNotificacao, idUsuario, visualizacaoNotificacao, dataNotificacao } = req.body;
+    db.query("UPDATE Mensagem SET visualizacao_notificacao= ? WHERE id_notificacao = ?", [visualizacaoNotificacao, idNotificacao], (err, result) => {
+        if (err) {
+            console.log(err);
+            return res.status(500).json({ error: 'Erro ao atualizar notificacao' });
+        }
+        res.status(200).json({ message: 'Proposta deletada com sucesso' });
+    });
+});
 
 //Ativação do servidor
 app.listen(PORT, () => {

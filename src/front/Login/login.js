@@ -12,34 +12,46 @@ async function loginUsuario(event) {
         return;
     }
 
-    try {
         // Obtém todos os doadores e centros
         const doadores = await UsuarioHelper.getDoador();
         const centros = await UsuarioHelper.getCentro();
+        const tipoUsuario = document.getElementById("tipoUsuario").value;
 
         // Verifica se o login (email) existe em doadores ou centros
-        const usuario = [...doadores, ...centros].find(user => user.email === login);
-
-        if (!usuario) {
-            alert("E-mail não encontrado.");
-            return;
+        if(tipoUsuario == "Doador"){
+            doadores.array.forEach(doador => {
+                if(doador.email === login){
+                    if(doador.senha === senha){
+                        logarUsuario(doador.id);
+                    }
+                    else {
+                        window.alert(`A senha para o usuário ${doador.nome} está incorreta`);
+                    }
+                } else {
+                    window.alert(`O email para o usuário ${doador.nome} está incorreto`);
+                }
+    
+            });
         }
-
-        // Verifica a senha
-        if (usuario.senha === senha) {
-            alert("Login Realizado!");
-            console.log("Usuário logado:", usuario);
-
-            // Redireciona para a página inicial
-            // aqui precisa colocar a url da home
-            window.location.href = "../Home/Home.html";
-        } else {
-            alert("Senha incorreta.");
+        else if(tipoUsuario == "Centro"){
+            centros.array.forEach(centro => {
+                if(centro.email === login){
+                    if(centro.senha === senha){
+                        logarUsuario(centro.id);
+                    }
+                    else {
+                        window.alert(`A senha para o usuário ${centro.nome} está incorreta`);
+                    }
+                } else {
+                    window.alert(`O email para o usuário ${centro.nome} está incorreto`);
+                }
+    
+            });
         }
-    } catch (error) {
-        console.error("Erro ao realizar login:", error);
-        alert("Erro ao realizar login.");
-    }
+}
+
+function logarUsuario(id){
+    localStorage.setItem("UsuarioLogado", id)
 }
 
 // Adiciona o evento de submit ao formulário

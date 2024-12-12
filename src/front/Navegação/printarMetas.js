@@ -12,7 +12,7 @@ function createMetaCard(meta) {
     return `
     <div class="cardMetas shadow-lg mb-3 mt-5 rounded-4" onclick="abrirDetalhes(${meta.id_meta})">
             <h5 class="card-title mt-4 mb-5 ">${meta.titulo_meta}</h5>
-            <img src="../images/logo sem fundo.jpeg" class="card-img-top" alt="...">
+            <img src="${meta.imagem_meta}" class="card-img-top" alt="...">
             <div class="card-body">
                 <p class="card-text">${descricaoTruncada}</p>
                 <div class="progress barraCard mt-3" role="progressbar" aria-label="Example with label" aria-valuenow="${progresso}"
