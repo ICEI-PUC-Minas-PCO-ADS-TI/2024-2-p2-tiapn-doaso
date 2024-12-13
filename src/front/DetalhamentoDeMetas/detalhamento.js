@@ -18,8 +18,8 @@ fetch(`http://localhost:3307/api/meta/${metaId}`)
             console.log("Dados recebidos da API:", meta);
             console.log("Descrição da meta:", meta.desc_meta);
 
-            const descricaoTruncada = meta.desc_meta.length > 100
-                ? meta.desc_meta.substring(0, 100) + "..."
+            const descricaoTruncada = meta.desc_meta.length > 650
+                ? meta.desc_meta.substring(0, 650) + "..."
                 : meta.desc_meta;
 
             // Atualiza os elementos HTML com os dados da meta
