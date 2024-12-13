@@ -18,7 +18,7 @@ function createConfigWrapper(containerId) {
     const imgProfile = document.createElement("div");
     imgProfile.className = "imgProfile";
     const img = document.createElement("img");
-    img.src ="https://i.ibb.co/RcFgVsn/logo-sem-fundo.jpg"
+    img.src = "https://i.ibb.co/RcFgVsn/logo-sem-fundo.jpg";
     img.alt = "...";
     img.className = "imgProfileItem rounded-circle";
     imgProfile.appendChild(img);
@@ -49,18 +49,24 @@ function createConfigWrapper(containerId) {
     myAccountBtn.className = "myAccountBtn";
 
     // Verifica se o usuário corrente está presente no localStorage
-    const usuarioCorrente = localStorage.getItem("UsuarioLogado");
+    const usuarioCorrente = JSON.parse(localStorage.getItem("UsuarioLogado"));
 
     if (usuarioCorrente) {
-        myAccountBtn.textContent = "Minha conta";
-        myAccountBtn.href = "/Perfil/perfilDoador.html"; // TROCAR LINK
+        // Verifica se o usuário tem CPF ou CNPJ e redireciona para a página correspondente
+        if ('cpf' in usuarioCorrente) {
+            myAccountBtn.textContent = "Minha conta";
+            myAccountBtn.href = "../../2024-2-p2-tiapn-doaso/src/front/Perfil/perfilDoador.html"; // Redireciona para o perfil de doador
+        } else if ('cnpj' in usuarioCorrente) {
+            myAccountBtn.textContent = "Minha conta";
+            myAccountBtn.href = "../../2024-2-p2-tiapn-doaso/src/front/Perfil/perfilCentro.html"; // Redireciona para o perfil do centro
+        }
     } else {
         // Se não houver usuário corrente, o botão será "Fazer Login"
         myAccountBtn.textContent = "Fazer Login";
-        myAccountBtn.href = "../../2024-2-p2-tiapn-doaso/src/front/Login/login.html"; //TROCAR LINK
+        myAccountBtn.href = "../../2024-2-p2-tiapn-doaso/src/front/Login/login.html"; // Redireciona para a página de login
     }
 
-myAccount.appendChild(myAccountBtn);
+    myAccount.appendChild(myAccountBtn);
 
     // Botão Quero Doar
     const queroDoar = document.createElement("div");
@@ -167,5 +173,3 @@ myAccount.appendChild(myAccountBtn);
 
 // Chame a função passando o ID do container onde você quer inserir a estrutura
 createConfigWrapper("seuContainerId");
-
-
