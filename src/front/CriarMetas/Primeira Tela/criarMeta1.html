@@ -45,11 +45,25 @@
                                     <p class="pLabel">Insira um breve paragrafo explicando o motivo dessa meta de arrecadação.</p>
                                     <input type="text" class="form-control" id="descricaoMeta" required>
                                 </div>
+                                <div class="icon-addImagem-container">
+                                    <!-- Input oculto para seleção de imagem -->
+                                    <input type="file" id="imageMetaInput" accept="image/*" style="display: none;">
+                                    
+                                    
+                                </div>
+                                
                             </div>
-                            <button class="btn mt-3" id="btnCriarMeta">Adicionar Meta no Banco</button>
-                            <button class="btn mt-3" id="btnDeletarMeta">Remover Meta do Banco</button>
+                            
                         </div>
                     </form>
+                    <!-- Botão estilizado que aciona o input -->
+                    <button class="icon-button pt-5" onclick="document.getElementById('imageMetaInput').click()">
+                        <svg class="adicionarImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="50" height="50">
+                            <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"></path>
+                        </svg>
+                    </button>
+                    <button class="btn mt-3" id="btnCriarMeta">Adicionar Meta no Banco</button>
+                    <button class="btn mt-3" id="btnDeletarMeta">Remover Meta do Banco</button>
                 </div>
             </div>
         </div>

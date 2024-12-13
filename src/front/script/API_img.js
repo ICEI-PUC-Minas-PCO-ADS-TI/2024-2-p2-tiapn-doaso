@@ -1,5 +1,5 @@
 
-async function postImgAPI(inputId) {
+export async function postImgAPI(inputId) {
     const inputElement = document.getElementById(inputId);
     
     if (!inputElement || !inputElement.files || inputElement.files.length === 0) {
@@ -25,14 +25,14 @@ async function postImgAPI(inputId) {
 }
 
 // TESTE FEITO COM O BOTÃO DE CADASTRAR PROPOSTA DO PERFIL CENTRO
-document.getElementById('btnCadastrarProposta').addEventListener('click', async (event) => {
-    event.preventDefault();
+// document.getElementById('btnCadastrarProposta').addEventListener('click', async (event) => {
+//     event.preventDefault();
 
-    try {
-        const imageUrl = await postImgAPI('imagemProposta');
-        console.log('Imagem armazenada na URL:', imageUrl);
+//     try {
+//         const imageUrl = await postImgAPI('imagemProposta');
+//         console.log('Imagem armazenada na URL:', imageUrl);
 
-    } catch (error) {
-        console.error('Erro:', error);
-    }
-});
+//     } catch (error) {
+//         console.error('Erro:', error);
+//     }
+// });

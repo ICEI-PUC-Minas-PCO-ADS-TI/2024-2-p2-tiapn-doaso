@@ -3,16 +3,16 @@ function createMetaCard(meta) {
     // Calcula o progresso
     const progresso = (meta.valor_recebido_meta / meta.valor_objetivo_meta) * 100;
 
-     // Limita a descrição a 50 caracteres e adiciona reticências se necessário
-    const descricaoTruncada = meta.desc_meta.length > 50 
-    ? meta.desc_meta.substring(0, 50) + "..." 
+    // Limita a descrição a 75 caracteres e adiciona reticências se necessário
+    const descricaoTruncada = meta.desc_meta.length > 75 
+    ? meta.desc_meta.substring(0, 75) + "..." 
     : meta.desc_meta;
 
     // Monta o HTML do card
     return `
     <div class="cardMetas shadow-lg mb-3 mt-5 rounded-4" onclick="abrirDetalhes(${meta.id_meta})">
             <h5 class="card-title mt-5 mb-5 ">${meta.titulo_meta}</h5>
-            <img src="${meta.imagem_meta}" class="card-img-top rounded-2 mb-5" alt="...">
+            <img src="${meta.imagem_meta}" class="card-img-top rounded-2" alt="...">
             <div class="card-body">
                 <p class="card-text">${descricaoTruncada}</p>
                 <div class="progress barraCard mt-3 mb-5" role="progressbar" aria-label="Example with label" aria-valuenow="${progresso}"
