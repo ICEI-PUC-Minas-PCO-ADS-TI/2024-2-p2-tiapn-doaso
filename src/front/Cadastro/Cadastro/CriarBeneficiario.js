@@ -1,4 +1,35 @@
 import UsuarioHelper from "../../script/Usuario.js";
+import { postImgAPI } from '../../script/API_img.js';
+
+document.getElementById('btnMudarFoto').addEventListener('click', () => {
+    document.getElementById('inputFoto').click();
+});
+
+var linkImagemPerfil;
+
+document.getElementById('inputFoto').addEventListener('change', async function (event) {
+    const inputElement = event.target;
+
+    if (!inputElement.files || inputElement.files.length === 0) {
+        alert("Por favor, selecione uma imagem.");
+        return;
+    }
+
+    try {
+        // Chame a função para enviar a imagem e obter o URL
+        const url = await postImgAPI('inputFoto');
+        console.log("Imagem carregada em:", url);
+        linkImagemPerfil = url;
+        // Atualize a imagem de perfil
+        document.getElementById('fotoPerfil').src = url;
+
+        alert("Foto de perfil alterada com sucesso!");
+
+    } catch (error) {
+        console.error("Erro ao enviar a imagem:", error);
+        alert("Falha ao carregar a imagem.");
+    }
+});
 
 var btnCadastrar = document.getElementById('btnCadastrar');
 var btnDeletar = document.getElementById('btnDeletar');
@@ -7,7 +38,7 @@ async function postarDoador() {
     var nome = document.getElementById('nomeCompleto').value;
     var email = document.getElementById('email').value;
     // var senha = document.getElementById('senha').value;
-    // var imagemPerfil = document.getElementById('link.imagem').value;
+    var imagemPerfil = linkImagemPerfil;
     // var descricao = document.getElementById('descricao').value;
     var cpf = document.getElementById('cpf').value;
     var ruaEnd = document.getElementById('rua').value;
@@ -26,7 +57,7 @@ async function postarDoador() {
             nome: nome,
             email: email,
             senha: "1234",
-            imagemPerfil: "link da imagem.png",
+            imagemPerfil: imagemPerfil,
             descricao: "",
             cpf: cpf,
             ruaEnd: ruaEnd,

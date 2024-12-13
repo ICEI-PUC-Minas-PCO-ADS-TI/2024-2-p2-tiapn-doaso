@@ -70,7 +70,7 @@ fetch('http://localhost:3307/api/meta/')
                 <div class="cardMetas shadow-lg mb-3 mt-5 rounded-4" onclick="abrirDetalhes(${meta.id_meta})">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="../images/logo sem fundo.jpeg" class="img-fluid rounded-start" alt="Logo">
+                            <img src=${meta.imagem_meta} class="img-fluid rounded-start" alt="Logo">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
