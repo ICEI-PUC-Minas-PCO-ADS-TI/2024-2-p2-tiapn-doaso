@@ -40,10 +40,7 @@ async function verificaLogin() {
                 else {
                     window.alert(`A senha para o usuário ${centro.nome_centro} está incorreta`);
                 }
-            } else {
-                window.alert(`O email para o usuário ${centro.nome_centro} está incorreto`);
             }
-
         });
     } else {
         console.log("Tipo Inválido")

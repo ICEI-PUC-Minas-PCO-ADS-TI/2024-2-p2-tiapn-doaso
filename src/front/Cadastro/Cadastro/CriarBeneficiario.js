@@ -1,18 +1,19 @@
 import UsuarioHelper from "../../script/Usuario.js";
 
 var btnCadastrar = document.getElementById('btnCadastrar');
-var btnDeletar = document.getElementById('btnDeletar');
+btnCadastrar.addEventListener('click', postarDoador);
+
 
 async function postarDoador() {
     var nome = document.getElementById('nomeCompleto').value;
     var email = document.getElementById('email').value;
-    // var senha = document.getElementById('senha').value;
+    var senha = document.getElementById('senha').value;
     // var imagemPerfil = document.getElementById('link.imagem').value;
-    // var descricao = document.getElementById('descricao').value;
+    var descricao = document.getElementById('descricao').value;
     var cpf = document.getElementById('cpf').value;
     var ruaEnd = document.getElementById('rua').value;
     var bairroEnd = document.getElementById('bairro').value;
-    // var numeroEnd = document.getElementById('numero do endereço').value;
+    var numeroEnd = document.getElementById('numero').value;
     var cidadeEnd = document.getElementById('cidade').value;
     var estadoEnd = document.getElementById('estado').value;
     var cepEnd = document.getElementById('CEP').value;
@@ -25,13 +26,13 @@ async function postarDoador() {
         const body = {
             nome: nome,
             email: email,
-            senha: "1234",
+            senha: senha,
             imagemPerfil: "link da imagem.png",
             descricao: "",
             cpf: cpf,
             ruaEnd: ruaEnd,
             bairroEnd: bairroEnd,
-            numeroEnd: 1,
+            numeroEnd: numeroEnd,
             cidadeEnd: cidadeEnd,
             estadoEnd: estadoEnd,
             cepEnd: cepEnd,
@@ -39,16 +40,9 @@ async function postarDoador() {
         };
 
         await UsuarioHelper.postDoador(body);
-        await UsuarioHelper.getDoador();
-        // alert("Beneficiário cadastrado com sucesso!");
+        window.alert("Beneficiário cadastrado com sucesso!");
     } catch(error){
         console.log(error);
-    }
-}
-
-function deletarDoador() {
-    for (let i = 29; i < 34; i++){
-        UsuarioHelper.deleteDoador(i);
     }
 }
 
@@ -84,24 +78,3 @@ async function verificaCadastro(emailCad, cpfCad){
 
 }
 
-btnCadastrar.addEventListener('click', postarDoador);
-btnDeletar.addEventListener('click', deletarDoador);
-
-// Salvar a foto de perfil no localStorage
-// function selecionarFoto() {
-//     const inputFile = document.getElementById('selecaoFoto');
-//     inputFile.click(); // Abre o seletor de arquivos
-
-//     inputFile.addEventListener('change', function () {
-//         const file = inputFile.files[0];
-//         if (file) {
-//             const reader = new FileReader();
-//             reader.onload = function (e) {
-//                 const fotoBase64 = e.target.result;
-//                 document.getElementById('fotoPreview').src = fotoBase64; // Atualiza o preview
-//                 localStorage.setItem('fotoPerfil', fotoBase64); // Salva no localStorage
-//             };
-//             reader.readAsDataURL(file); // Lê o arquivo como base64
-//         }
-//     });
-// }

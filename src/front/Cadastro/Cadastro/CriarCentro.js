@@ -69,7 +69,7 @@ async function verificaCadastro(emailCad, cnpjCad){
             if(centro.email_centro === emailCad){
                 window.alert("Esse endereço de e-mail ja está cadastrado no sistema! Por favor, use outro!")
                 existeUsuario++;
-            } else if(centro.cnpj === cpfCad){
+            } else if(centro.cnpj === cnpjCad){
                 window.alert("Esse CPF ja está cadastrado no sistema! Por favor, use outro!")
                 existeUsuario++;
             }
