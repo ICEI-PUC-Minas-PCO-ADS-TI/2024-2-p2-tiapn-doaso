@@ -1,5 +1,34 @@
 import UsuarioHelper from "../../script/Usuario.js";
 
+document.getElementById('btnMudarFoto').addEventListener('click', () => {
+    document.getElementById('inputFoto').click();
+});
+
+var linkImagemPerfil;
+
+document.getElementById('inputFoto').addEventListener('change', async function (event) {
+    const inputElement = event.target;
+
+    if (!inputElement.files || inputElement.files.length === 0) {
+        alert("Por favor, selecione uma imagem.");
+        return;
+    }
+
+    try {
+        // Chame a função para enviar a imagem e obter o URL
+        const url = await postImgAPI('inputFoto');
+        console.log("Imagem carregada em:", url);
+        linkImagemPerfil = url;
+        // Atualize a imagem de perfil
+        document.getElementById('fotoPerfil').src = url;
+
+        alert("Foto de perfil alterada com sucesso!");
+
+    } catch (error) {
+        console.error("Erro ao enviar a imagem:", error);
+        alert("Falha ao carregar a imagem.");
+    }
+});
 var btnCadastrar = document.getElementById('btnCadastrarCentro');
 btnCadastrar.addEventListener('click', postarCentro);
 
@@ -26,7 +55,7 @@ async function postarCentro() {
             nome: nome,
             email: email,
             senha: senha,
-            imagemPerfil: "imagemPerfil",
+            imagemPerfil: linkImagemPerfil,
             descricao: descricao,
             cnpj: cnpj,
             valorArrecadado: 0,

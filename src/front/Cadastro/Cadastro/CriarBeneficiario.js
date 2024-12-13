@@ -58,7 +58,7 @@ async function postarDoador() {
             nome: nome,
             email: email,
             senha: "1234",
-            imagemPerfil: "link da imagem.png",
+            imagemPerfil: linkImagemPerfil,
             descricao: "",
             cpf: cpf,
             ruaEnd: ruaEnd,

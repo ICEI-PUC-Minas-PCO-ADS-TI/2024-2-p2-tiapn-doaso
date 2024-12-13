@@ -21,11 +21,14 @@
             <form class="formulario">
                 <div class="formularios1">
                     <div class="perfil">
-                        <label for="fotoPerfil" class="form-label"><h1 class="textoFoto">Foto de perfil</h1></label>
+                        <label for="fotoPerfil" class="form-label">
+                            <h1 class="textoFoto">Foto de perfil</h1>
+                        </label>
                         <div class="imgPerfil">
-                            <img src="../../images/logo sem fundo.jpeg" class="imgPerfilItem rounded-circle" alt="Foto de perfil">
+                            <img src="../../images/logo sem fundo.jpeg" id="fotoPerfil" class="imgPerfilItem rounded-circle" alt="Foto de perfil">
                         </div>
-                        <button type="button" class="btn btn-success btn-foto">Mudar Foto</button>
+                        <button type="button" class="btn btn-success btn-foto" id="btnMudarFoto">Mudar Foto</button>
+                        <input type="file" id="inputFoto" accept="image/*" style="display: none;">
                     </div>
                     <div class="campos">
                         <div class="mb-3">
