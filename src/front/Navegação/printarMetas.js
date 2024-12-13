@@ -4,10 +4,17 @@ function createMetaCard(meta) {
     const progresso = (meta.valor_recebido_meta / meta.valor_objetivo_meta) * 100;
 
     // Limita a descrição a 75 caracteres e adiciona reticências se necessário
-    const descricaoTruncada = meta.desc_meta.length > 75 
-    ? meta.desc_meta.substring(0, 75) + "..." 
-    : meta.desc_meta;
-
+    var descricaoTruncada = ""
+    if(meta.desc_meta != null){
+        if(meta.desc_meta.length > 75){
+            descricaoTruncada = meta.desc_meta.substring(0, 75) + "..."
+        } else {
+            descricaoTruncada = meta.desc_meta;
+        }
+    } else{
+        descricaoTruncada = "Meta sem descrição"
+    }
+    
     // Monta o HTML do card
     return `
     <div class="cardMetas shadow-lg mb-3 mt-5 rounded-4" onclick="abrirDetalhes(${meta.id_meta})">
@@ -29,7 +36,7 @@ async function renderMetas() {
     try {
         const metasContainer = document.getElementById("metasContainer");
         const url = "http://localhost:3307/api/meta";
-        const metas =await fetch(url, {
+        const metas = await fetch(url, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
