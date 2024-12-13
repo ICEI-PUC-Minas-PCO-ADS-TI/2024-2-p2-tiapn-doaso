@@ -14,7 +14,7 @@ async function postarCentro() {
     var cpf = document.getElementById('cpf').value;
     var ruaEnd = document.getElementById('rua').value;
     var bairroEnd = document.getElementById('bairro').value;
-    var numeroEnd = document.getElementById('numeroEnd').value;
+    var numeroEnd = document.getElementById('numero').value;
     var cidadeEnd = document.getElementById('cidade').value;
     var estadoEnd = document.getElementById('estado').value;
     var cepEnd = document.getElementById('CEP').value;
