@@ -47,9 +47,9 @@ async function postarCentro() {
     var numeroTel = document.getElementById('telefone').value;
 
     try{
-        // if(await verificaCadastro(email, cnpj) == false){
-        //     return;
-        // }
+        if(await verificaCadastro(email, cnpj) == false){
+            return;
+        }
         const body = {
             nome: nome,
             email: email,

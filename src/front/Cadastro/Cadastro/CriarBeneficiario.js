@@ -71,6 +71,7 @@ async function postarDoador() {
 
         await UsuarioHelper.postDoador(body);
         window.alert("Beneficiário cadastrado com sucesso!");
+        window.location.href = "../../Login/login.html"
     } catch(error){
         console.log(error);
     }
