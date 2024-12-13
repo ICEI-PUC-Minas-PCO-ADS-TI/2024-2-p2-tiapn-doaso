@@ -8,6 +8,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="metas.css" rel="stylesheet">
     <link href="../global.css" rel="stylesheet">
+    <script type="module" src="detalhamento.js" defer></script>
     <title>Metas</title>
 </head>
 <body>
@@ -57,7 +58,30 @@
                           </div>
                     </div>
                     <div class="contribuir">
-                        <button type="button" class="contribuirBtn btn rounded-3">Contribuir</button>
+                        <button type="button" class="contribuirBtn btn rounded-3" data-bs-toggle="modal" data-bs-target="#contribuirModal">
+                          Contribuir
+                        </button>
+                      </div>
+                    </div>
+                  
+                    <!-- Modal -->
+                    <div class="modal fade" id="contribuirModal" tabindex="-1" aria-labelledby="contribuirModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="contribuirModalLabel">Contribuir</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Insira o valor que deseja contribuir:</p>
+                            <input type="number" class="valorContribuicao form-control" id="valorContribuicao" placeholder="Digite o valor">
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn" id="confirmarContribuicao">Confirmar</button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -66,6 +90,7 @@
 </div>
 </body>
 <script src="../global.js"></script>
-<script src="detalhamento.js"></script>
+
 <!-- Chama a função da barra para a classe menuContainer -->
 <script>createConfigWrapper('menuContainer');</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script>
