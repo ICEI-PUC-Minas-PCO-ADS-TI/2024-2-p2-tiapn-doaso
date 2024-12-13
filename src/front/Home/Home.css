@@ -46,6 +46,200 @@ body {
     max-height: 60%;
 }
 
+
+/* Notificação */
+.button {
+    width: 60px; 
+    height: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #28a745 ; 
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    border: none;
+  }
+  
+  .button:hover {
+    background-color: #4CAF50; 
+  }
+  
+  .button:active {
+    transform: scale(0.9); /* Efeito clique*/
+  }
+  
+  .bell {
+    width: 28px; 
+    height: 28px;
+    fill: #fff; 
+    transition: transform 0.3s ease; /* Animação */
+  }
+  
+  .button:hover .bell {
+    animation: bellRing 0.9s both; /* Animação de sino tocando */
+  }
+  
+  @keyframes bellRing {
+    0%, 100% {
+      transform-origin: top;
+    }
+    15% {
+      transform: rotateZ(10deg);
+    }
+    30% {
+      transform: rotateZ(-10deg);
+    }
+    45% {
+      transform: rotateZ(5deg);
+    }
+    60% {
+      transform: rotateZ(-5deg);
+    }
+    75% {
+      transform: rotateZ(2deg);
+    }
+  }
+  
+  /* Dropdown Notificação */
+  .notification-dropdown {
+    position: absolute;
+    top: 70px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff; 
+    border-radius: 12px; 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); 
+    z-index: 1000;
+    width: 340px;
+    max-height: 450px; /* Certifique-se de ter um limite máximo de altura */
+    opacity: 0; 
+    visibility: hidden; 
+    transform: translateY(-15px); 
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+  }
+  
+  /*Começa hidden true*/
+  .notification-dropdown.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+  }
+  
+  /*Após começa a ficar visível*/
+  .notification-dropdown.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+  }
+  
+  
+  .notification-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow-y: auto; /* Habilita o scroll vertical */
+    max-height: 400px; /* Limite para que o scroll se ative quando necessário */
+    border-radius: 12px;
+    overflow-x: hidden; /* Desabilita a rolagem horizontal */
+  }
+  
+  /* Item de Notificação */
+  .notification-item {
+    display: flex;
+    padding: 15px 18px;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6; 
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.7;
+    background-color: #fafafa; 
+    border-radius: 8px; 
+    margin-bottom: 8px;
+  }
+  
+  .notification-item:hover {
+    transform: translateX(8px); 
+    background-color: #f1f1f1; 
+  }
+  
+  .notification-item:active {
+    background-color: #e2e2e2; 
+  }
+  
+  /* Ícone notificações */
+  .notification-item-icon {
+    width: 40px; 
+    height: 40px;
+    margin-right: 18px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .notification-item-icon:hover {
+    background-color: #4CAF50; 
+  }
+  
+  .notification-item-content {
+    flex: 1;
+  }
+  
+  .notification-item-message {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px; 
+  }
+  
+  .notification-item-date {
+    color: #999;
+    font-size: 13px; 
+  }
+  
+  /* Contagem de Notificações */
+  .notification-count {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: red;
+    color: white;
+    font-size: 13px;
+    border-radius: 50%;
+    width: 20px; 
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .notification-item.unread {
+    border-left: 4px solid #ffc107; 
+  }
+  
+  .notification-item.read {
+    border-left: 4px solid #28a745; 
+  }
+  
+  .notification-check {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #28a745;
+  }
+  
+  .notification-check:hover {
+    color: #155724;
+    transform: scale(1.1); 
+  }
+
+
 .titulo h1 {
     /* Estilo do título principal com cor secundária */
     color: var(--cor-btn);
