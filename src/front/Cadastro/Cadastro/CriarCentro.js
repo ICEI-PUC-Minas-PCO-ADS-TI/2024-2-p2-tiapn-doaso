@@ -1,17 +1,15 @@
 import UsuarioHelper from "../../script/Usuario.js";
 
-// var btn = document.getElementById('btnCriarMeta');
-// var btn2 = document.getElementById('btnDeletarMeta');
-// var btnCadastrar = document.getElementById('btnCadastrar');
-// var btnDeletar = document.getElementById('btnDeletar');
+var btnCadastrar = document.getElementById('btnCadastrarCentro');
+btnCadastrar.addEventListener('click', postarCentro);
 
 async function postarCentro() {
     var nome = document.getElementById('nomeCompleto').value;
     var email = document.getElementById('email').value;
-    // var senha = document.getElementById('senha').value;
-    // var imagemPerfil = document.getElementById('link.imagem').value;
+    var senha = document.getElementById('senha').value;
+    // var imagemPerfil = document.getElementById('imagem').value;
     var descricao = document.getElementById('descricao').value;
-    var cpf = document.getElementById('cpf').value;
+    var cnpj = document.getElementById('cnpj').value;
     var ruaEnd = document.getElementById('rua').value;
     var bairroEnd = document.getElementById('bairro').value;
     var numeroEnd = document.getElementById('numero').value;
@@ -21,17 +19,17 @@ async function postarCentro() {
     var numeroTel = document.getElementById('telefone').value;
 
     try{
-        // if(await verificaCadastro(email, cpf) == false){
+        // if(await verificaCadastro(email, cnpj) == false){
         //     return;
         // }
         const body = {
             nome: nome,
             email: email,
             senha: senha,
-            imagemPerfil: imagemPerfil,
+            imagemPerfil: "imagemPerfil",
             descricao: descricao,
             cnpj: cnpj,
-            valorArrecadado: valorArrecadado,
+            valorArrecadado: 0,
             ruaEnd: ruaEnd,
             bairroEnd: bairroEnd,
             numeroEnd: numeroEnd,
@@ -41,33 +39,33 @@ async function postarCentro() {
             numeroTel: numeroTel
         };
 
-        await UsuarioHelper.postDoador(body);
-        await UsuarioHelper.getDoador();
-        // alert("Beneficiário cadastrado com sucesso!");
+        await UsuarioHelper.postCentro(body);
+        window.alert("Usuario Cadastrado!");
+        window.location.href = "../../Login/login.html"
     } catch(error){
         console.log(error);
     }
 }
 
-async function verificaCadastro(emailCad, cpfCad){
-        const doadores = await UsuarioHelper.getDoador();
-        const centros = await UsuarioHelper.getCentro();
+async function verificaCadastro(emailCad, cnpjCad){
+        var doadores = await UsuarioHelper.getDoador();
+        var centros = await UsuarioHelper.getCentro();
         var existeUsuario = 0;
 
         console.log(doadores, centros)
 
         // Verifica se o e-mail ou CPF já existem
-        doadores.foreach(doador => {
+        doadores.forEach(doador => {
             if(doador.email_doador === emailCad){
                 window.alert("Esse endereço de e-mail ja está cadastrado no sistema! Por favor, use outro!")
                 existeUsuario++;
-            } else if(doador.cpf === cpfCad){
+            } else if(doador.cpf === cnpjCad){
                 window.alert("Esse CPF ja está cadastrado no sistema! Por favor, use outro!")
                 existeUsuario++;
             }
         });
 
-        centros.foreach(centro => {
+        centros.forEach(centro => {
             if(centro.email_centro === emailCad){
                 window.alert("Esse endereço de e-mail ja está cadastrado no sistema! Por favor, use outro!")
                 existeUsuario++;
@@ -82,9 +80,6 @@ async function verificaCadastro(emailCad, cpfCad){
         }
 
 }
-
-btnCadastrar.addEventListener('click', postarDoador);
-btnDeletar.addEventListener('click', deletarDoador);
 
 // Salvar a foto de perfil no localStorage
 // function selecionarFoto() {

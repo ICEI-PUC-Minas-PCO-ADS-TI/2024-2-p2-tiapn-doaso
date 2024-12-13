@@ -19,9 +19,9 @@ async function postarDoador() {
     var numeroTel = document.getElementById('telefone').value;
 
     try{
-        // if(await verificaCadastro(email, cpf) == false){
-        //     return;
-        // }
+        if(await verificaCadastro(email, cpf) == false){
+             return;
+        }
         const body = {
             nome: nome,
             email: email,
