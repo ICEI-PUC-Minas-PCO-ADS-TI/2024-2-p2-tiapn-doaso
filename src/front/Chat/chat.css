@@ -248,6 +248,22 @@ body {
     pointer-events: none; 
 }
 
+.aviso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8d7da; /* Cor de fundo suave */
+    color: #721c24; /* Cor do texto */
+    padding: 15px 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    margin: 20px auto; /* Margem para centralizar */
+    max-width: 400px; /* Largura máxima do balão */
+    text-align: center; /* Centraliza o texto */
+    font-family: 'Arial', sans-serif; /* Fonte moderna */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
 @media (max-width: 768px) {
     .containerGrid {
         grid-template-columns: 1fr;
