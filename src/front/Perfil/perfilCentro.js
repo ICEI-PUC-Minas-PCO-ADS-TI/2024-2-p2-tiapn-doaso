@@ -1,10 +1,8 @@
-export default perfilCentro;
-
 import UsuarioHelper from "../script/Usuario.js";
 
 function getUsuarioLogado(){
-    var idUsuarioLogado = localStorage.getItem("id");
-    return idUsuarioLogado;
+    var UsuarioLogado = localStorage.getItem("UsuarioLogado");
+    return UsuarioLogado;
 }
 function carregaPerfilCentro(idCentro){
     // Obtém os dados do Centro pelo ID
@@ -35,11 +33,9 @@ function carregaPerfilCentro(idCentro){
 }
 
 // Carrega o perfil do Centro ao iniciar a página
-const idCentro = getUsuarioLogado();
-if (idCentro) {
-    carregaPerfilCentro(idCentro);
-} else {
-    console.error("Usuário não está logado");
+const usuario = getUsuarioLogado();
+if (id_centro in usuario) {
+    carregaPerfilCentro(usuario.id_centro);
 }
 
 function editarPerfilCentro(idCentro){

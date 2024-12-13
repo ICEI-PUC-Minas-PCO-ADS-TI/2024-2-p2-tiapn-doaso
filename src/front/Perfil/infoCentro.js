@@ -58,9 +58,16 @@ fetch('http://localhost:3307/api/meta/')
         if (metasFiltradas.length > 0) {
             metasFiltradas.forEach(meta => {
                 // Trunca a descrição se for muito longa
-                const descricaoTruncada = meta.desc_meta.length > 100
-                    ? meta.desc_meta.substring(0, 100) + "..."
-                    : meta.desc_meta;
+                var descricaoTruncada = ""
+                if(meta.desc_meta != null){
+                    if(meta.desc_meta.length > 100){
+                        descricaoTruncada = meta.desc_meta.substring(0, 100) + "..."
+                    } else {
+                        descricaoTruncada = meta.desc_meta;
+                    }
+                } else{
+                    descricaoTruncada = "Meta sem descrição"
+                }
 
                 // Calcula o progresso da meta
                 const progresso = (meta.valor_recebido_meta / meta.valor_objetivo_meta) * 100;

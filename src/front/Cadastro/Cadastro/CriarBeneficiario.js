@@ -38,9 +38,8 @@ btnCadastrar.addEventListener('click', postarDoador);
 async function postarDoador() {
     var nome = document.getElementById('nomeCompleto').value;
     var email = document.getElementById('email').value;
-    // var senha = document.getElementById('senha').value;
+    var senha = document.getElementById('senha').value;
     var imagemPerfil = linkImagemPerfil;
-    // var descricao = document.getElementById('descricao').value;
     var cpf = document.getElementById('cpf').value;
     var ruaEnd = document.getElementById('rua').value;
     var bairroEnd = document.getElementById('bairro').value;
@@ -57,8 +56,8 @@ async function postarDoador() {
         const body = {
             nome: nome,
             email: email,
-            senha: "1234",
-            imagemPerfil: linkImagemPerfil,
+            senha: senha,
+            imagemPerfil: imagemPerfil,
             descricao: "",
             cpf: cpf,
             ruaEnd: ruaEnd,

@@ -11,6 +11,7 @@
     <link href="../global.css" rel="stylesheet">
     <!-- Link do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="perfilCentro.js" defer></script>
     <title>Perfil do Centro de doação</title>
     <style>
         /* Estilo para o botão de favoritos */
@@ -111,11 +112,15 @@
                                                 <textarea class="form-control" id="descricaoProposta" name="descricao" rows="3" required></textarea>
                                             </div> -->
                                             <div class="mb-3">
-                                                <label for="imagem" class="form-label">Imagem da proposta</label>
-                                                <input type="file" class="btnCadastrarImagem form-control" id="imagemProposta" name="imagem" accept="image/*" required />
+                                                <label class="form-label" for="descricaoProposta">Descrição da proposta</label>
+                                                <input type="text" class="form-control" id="descricaoProposta" name="descricaoProposta" maxlength="2000">
+
+                                                <label for="imagem" class="form-label mt-3">Imagem da proposta</label>
+                                                <input type="file" class="btnCadastrarImagem form-control" id="imagemProposta" name="imagemProposta" accept="image/*" required />
                                             </div>
-                                            <button type="submit" class="btnCadastrarProposta btn" id="btnCadastrarProposta">Enviar Proposta</button>   
                                         </form>
+
+                                        <button class="btnCadastrarProposta btn" id="btnCadastrarProposta">Enviar Proposta</button>   
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +191,6 @@
         integrity="sha384-MXGh2M0ZksLv99kzjFu/nJt0XPB6X8dq/u5Lv5jEOcl1Bntuh2RGT6jRWwG8kgUd" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <script src="../global.js"></script>
-    <script src="perfilCentro.js"></script>
     <script src="infoCentro.js"></script>
     <script src="../script/API_img.js"></script>
     <script type="module" src="propostas.js"></script>

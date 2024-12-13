@@ -299,10 +299,10 @@ app.get("/api/proposta/:id", (req, res) => {
 });
 // POST proposta de doação
 app.post('/api/proposta', (req, res) => {
-    const { descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario } = req.body;
+    const { descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario, imagemProposta } = req.body;
     const statusProposta = false;
-    db.query("INSERT INTO Proposta_de_doacao (desc_proposta, data_proposta, id_doador_remetente, id_centro_destinatario, status_proposta) VALUES (?, ?, ?, ?, ?)", 
-    [descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario, statusProposta], (err, result) => {
+    db.query("INSERT INTO Proposta_de_doacao (desc_proposta, data_proposta, id_doador_remetente, id_centro_destinatario, status_proposta, imagem_proposta) VALUES (?, ?, ?, ?, ?, ?)", 
+    [descricaoProposta, dataProposta, idDoadorRemetente, idCentroDestinatario, statusProposta, imagemProposta], (err, result) => {
         if (err) {
             console.log(err);
         } else {

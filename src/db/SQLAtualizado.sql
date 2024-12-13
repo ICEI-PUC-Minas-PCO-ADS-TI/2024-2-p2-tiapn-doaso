@@ -66,6 +66,7 @@
 			id_doador_remetente INT,
 			id_centro_destinatario INT,
 			status_proposta BOOLEAN,
+			imagem_proposta VARCHAR(2000),
 			FOREIGN KEY (id_doador_remetente) REFERENCES Doador(id_doador),
 			FOREIGN KEY (id_centro_destinatario) REFERENCES Centro_de_doacao(id_centro) ON DELETE CASCADE
 		);

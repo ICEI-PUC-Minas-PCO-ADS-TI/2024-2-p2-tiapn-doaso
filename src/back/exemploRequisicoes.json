@@ -42,7 +42,8 @@
         "descricaoProposta": "proposta de doação",
         "dataProposta": "hoje",
         "idDoadorRemetente": "5",
-        "idCentroDestinatario": "3"
+        "idCentroDestinatario": "3",
+        "imagemProposta": "link imagem"
     },
     "imagem da proposta":{
         "idProposta": "2",

@@ -48,7 +48,8 @@ const PropostaHelper = {
     },
 
     postProposta: async function(body){
-        fetch(url, {
+        //Fetch proposta
+        await fetch(url, {
             method: "POST", // Método HTTP
             headers: {
                 "Content-Type": "application/json" // Tipo de conteúdo sendo enviado

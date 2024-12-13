@@ -36,7 +36,6 @@ async function postarCentro() {
     var nome = document.getElementById('nomeCompleto').value;
     var email = document.getElementById('email').value;
     var senha = document.getElementById('senha').value;
-    // var imagemPerfil = document.getElementById('imagem').value;
     var descricao = document.getElementById('descricao').value;
     var cnpj = document.getElementById('cnpj').value;
     var ruaEnd = document.getElementById('rua').value;
