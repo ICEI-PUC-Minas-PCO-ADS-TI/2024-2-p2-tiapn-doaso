@@ -3,25 +3,20 @@
 Durante a elaboração do projeto, trabalhamos em grupo para definir os problemas e o escopo do sistema, baseando-nos na observação e na pesquisa do público-alvo. Nosso objetivo era obter o máximo de informações possíveis para resolver as dores dos usuários. Para isso, realizamos entrevistas com o público-alvo e após analisar as informações coletadas, personificamos esse público, simulando seus padrões de rotina, a fim de entender como a DoaSô poderia melhorar suas vidas. Foram utilizadas as ferramentas do Trello para a criação das personas e as ferramentas do Lucidchart para a criação dos Casos de Uso. Seguem os dados coletados:
 
 ## Personas
-Durante a fase de compreensão do problema, identificamos as seguintes personas:
+Durante a fase de compreensão do problema, foram identificadas as seguintes personas:
+
 
 | **Nome**         | **Imagem**                                                                                                  | **Idade** | **Profissão**              | **Frustrações**                          | **Hobbies**                 |
 |------------------|-------------------------------------------------------------------------------------------------------------|:---------:|:--------------------------:|:----------------------------------------:|:---------------------------:|
 | João Almeida     | <img src="https://github.com/user-attachments/assets/f41cb363-ef1e-4c6d-a564-96e7caa2730d" width="300"/>     | 32 anos   | Analista de Suporte Técnico | Desconhecimento de onde doar<br>Falta de tempo em sua rotina | Ciclismo<br>Jogar Videogames |
-| Fernanda Costa   | <img src="https://github.com/user-attachments/assets/dc34d87b-0af6-4c99-954c-979196fea4a0" width="300"/>     | 25 anos   | Estudante de Biologia<br>Estagiária de Laboratório | Falta de clareza sobre o que doar        | Fazer trilhas<br>Cozinhar   |
-| Pedro Nunes      | <img src="https://github.com/user-attachments/assets/0d80c07d-7289-4544-b102-2203e9f07a29" width="300"/>     | 45 anos   | Gerente de Projetos         | Falta de confiança nas instituições<br>Acúmulo de objetos em casa | Filmes clássicos<br>Fotografia |
-
-Um pouco sobre as personas:
-
-**João Almeida**
 
 João tem 32 anos e trabalha como analista de suporte técnico. Ele é prático, focado em soluções rápidas e sempre buscando formas de simplificar sua rotina. No dia a dia, João se sente sobrecarregado com o acúmulo de objetos em casa, especialmente porque ele não gosta de perder tempo com processos complicados. Ele prefere resolver tudo rapidamente pelo celular ou notebook e sua maior frustração é não saber exatamente onde doar seus itens. O site de doações pode ajudá-lo oferecendo uma plataforma fácil de usar, que permita a ele doar com apenas alguns cliques e resolver esse problema de forma eficiente.
 
-**Fernanda Costa**
+| Fernanda Costa   | <img src="https://github.com/user-attachments/assets/dc34d87b-0af6-4c99-954c-979196fea4a0" width="300"/>     | 25 anos   | Estudante de Biologia<br>Estagiária de Laboratório | Falta de clareza sobre o que doar        | Fazer trilhas<br>Cozinhar   |
 
 Fernanda é uma jovem de 25 anos, estudante de biologia e estagiária em um laboratório ambiental. Muito preocupada com questões ecológicas e sociais, ela gosta de se envolver em causas que reflitam seus valores de sustentabilidade. Apesar de suas boas intenções, Fernanda muitas vezes se sente insegura sobre o impacto real de suas doações e quer garantir que suas ações realmente ajudem. Ela usa o celular e o tablet para seguir iniciativas ambientais, desta forma, o site de doações pode oferecer a ela uma maneira tangível de contribuir para essas causas. Mostrando o impacto das doações e garantindo um processo sustentável, o site pode conectar Fernanda às necessidades das instituições de forma transparente.
 
-**Pedro Nunes**
+| Pedro Nunes      | <img src="https://github.com/user-attachments/assets/0d80c07d-7289-4544-b102-2203e9f07a29" width="300"/>     | 45 anos   | Gerente de Projetos         | Falta de confiança nas instituições<br>Acúmulo de objetos em casa | Filmes clássicos<br>Fotografia |
 
 Pedro, com 45 anos, é gerente de projetos em uma empresa de tecnologia. Ele é organizado, gosta de ter controle sobre o que faz, e valoriza a segurança em todos os processos. Pedro quer doar objetos que não usa mais, mas se sente desconfiado quanto à transparência das instituições e à logística de entrega. Ele é metódico, acessa o site principalmente pelo laptop ou tablet e busca soluções que tragam garantias claras. O site de doações pode proporcionar segurança e confiança ao fornecer informações detalhadas sobre o destino dos itens doados, assim como uma logística bem estruturada para facilitar o processo. Pedro ficará satisfeito com uma interface que ofereça transparência e acompanhamento das doações.
 

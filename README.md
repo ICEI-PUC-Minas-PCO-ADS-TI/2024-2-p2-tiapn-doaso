@@ -6,7 +6,7 @@
 
 `2º semestre/2024`
 
-O objetivo principal do DoaSô é proporcionar uma solução tecnológica que simplifique o processo de doação, conectando de maneira eficiente doadores e beneficiários. Além disso, a plataforma busca promover práticas sustentáveis, incentivando a reutilização de itens que, de outra forma, seriam descartados, e assim contribuindo para a redução do desperdício (ODS 12). Especificamente, a plataforma visa:
+O objetivo principal do DoaSô é proporcionar uma solução tecnológica que simplifique o processo de doação, conectando de maneira eficiente doadores e beneficiários. Além disso, a plataforma busca promover práticas sustentáveis, incentivando a reutilização de itens que, de outra forma, seriam descartados, e assim contribuindo para a redução do desperdício com base no 12° objetivo de Objetivos de Desenvolvimento Sustentável global (ODS 12), objetivos estes criados pela Organização das Nações Unidas (ONU). Especificamente, a plataforma visa:
 
 - Criar um ambiente seguro e acessível para o cadastro de parceiros e voluntários.
 - Facilitar a localização e visualização de pontos de doação, proporcionando transparência e acessibilidade.
