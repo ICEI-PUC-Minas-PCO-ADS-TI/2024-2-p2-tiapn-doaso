@@ -2,6 +2,14 @@
 
 O site da DoaSô foi desenvolvido com o objetivo de proporcionar uma experiência visual agradável e envolvente para seus usuários. Com um design minimalista e elegante, a combinação de cores foi cuidadosamente escolhida para transmitir conforto, sofisticação e harmonia, criando um ambiente acolhedor e funcional.
 
+# Logo da página
+
+A logo da DoaSo visa transmitir a ideia de uma plataforma que tem seguimentos sustentaveis e buscar trazer as seguintes sensações:
+
+O Coração representa solidariedade, amor e generosidade, que estão diretamente relacionados ao ato de doar e ajudar quem precisa.
+O Marcador de localização indica a conexão entre doadores e centros de doação, reforçando a ideia de encontrar ou localizar doações e metas próximas.
+O verde está associado à esperança, renovação e sustentabilidade, características que combinam bem com a ideia de ajudar e contribuir. 
+
 ## As principais cores utilizadas na interface foram:
 - Um tom de ciano mais escuro, código `#284854`;
 - Um tom de verde mais vibrante, código `#4FEB4F`;

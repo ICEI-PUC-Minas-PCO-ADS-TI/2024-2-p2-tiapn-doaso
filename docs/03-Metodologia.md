@@ -125,9 +125,7 @@ Atualizado em: 20/10/2024
 
 | Responsável        | Tarefa/Requisito                | Iniciado em  | Prazo       | Status | Terminado em |
 |--------------------|---------------------------------|--------------|-------------|--------|--------------|
-| Gabriel Madureira  | Protótipo de telas              | 14/10/2024   | 18/10/2024  | 📝     | --/--/2024  |
-| Gabriel Madureira  | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
-| Gabriel Madureira  | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Gabriel Madureira  | Protótipo de telas              | 14/10/2024   | 18/10/2024  | ✔️     | 20/10/2024  |
 | Guilherme Souza    | Diagrama de Classes             | 14/10/2024   | 18/10/2024  | ✔️     |  18/10/2024  |
 | Igor Maia          | Jornada do usuário              | 14/10/2024   | 18/10/2024  | ✔️     |  18/10/2024  |
 | Igor Maia          | Modelo Físico Script SQL        | 17/10/2024   | 20/10/2024  | ✔️     |  20/10/2024  |
@@ -135,9 +133,8 @@ Atualizado em: 20/10/2024
 | Luis Sampaio       | Esquema Relacional              | 18/10/2024   | 19/10/2024  | ✔️     |  19/10/2024  |
 | Luis Sampaio       | Protótipo interativo            | 19/10/2024   | 19/10/2024  | ✔️     |  19/10/2024  |
 | Luis Sampaio       | Diagrama de fluxo               | 20/10/2024   | 20/10/2024  | ✔️     |  20/10/2024  |
-| Thiago Moreira     | Documentação GitHub             | 14/10/2024   | 18/10/2024  | ✔️     | --/--/2024   |
-| Thiago Moreira     | Documentação APC                | 14/10/2024   | 18/10/2024  | ✔️     | --/--/2024   |
-| Thiago Moreira     | **Tarefa em branco**            | --/--/2024   | --/--/2024  |        |              |
+| Thiago Moreira     | Documentação GitHub             | 14/10/2024   | 18/10/2024  | ✔️     | 20/10/2024   |
+| Thiago Moreira     | Documentação APC                | 14/10/2024   | 18/10/2024  | ✔️     | 20/10/2024   |
 | Victor Schneider   | Modelo Entidade Relacionamento  | 14/10/2024   | 18/10/2024  | ✔️     | 18/10/2024   |
 | Victor Schneider   | Diagrama de Classes             | 19/10/2024   | 20/10/2024  | ✔️     | 20/10/2024   |
 | Victor Schneider   | Esquema Relacional              | 19/10/2024   | 20/10/2024  | ✔️     | 20/10/2024   |
@@ -148,34 +145,51 @@ Atualizado em: 20/10/2024
 
 #### Sprint 4
 
-Gabriel Madureira Matos: Crud da tela de perfil e favoritos do usuário
+Atualizado em: 17/12/2024
 
-Guilherme de Oliveira Souza: Criação do banco com apoio do Victor Schneider, e criação do artefato de notificações do usuário.
+| Responsável        | Tarefa/Requisito                | Iniciado em  | Prazo       | Status | Terminado em |
+|--------------------|---------------------------------|--------------|-------------|--------|--------------|
+| Gabriel Madureira  | Crud da tela de perfil          | 21/11/2024   | 21/11/2024  | 📝     | 21/11/2024  |
+| Gabriel Madureira  | favoritos do usuário            | 21/11/2024   | 21/11/2024  | 📝     | 21/11/2024  |
+| Guilherme Souza    | Diagrama de Classes             | 21/11/2024   | 21/11/2024  | ✔️     |  21/11/2024  |
+| Igor Maia          | Geolocalização                  | 21/11/2024   | 21/11/2024  | ✔️     |  21/11/2024  |
+| Luis Sampaio       | Codificação das telas           | 21/11/2024   | 21/11/2024  | ✔️     |  21/11/2024  |
+| Thiago Moreira     | Criação do script para armazenar as informações do formulário de cadastro de doador e documentação APC.             | 21/11/2024   | 21/11/2024  | ✔️     | 21/11/2024   |
+| Victor Schneider   | Criação e conexão com o banco de dados  | 21/11/2024   | 21/11/2024  | ✔️     | 21/11/2024   |
+| Victor Schneider   | Definição das rotas da api do node express             | 21/11/2024   | 21/11/2024  | ✔️     | 21/11/2024   |
+| Victor Schneider   | Criação das classes Helper      | 21/11/2024   | 21/11/2024  | ✔️     | 21/11/2024   |
+| Victor Schneider   | Criação do artefato de cadastro de metas no sistema      | 21/11/2024   | 21/11/2024  | ✔️     | 21/11/2024   |
+| Wendell Leonardo   | Tela de Chat                     | 21/11/2024   | 21/11/2024  | ✔️     | 21/11/2024   |
 
-Igor Maia Moreira Fernandes: Geolocalização com implementação do MapBox na tela Navegação.
+#### Sprint 5
 
-Luis Henrique Sampaio Vieira:
+Atualizado em: 17/12/2024
 
-Thiago Moreira de Queiroz: Criação do script para armazenar as informações do formulário de cadastro de doador e documentação APC. 
-
-Victor Schneider do Vale: Criação e conexão com o banco de dados, definição das rotas da api do node express, criação das classes Helper (métodos create/POST, read/GET, update/PUT, delete/DELETE) e criação do artefato de cadastro de metas no sistema.
-
-Vitor Prates Souza Lima:
-
-Wendell Leonardo Machado Miranda: Tela de Chat e Aceitar/Recusar Proposta de Doação.
-
+| Responsável            | Tarefa/Requisito                                        | Iniciado em | Prazo      | Status | Terminado em |
+|-------------------------|--------------------------------------------------------|-------------|------------|--------|--------------|
+| Gabriel Madureira       | Relatório final de extensão                            | 11/12/2024  | 12/12/2024 | ✔️      | 12/12/2024   |
+| Gabriel Madureira       | Integração das telas de perfis com o banco de dados    | 02/12/2024  | 12/12/2024 | ✔️      | 06/12/2024   |
+| Thiago Moreira          | Integração do formulário de cadastro de usuários com o back-end | 02/12/2024  | 12/12/2024 | ✔️      | 09/12/2024   |
+| Thiago Moreira          | Auxílio no Relatório final                             | 12/12/2024  | 12/12/2024 | ✔️      | 12/12/2024   |
+| Wendell Leonardo        | Integração do Chat ao banco de dados                   | 06/12/2024  | 12/12/2024 | ✔️      | 12/12/2024   |
+| Igor Maia               | Integração do MapBox ao banco de dados                 | 09/12/2024  | 12/12/2024 | ✔️      | 12/12/2024   |
+| Luis Sampaio            | Integração com API de imagem                           | 10/12/2024  | 12/12/2024 | ✔️      | 11/12/2024   |
+| Luis Sampaio            | Carregamento das metas presentes no banco de dados     | 09/12/2024  | 12/12/2024 | ✔️      | 10/12/2024   |
+| Luis Sampaio            | Carregamento dos centros de doação presentes no banco de dados | 10/12/2024  | 12/12/2024 | ✔️      | 10/12/2024   |
+| Luis Sampaio            | Criação dinâmica dos perfis                            | 11/12/2024  | 12/12/2024 | ✔️      | 11/12/2024   |
+| Luis Sampaio            | Criação dinâmica dos detalhamentos de metas            | 12/12/2024  | 12/12/2024 | ✔️      | 12/12/2024   |
+| Victor Schneider        | Login e Cadastro de centros e doadores                 | 05/12/2024  | 12/12/2024 | ✔️      | 07/12/2024   |
+| Victor Schneider        | Cadastro de metas                                      | 08/12/2024  | 12/12/2024 | ✔️      | 08/12/2024   |
+| Victor Schneider        | Auxílio na integração do MAPBOX                        | 10/12/2024  | 12/12/2024 | ✔️      | 12/12/2024   |
+| Victor Schneider        | Correções no banco de dados e rotas do node            | 06/12/2024  | 12/12/2024 | ✔️      | 06/12/2024   |
+| Victor Schneider        | Implementação de classes, gets e sets                  | 12/12/2024  | 12/12/2024 | ✔️      | 12/12/2024   |
+| Guilherme de Oliveira   | Inclusão do menu suspenso de notificações              | 12/12/2024  | 12/12/2024 | ✔️      | 12/12/2024   |
+| Guilherme de Oliveira   | Associação do sistema de notificação com o banco       | 12/12/2024  | 12/12/2024 | ✔️      | 12/12/2024   |
 
 Legenda:
 - 📝: em execução
 - ✔️: terminado
 - ❌: não iniciado
-
-
-
-<!-- > **Links úteis**:
-> - [11 passos essenciais para implantar Scrum no seu projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles) -->
 
 ### Processo
 
