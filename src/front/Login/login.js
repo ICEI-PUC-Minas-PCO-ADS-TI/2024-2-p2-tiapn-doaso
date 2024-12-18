@@ -50,5 +50,5 @@ async function verificaLogin() {
 function logarUsuario(usuario){
     localStorage.setItem("UsuarioLogado", JSON.stringify(usuario))
     window.alert(`Usuário logado`)
-    window.location.href = "../Home/index.html";
+    window.location.href = "../Navegacao/navegacao.html";
 }

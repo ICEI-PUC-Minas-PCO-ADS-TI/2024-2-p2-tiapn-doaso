@@ -63,7 +63,8 @@ function createConfigWrapper(containerId) {
     } else {
         // Se não houver usuário corrente, o botão será "Fazer Login"
         myAccountBtn.textContent = "Fazer Login";
-        myAccountBtn.href = "../../2024-2-p2-tiapn-doaso/src/front/Login/login.html"; // Redireciona para a página de login
+        myAccountBtn.href = "../Login/login.html";
+        // Redireciona para a página de login
     }
 
     myAccount.appendChild(myAccountBtn);
@@ -91,8 +92,34 @@ function createConfigWrapper(containerId) {
     notificationButton.appendChild(bellIcon);
     notificacao.appendChild(notificationButton);
 
+        // Notificação
+    const sair = document.createElement("div");
+    sair.className = "sair";
+    const sairButton = document.createElement("button");
+    sairButton.className = "btn";
+    sairButton.textContent = "Sair";
+    sairButton.style.backgroundColor = "red";
+    sairButton.addEventListener('click', deslogar)
+    sair.appendChild(sairButton);
+    
+    const criarMeta = document.createElement("div");
+    criarMeta.className = "criarMeta";
+    const criarMetaButton = document.createElement("button");
+    criarMetaButton.className = "btn";
+    criarMetaButton.textContent = "Criar Meta";
+    criarMetaButton.addEventListener('click', criarMetaPath)
+    criarMeta.appendChild(criarMetaButton);
+
+    function criarMetaPath(){
+        window.location.href = "../CriarMetas/Primeira Tela/criarMeta1.html";
+    }
+
+    function deslogar(){
+        localStorage.removeItem('UsuarioLogado');
+        window.location.href = "../Home/index.html"
+    }
     // Montando a barra de configuração
-    configBar.append(imgProfile, myAccount, queroDoar, notificacao);
+    configBar.append(imgProfile, myAccount, queroDoar, notificacao, criarMeta, sair);
     configWrapper.appendChild(configBar);
 
     // Menu Hambúrguer
