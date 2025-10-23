@@ -15,7 +15,7 @@ O projeto de fluxo do usuário visa o permitir que gerencie suas arrecadações/
 
 ### Diagrama de fluxo
 
-Os seguintes diagramas ilustram como será o fluxo a ser seguido por usuários na aplicação DoaSô, sendo para os dois tipos de usuários(Doador e Parceiro), caminhos diferentes e que dependem um do outro.
+Os seguintes diagramas ilustram como será o fluxo a ser seguido por usuários na aplicação, sendo para os dois tipos de fluxos, cardápio e oficinas.
 
 ![Diagrama de fluxo doador](images/Diagrama%20de%20fluxo%20doador.png)
 Neste diagrama se percebe o processo padrão de busca de doações pelo usuário doador, podendo contribuir tanto com doações em dinheiro ou em bens materiais.
