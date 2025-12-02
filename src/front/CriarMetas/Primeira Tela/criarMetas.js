@@ -44,7 +44,7 @@ function postarMeta() {
         valorArrecadado: 0,
         descricao: descricao,
         titulo: titulo,
-        idCentroCriador: 48,
+        idCentroCriador: idCentro,
         imagemMeta: imagem_meta
     }
 
