@@ -31,13 +31,76 @@ O objetivo principal do DoaSô é proporcionar uma solução tecnológica que si
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+📄 Guia Detalhado de Configuração e Execução da Aplicação (DoaSô API)
+Este guia detalha o processo para configurar e executar a API de backend (Node.js/Express) em um ambiente de desenvolvimento local, garantindo que todos os colegas de turma possam rodar a aplicação com sucesso.
 
-Não deixe de informar o link onde a aplicação estará disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+1. Pré-requisitos 🛠️
+Para rodar o projeto, você precisa dos seguintes softwares instalados:
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
+Node.js: Versão LTS (recomendada).
 
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+MySQL Server: Um servidor MySQL ativo (pode ser o MySQL Community Server, ou através de pacotes como XAMPP/WAMP/MAMP).
+
+MySQL Workbench/phpMyAdmin: Opcional, mas recomendado para gerenciar o banco de dados.
+
+2. Configuração do Ambiente e Dependências
+2.1. Instalação das Dependências
+No terminal, navegue até a pasta raiz do projeto (onde está o arquivo package.json) e execute o comando para instalar as dependências necessárias (Express, mysql2, cors, etc.):
+
+Bash
+
+npm install
+2.2. Configuração do Banco de Dados (MySQL)
+A aplicação está configurada para usar um banco de dados MySQL chamado doaso.
+
+A. Iniciar o Serviço MySQL
+Certifique-se de que o seu servidor MySQL esteja ativo e rodando na porta padrão (3306).
+
+(Se estiver usando XAMPP, inicie o módulo MySQL no painel de controle.)
+
+B. Criar o Banco de Dados e as Tabelas
+O script SQLAtualizado.sql contém o esquema completo do banco de dados.
+
+Conecte-se ao seu servidor MySQL (via Workbench, phpMyAdmin, ou linha de comando).
+
+Execute o conteúdo completo do arquivo SQLAtualizado.sql para criar o banco de dados doaso e todas as suas tabelas (Doador, Centro_de_doacao, etc.).
+
+2.3. Ajuste da Conexão da API
+O arquivo connection_mysql.js define as credenciais de conexão da API com o banco de dados. Você deve editá-lo para usar as suas credenciais locais.
+
+Edite o arquivo connection_mysql.js para refletir sua configuração local:
+
+JavaScript
+
+// connection_mysql.js
+const mysql = require('mysql2')
+
+const db = mysql.createConnection({
+  host: "localhost",            // Mantenha "localhost" ou "127.0.0.1"
+  user: "root",                 // Seu usuário MySQL local (geralmente 'root')
+  password: "",                 // Sua senha MySQL local. Use "" se não tiver senha.
+  database: "doaso",            // Nome do banco de dados criado
+  port: 3306                    // Porta padrão do MySQL
+})
+
+// ... (Restante do código)
+3. Execução da Aplicação 🚀
+3.1. Iniciar o Servidor Backend (API)
+No terminal, a partir da pasta raiz do projeto, execute o arquivo principal:
+
+Bash
+
+node index.js
+Se a conexão for bem-sucedida, você verá as seguintes mensagens de console:
+
+Conexão estabelecida: [ID da thread]
+Server is running on 3307
+O servidor da sua API estará rodando em http://localhost:3307.
+
+3.2. Acessar o Frontend
+Para visualizar a página inicial:
+
+Abra o arquivo index.html no seu navegador. Ele fará chamadas para a API em http://localhost:3307.
 
 # Documentação
 

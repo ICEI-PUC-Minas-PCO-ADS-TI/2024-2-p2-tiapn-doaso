@@ -1,10 +1,10 @@
 const mysql = require('mysql2')
 
 const db = mysql.createConnection({
-  host: "doaso.mysql.database.azure.com",
-  user: "AdmDoaso",
-  password: "@Doaso123",
-  database: "doaso",
+  host: "localhost", 
+  user: "root", 
+  password: "", // Deve estar vazio se você não configurou senha
+  database: "doaso", // <-- Deve ser "doaso" (minúsculo)
   port: 3306
 })
 
