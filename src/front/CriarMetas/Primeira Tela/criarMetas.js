@@ -22,6 +22,7 @@ document.getElementById('btnCriarMeta').addEventListener('click', async (event) 
         
         postarMeta();
         
+        
     } catch (error) {
         console.error("Erro ao enviar a imagem:", error);
         alert("Falha ao carregar a imagem.");
@@ -51,6 +52,6 @@ function postarMeta() {
     console.log(idCentro)
     MetaHelper.postMeta(body);
     window.alert("Meta cadastrada!");
-}
 
-btn.addEventListener('click', postarMeta);
+    window.location.href = '../../Navegacao/navegacao.html'
+}
