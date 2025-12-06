@@ -4,5 +4,19 @@
     "express": "^4.21.1",
     "mysql": "^2.18.1",
     "mysql2": "^3.11.4"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
+  },
+  "name": "doaso-backend",
+  "version": "1.0.0",
+  "description": "Backend do projeto DoaSo",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "start": "node index.js"
   }
 }

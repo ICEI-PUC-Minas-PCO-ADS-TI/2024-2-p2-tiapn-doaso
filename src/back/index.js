@@ -66,25 +66,27 @@ app.post('/api/doador', (req, res) => {
     var bairroEnd = req.body.bairroEnd;
     var numeroEnd = req.body.numeroEnd;
     var cidadeEnd = req.body.cidadeEnd;
-    var estadoEnd = req.body.estadoEnd; //Sigla do estado
+    var estadoEnd = req.body.estadoEnd;
     var cepEnd = req.body.cepEnd;
     var numeroTel = req.body.numeroTel;
 
-
     db.query("INSERT INTO Usuario (tipo_usuario) VALUES (?)", ["Doador"], (err, result) => {
         if (err) {
-            console.log(err)
+            console.log(err);
+            return res.status(500).json({ error: 'Erro ao criar usuário' });
         }
         const idUsuario = result.insertId;
 
         db.query("INSERT INTO Doador (id_doador, CPF, nome_doador, email_doador, senha_doador, imagem_perfil_doador, bio_doador, endereco_rua, endereco_bairro, endereco_numero, endereco_cidade, endereco_estado_sigla, endereco_cep, telefone_numero) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [idUsuario, cpf, nome, email, senha, imagemPerfil, descricao, ruaEnd, bairroEnd, numeroEnd, cidadeEnd, estadoEnd, cepEnd, numeroTel], (err, result) => {
             if (err) {
-                console.log(err)
+                console.log(err);
+                return res.status(500).json({ error: 'Erro ao criar doador' });
             }
-            console.log(result)
+            res.status(201).json({ message: 'Doador criado com sucesso', id: idUsuario });
         });
     });
 });
+
 //Rota para cadastrar/post um usuário CENTRO DE DOAÇÃO
 app.post('/api/centro', (req, res) => {
     const nome = req.body.nome;
@@ -98,24 +100,27 @@ app.post('/api/centro', (req, res) => {
     var bairroEnd = req.body.bairroEnd;
     var numeroEnd = req.body.numeroEnd;
     var cidadeEnd = req.body.cidadeEnd;
-    var estadoEnd = req.body.estadoEnd; //Sigla do estado
+    var estadoEnd = req.body.estadoEnd;
     var cepEnd = req.body.cepEnd;
     var numeroTel = req.body.numeroTel;
 
     db.query("INSERT INTO Usuario (tipo_usuario) VALUES (?)", ["Centro"], (err, result) => {
         if (err) {
-            console.log(err)
+            console.log(err);
+            return res.status(500).json({ error: 'Erro ao criar usuário' });
         }
         const idUsuario = result.insertId;
 
         db.query("INSERT INTO Centro_de_doacao (id_centro, CNPJ, nome_centro, email_centro, senha_centro, imagem_perfil_centro, desc_centro, valor_total_arrecadado, endereco_rua, endereco_bairro, endereco_numero, endereco_cidade, endereco_estado_sigla, endereco_cep, telefone_numero) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", [idUsuario, cnpj, nome, email, senha, imagemPerfil, descricao, valorArrecadado, ruaEnd, bairroEnd, numeroEnd, cidadeEnd, estadoEnd, cepEnd, numeroTel], (err, result) => {
             if (err) {
-                console.log(err)
+                console.log(err);
+                return res.status(500).json({ error: 'Erro ao criar centro' });
             }
-            console.log(result)
+            res.status(201).json({ message: 'Centro criado com sucesso', id: idUsuario });
         });
     });
 });
+
 // Rota para remover/delete usuarios
 // DELETE doador
 app.delete('/api/doador/:id', (req, res) => {
@@ -481,7 +486,13 @@ app.put('/api/notificacao', (req, res) => {
     });
 });
 
-//Ativação do servidor
-app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT}`)
-});
+
+//Ativação do servidor (apenas se não estiver em teste)
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server is running on ${PORT}`)
+    });
+}
+
+//Exportando o app para os testes
+module.exports = app;
